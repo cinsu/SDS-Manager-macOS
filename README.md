@@ -4,7 +4,7 @@
 
 A native Kubuntu (PyQt6) manager for the Uniden SDS100 scanner: update the system database, build and edit Favorites Lists, and change scanner settings, with every scanner write validated, backed up first and reversible. A Sentinel alternative for Linux.
 
-**New here? Read [USER_GUIDE.md](USER_GUIDE.md).**
+**New here? Read the [user manual](docs/user-manual.md)** (also as a PDF with each [release](https://github.com/jmlynchjr/SDS-Manager/releases)). The shorter [USER_GUIDE.md](USER_GUIDE.md) is the guide shown in the program (Help → User Guide).
 
 Created by J. Lynch, with AI assistance in the build. Free software under the GNU GPL v3 or later (see `LICENSE`, `NOTICE.md`).
 
@@ -29,7 +29,8 @@ The program's RadioReference app key is not in this source. The .deb packages on
 
 | Path | Contents |
 |---|---|
-| `USER_GUIDE.md` | How to use it, safety model, recovery |
+| `docs/user-manual.md` | The user manual |
+| `USER_GUIDE.md` | The in-program guide: how to use it, safety model, recovery |
 | `CHANGELOG.md` | What changed in each version |
 | `DEVELOPMENT.md` | Architecture and how to test, for contributors |
 | `docs/test-procedures/` | Hardware test steps written for earlier versions |

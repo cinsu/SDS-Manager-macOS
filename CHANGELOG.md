@@ -177,11 +177,11 @@
 - **Database → Update Database (Rebuild from Archive)…** rebuilds the database from a Uniden master database archive you choose (`MasterHpdb_MM_DD_YYYY.gz`). **Update Scanner Firmware** takes firmware files you download from Uniden's support page (Add File…).
 - New tests for the RadioReference connection (9).
 
-## v0.0.9i — Firmware found on Uniden's server
+## v0.0.9i — Firmware file names
 
-- **Fixed: Check Uniden for Firmware found nothing for the SDS100.** Uniden's update server spells the model with a hyphen (`SDS-100_V1_26_01.bin`, `SDS-100-SUB_V1_03_15.firm`), which the Manager didn't recognise as SDS100 firmware. Both spellings are now accepted; SDS100E, SDS200 and other models are still refused.
+- **Fixed: SDS100 firmware named with a hyphen** (`SDS-100_V1_26_01.bin`, `SDS-100-SUB_V1_03_15.firm`) wasn't recognised as SDS100 firmware. Both spellings are now accepted; SDS100E, SDS200 and other models are still refused.
 - **Other files in the firmware folder are left alone.** The scanner keeps its location tables there (`CityTable_…dat`, `ZipTable_…dat`); they were listed as waiting firmware and offered for removal before a write. Now only firmware files (`.bin`, `.firm`) count as waiting; other files are shown as "not firmware, left alone" and never removed.
-- New tests (3), using the file names on Uniden's server.
+- New tests (3).
 
 ## v0.0.9h — Menu icon and quieter installs
 
@@ -240,11 +240,11 @@
 ## v0.0.9a — Update Scanner Firmware
 
 - **New: Scanner Settings → Update Scanner Firmware…** Puts new SDS100 firmware on the scanner the way Sentinel does: verified files go in the card's `BCDx36HP/firmware` folder, and the scanner installs them itself when it next starts from its own card (eject, unplug USB). The program never flashes firmware itself.
-- **Check Uniden for Firmware** reads Uniden's update server (the one Sentinel uses, with the same built-in login as the database download) and lists the main (`.bin`) and sub (`.firm`) firmware for your model, compared with the scanner's main version from `scanner.inf`. **Add File…** takes a `.bin`, `.firm` or Uniden's support-page `.zip` (read in memory, never unpacked).
+- **Add File…** takes a `.bin`, `.firm` or the `.zip` from Uniden's support page (read in memory, never unpacked), compared with the scanner's main version from `scanner.inf`.
 - Checks before writing: exact model match in the file name (SDS100 never matches SDS100E or SDS200), one main and one sub at most, plausible size, not a saved web page, enough free space, a second confirmation for an older main version, and leftovers already in the firmware folder listed and removed first (optional). The write uses the same USB identity check, SHA-256 staging and read-back as every scanner write, and leaves a receipt in `firmware/receipts/`.
 - The User Guide's safety section and "If something goes wrong" cover firmware.
-- New tests (15): file names and models, Uniden zips (including a path-traversal entry), error pages and sizes, server listings, downloads, planning and downgrades, the write with leftovers, a scanner that changes mid-write, a symlinked firmware folder, and the window on the Qt stub.
-- **Not yet tried on the real scanner or server.** In particular: whether Uniden's server lists SDS100 firmware in the same place as the database (if not, the window says so and Add File… still works), and the exact names Uniden uses for the current SDS100 files.
+- New tests (15): file names and models, Uniden zips (including a path-traversal entry), error pages and sizes, planning and downgrades, the write with leftovers, a scanner that changes mid-write, a symlinked firmware folder, and the window on the Qt stub.
+- **Not yet tried on the real scanner.**
 
 ## v0.0.8z — Busy dialogs for Restore, Backup and Preflight
 
@@ -298,7 +298,7 @@
 ## v0.0.8t — User guide and wording cleanup
 
 - New **USER_GUIDE.md**: the safety model, step-by-step workflows (database update, new lists, settings, export), what is and is not supported, where files and backups live, and recovery steps.
-- Removed the "Experimental" wording now that the database update is verified on a real SDS100. Database menu: **Update Database (Download and Rebuild)…**, **Update Scanner's Master Database…**, **Export One State File (Advanced)…**, **Rebuild Full Database to a Folder (Advanced)…**. The duplicate "Update Database…" entry is gone. About box and status bar updated.
+- Removed the "Experimental" wording now that the database update is verified on a real SDS100. Database menu: **Update Database…**, **Update Scanner's Master Database…**, **Export One State File (Advanced)…**, **Rebuild Full Database to a Folder (Advanced)…**. The duplicate "Update Database…" entry is gone. About box and status bar updated.
 - A rebuilt database folder now contains README.txt (install only through Update Scanner's Master Database) instead of the old "NOT_FOR_INSTALLATION.txt". Folder names keep the historical `HPDB-Experimental-<date>` prefix so older versions still sort and load.
 
 ## v0.0.8s — Rectangle locations in new Favorites Lists
@@ -311,7 +311,7 @@
 
 ## v0.0.8r — Update Scanner's Master Database
 
-- New **Database → Update Scanner's Master Database…**. It takes a rebuilt database from **Database → Update Database…** (download and offline rebuild, unchanged) and writes the whole database to the SD card in one step.
+- New **Database → Update Scanner's Master Database…**. It takes a rebuilt database from **Database → Update Database…** (rebuilt offline from a database archive) and writes the whole database to the SD card in one step.
 - Read-only check first, nothing written: the new database must cover the same states as the card; every record must be of a type and field count the card's own files already use; state files must agree with their own file names; the database may not be older than the card's; and at least 70% of the card's existing records must appear unchanged in the new files (this catches a rebuilt format that differs from what the scanner holds). The check shows both database dates and how many state files change.
 - Then the same controlled write as the favorites export: fresh SHA-256-verified backup of the whole card configuration, SHA-256 staging of every file, automatic restore of every changed file if anything fails, `sync` at the end. State files are written first and `hpdb.cfg` last. Only changed files are rewritten. Favorites lists, profile.cfg and every other file are never touched.
 - Favorites export and preview now ignore the HPDB folder. A saved configuration keeps the older database it was taken with, which would otherwise have been reported as a difference after an update.

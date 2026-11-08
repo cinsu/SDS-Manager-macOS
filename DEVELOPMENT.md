@@ -9,7 +9,7 @@
 | Role | Modules |
 |---|---|
 | Application and UI | `database_favorites_manager.py` (main window, menus, dialogs), `database_workspace.py` (database browser, selection dialogs, draft), `favorites_*.py` |
-| Database download and rebuild | (personal edition only: `uniden_database_access.py`, `uniden_hpdb_download.py`), `master_hpdb_validator.py`, `hpdb_state_reconstruction.py`, `hpdb_bulk_reconstruction.py`, `hpdb_cfg_generator.py`, `managed_storage.py` |
+| Database rebuild | `master_hpdb_validator.py`, `hpdb_state_reconstruction.py`, `hpdb_bulk_reconstruction.py`, `hpdb_cfg_generator.py`, `managed_storage.py` |
 | Scanner master database update | `scanner_database_update.py` (checks, plan, write) |
 | Favorites lists | `new_favorites_list.py` (build new lists from database rows), `scanner_list_sync.py` (new/deleted list guards, f_list.cfg), `flist_settings.py` (per-list settings), `scanner_favorites_expanded.py` (edits to existing lists), `native_favorites_*.py` |
 | Scanner settings | `profile_schema.py` (spec-driven fields and validation), `scanner_profile_export.py` (profile.cfg guard), `scanner_global_settings.py`, `location_settings.py`, `quick_keys_settings.py` |

@@ -85,7 +85,7 @@ The main window's Favorites tree and the list editor's left pane have a **Keys /
 
 SDS-Manager shares the saved configuration's keys, number tags and scan profiles with SDS100 Monitor, so the Monitor can name its quick keys, offer tagged channels in Go to Number Tag and apply scan profiles. It writes `~/.local/share/sds100-database-favorites-manager/monitor-keys.json` whenever the configuration is saved or a profile changes; the Monitor only reads it.
 
-**Adding what you heard (with SDS100 Monitor, personal edition):** right-click a reception in the Monitor and choose **Add to Favorites List in Manager…**. This works for Close Call, search and Discovery hits, and talkgroups heard through ID Search.
+**Adding what you heard (with SDS100 Monitor):** right-click a reception in the Monitor and choose **Add to Favorites List in Manager…**. This works for Close Call, search and Discovery hits, and talkgroups heard through ID Search.
 - SDS-Manager asks which department to put it in. The same department and system come first, marked ★.
 - It also asks for a name, and for channels the modulation and an optional tone.
 - It's added as one Undo step. Save Configuration keeps it.
@@ -171,20 +171,20 @@ Dropdowns and text boxes can be changed; reserved or unsupported fields are read
 - **Clean up old backups** and **Clean up old database versions** are always manual and show exactly what will be deleted first. The newest backups, the current database and the version on your scanner are never offered for deletion.
 
 ### Installing and updates
-- **Install:** `sudo apt install ./sds-manager_<version>_all.deb` (the personal build: `sds-manager-personal`). Remove with `sudo apt remove sds-manager`; your data stays.
+- **Install:** `sudo apt install ./sds-manager_<version>_all.deb`. Remove with `sudo apt remove sds-manager`; your data stays.
 - **Help → Check for Updates…** finds a newer .deb in `~/Downloads` (or a GitHub release, once you enter the repository) and installs it with **Install**.
 
 ### RadioReference
 **Tools → RadioReference Account…** signs SDS-Manager in to the RadioReference database with **your own RadioReference account**, which needs an active **Premium** subscription. Enter your username and password, then **Save and Test Sign-in**: it shows your username and when your Premium subscription ends. The application key, which identifies SDS-Manager to RadioReference, is built into the package; only a build without one (for example, built from source) shows an **Advanced** section where you enter a key of your own.
 
 - The password (and a key you entered yourself) is kept in **KDE Wallet** (through `python3-keyring`), never in a settings file; your username is kept in the settings. Without a secret store it is kept only until SDS-Manager closes. **Forget Saved Password** removes it.
-- **Packaging with the key:** the key is never in the source code. `add_rr_key.sh` adds it to a package on your own computer: `bash add_rr_key.sh sds-manager_<version>_all.deb rr_app_key.txt` (the file holds just the key), then install the package as usual.
+- The key is never in the source code; the release packages include it.
 - SDS-Manager talks to RadioReference directly from your computer, always over HTTPS.
 - RadioReference data is used only to build and update the Favorites Lists of your own scanner; only what you add is kept, in your configuration.
 - Updating existing Favorites Lists from RadioReference, naming talkgroups from it and looking up unknown talkgroups come in the next versions.
 
 ### SDS100 Monitor link
-With **SDS100 Monitor** (personal build 1.1.52 or later) installed:
+With **SDS100 Monitor** (1.1.76 or later) installed:
 - **Edit in Manager:** in the Monitor, right-click a reception → **Edit in Manager…**, or use **Tools → Edit Current Channel in Manager…**. The Manager opens the Favorites List editor on that talkgroup or channel in the open configuration. If it is in several places you choose one; with no configuration open you are offered one.
 - **Tools → Name Unnamed Talkgroups…** suggests names for talkgroups that have none (blank or just the ID), from the master database and from what the Monitor recorded. Tick, check, and apply; it is one Undo step and goes to the scanner only with Save Configuration and Export.
 - **Heard (90 days) and Last Heard** (0.1.19): the last two columns of the Favorites List editor show how many times the Monitor logged each channel or talkgroup in the last 90 days, and when it was last heard. Talkgroups are matched by system name and TGID, channels by frequency. Read-only; they come from the Monitor's daily reception history and are read once when the editor opens.
@@ -205,8 +205,8 @@ With **SDS100 Monitor** (personal build 1.1.52 or later) installed:
 | What | Where |
 |---|---|
 | Local configurations (copies of your card) | the application's library (*File → Open Managed Data Folder…* shows the data folder) |
-| Downloaded and rebuilt databases | `~/.local/share/SDS100DatabaseFavoritesManager/database/` |
-| Downloaded firmware and write receipts | `~/.local/share/SDS100DatabaseFavoritesManager/firmware/` |
+| Rebuilt databases | `~/.local/share/SDS100DatabaseFavoritesManager/database/` |
+| Firmware files and write receipts | `~/.local/share/SDS100DatabaseFavoritesManager/firmware/` |
 | Scanner backups | `~/.local/share/sds100-database-favorites-manager/scanner-backups/<timestamp>/` |
 
 Rebuilt database folders are named `HPDB-Experimental-<date>` for historical reasons; they are ordinary, verified-complete database versions.
