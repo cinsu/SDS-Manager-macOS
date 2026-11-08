@@ -1,3 +1,9 @@
+## v0.1.23 — User manual
+
+- **New: a full user manual** (`docs/user-manual.md`, and as a PDF with each release).
+- The public edition's guide and change log describe only what's in it: installing, the RadioReference key, and SDS100 Monitor (1.1.76 or later, both editions).
+- No change to how the program works.
+
 ## v0.1.22 — Site quick keys
 
 - **New: trunked sites' quick keys.** On the SDS100 a site can have a quick key; it uses the same 00–99 keys as the departments of its system, so switching that department key Off stops scanning the departments and sites on it. SDS-Manager didn't show or set them before.
@@ -36,7 +42,7 @@
 
 ## v0.1.18 — Add what SDS100 Monitor heard to a Favorites List
 
-- **New: Add to Favorites List from SDS100 Monitor** (Monitor 1.1.73, personal edition). Right-click a reception in the Monitor (or Tools → Add Current Channel to Favorites List in Manager…) and SDS-Manager opens a small window:
+- **New: Add to Favorites List from SDS100 Monitor** (Monitor 1.1.73; in both Monitor editions since 1.1.76). Right-click a reception in the Monitor (or Tools → Add Current Channel to Favorites List in Manager…) and SDS-Manager opens a small window:
   - It shows what was heard and offers the departments it can go into: the same department and system first (marked ★), then the rest.
   - A channel goes into a conventional department, with name, modulation and an optional tone, NAC or colour code. A talkgroup goes into a talkgroup department of a trunked system.
   - The name starts as the one the scanner showed, unless that was only a number.

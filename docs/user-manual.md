@@ -1,12 +1,12 @@
 # SDS-Manager User Manual
 
-Version 0.1.22 · by J. Lynch, developed with the help of AI (Anthropic's Claude) · [PDF with each release](https://github.com/jmlynchjr/SDS-Manager/releases)
+Version 0.1.23 · by J. Lynch, developed with the help of AI (Anthropic's Claude) · [PDF with each release](https://github.com/jmlynchjr/SDS-Manager/releases)
 
 Use the outline button (☰) at the top right of this file to jump to a chapter.
 
 ## About this manual
 
-This manual describes **SDS-Manager version 0.1.22**, a Linux program for managing a Uniden SDS100 scanner's Favorites Lists, settings and system database from a PC, without Sentinel.
+This manual describes **SDS-Manager version 0.1.23**, a Linux program for managing a Uniden SDS100 scanner's Favorites Lists, settings and system database from a PC, without Sentinel.
 
 Chapters 1 to 4 cover installing, the main window and scanner configurations, and are worth reading first. Chapter 10, *Exporting to the scanner*, explains how changes reach the scanner and how they are protected. The rest can be read as you need them.
 
