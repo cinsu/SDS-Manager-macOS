@@ -421,6 +421,20 @@ def summary(clip, result, list_name):
     return '\n'.join(lines)
 
 
+def database_clip(database_records):
+    """Channels or talkgroups chosen from the database, as a clip of the scanner's own rows (v0.1.24).
+
+    database_records: a system in the database's layout ([Conventional | Trunk header, groups ...]), as for
+    a new list. They are written exactly as new_favorites_list writes a new list, so Paste can merge them."""
+    from new_favorites_list import build_new_list_rows
+    rows, encoding, _newline = build_new_list_rows(database_records)
+    start = next((i for i, r in enumerate(rows) if r and r[0] in ('Conventional', 'Trunk')), None)
+    if start is None:
+        raise ClipboardError('Nothing to add.')
+    return {'what': 'system', 'name': rows[start][3], 'records': [list(r) for r in rows[start:]],
+            'preamble': [list(r) for r in rows[:start]], 'encoding': encoding, 'from': 'database'}
+
+
 def new_list_rows(clip):
     """A complete Favorites List (the rows of an .hpd file) holding what was copied."""
     if clip['what'] == 'leaves':

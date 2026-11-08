@@ -1,3 +1,13 @@
+## v0.1.24 — Add to Favorites into an existing list
+
+- **Fixed: adding a system from the database to an existing Favorites List couldn't be saved** ("Configuration save blocked: Draft includes non-native or unsupported system records"). Add to Favorites put the new system in the database's own layout instead of the scanner's. It worked for new lists only.
+- Now what you pick is written in the scanner's own format, exactly as for a new list, then merged like Paste:
+  - into the same system (same name and type) and department when the list has them, otherwise as a new system;
+  - nothing already in the list is replaced; anything already there is skipped;
+  - quick keys and number tags that clash with ones in the list go to the next free numbers.
+  - You see what will be added before anything changes; it is one Undo step, and Save Configuration keeps it.
+- New tests (2), including a DMR system added to a real list, saved and exported.
+
 ## v0.1.23 — User manual
 
 - **New: a full user manual** (`docs/user-manual.md`, and as a PDF with each release).

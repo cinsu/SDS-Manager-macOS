@@ -27,6 +27,7 @@ from uniden_source_check import check_official_source
 from edition import PERSONAL
 import rr_api
 import rr_source
+import favorites_clipboard
 
 import re
 
@@ -1372,6 +1373,9 @@ class DatabaseWorkspace(QWidget):
             self._add_to_new_list(section, new_list_name)
             return
         draft = self.drafts[self.current_draft]
+        if favorites_clipboard.is_native(draft):
+            self._add_to_native_list(section, draft)
+            return
         try:
             existing_entry, matched_by_name = find_existing_system(
                 draft, key, section['records'][0])
@@ -1528,23 +1532,61 @@ class DatabaseWorkspace(QWidget):
     def _can_create_list(self):
         return bool(self.new_list_hooks and self.new_list_hooks['available']())
 
-    def _add_to_new_list(self, section, list_name):
-        """Select conventional channels, or trunked sites and talkgroups, then create the new native list."""
+    def _add_to_native_list(self, section, draft):
+        """Add database channels or talkgroups to an existing Favorites List of a scanner configuration
+        (v0.1.24). They are written in the scanner's own format, exactly as for a new list, then merged like
+        Paste: into the same system (same name and type) and department when the list has them, otherwise as
+        a new system; nothing already there is replaced, and clashing quick keys and number tags move to
+        free numbers. Before, this added rows in the database's own layout, which Save then refused."""
+        import copy as _copy
+        chosen = self._choose_database_records(section)
+        if chosen is None:
+            return
+        records, _summary, _made = chosen
+        try:
+            clip = favorites_clipboard.database_clip(records)
+            trial = _copy.deepcopy(draft)
+            result = favorites_clipboard.paste(trial, clip, (None, None), 'free')
+        except (ValueError, favorites_clipboard.ClipboardError) as exc:
+            QMessageBox.warning(self, 'Add to Favorites', f'{exc}\n\nNothing was added.')
+            return
+        if result['added'] == 0 and not result['new_system'] and not result['sites'] and not result['departments']:
+            QMessageBox.information(self, 'Add to Favorites', f'Everything selected is already in '
+                                    f'{self.current_draft}. Nothing was added.')
+            return
+        text = favorites_clipboard.summary(clip, result, self.current_draft)
+        clashes = result.get('clashes') or []
+        if clashes:
+            text += (f'\n\n{len(clashes)} quick key(s) or number tag(s) were already used in this list; '
+                     'they go to the next free numbers.')
+        if QMessageBox.question(self, 'Add to Favorites', text + '\n\nSave Configuration keeps it. Continue?',
+                                QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No
+                                ) != QMessageBox.StandardButton.Yes:
+            return
+        self._snapshot()
+        favorites_clipboard.paste(draft, clip, (None, None), 'free')
+        self.status.setText(f'Added to {self.current_draft}: ' + text.splitlines()[0] +
+                            ' Save Configuration to keep it.')
+        self.refresh_draft()
+
+    def _choose_database_records(self, section):
+        """Select conventional channels, or trunked sites and talkgroups. Returns (records, summary, made) in
+        the database's layout, ready for new_favorites_list.build_new_list_rows, or None."""
         trunk_markers = {'Trunk', 'Trunked', 'Site', 'T-Group', 'TGID', 'Tgid', 'T-Id'}
         is_trunk = (str(section['kind']).strip() in trunk_markers or
                     any(r and str(r[0]).strip() in trunk_markers for r in section['records']))
         if is_trunk:
             dialog = SelectTrunkDialog(section, self)
             if dialog.exec() != QDialog.DialogCode.Accepted:
-                return
+                return None
             chosen = dialog.selected()
             sites = [g for g in chosen if g['kind'] == 'Site']
             departments = [g for g in chosen if g['kind'] == 'T-Group']
             talkgroups = sum(1 for g in departments for r in g['records'][1:] if r and r[0].strip() != 'Rectangle')
             if not sites or not talkgroups:
                 QMessageBox.information(self, 'Incomplete selection',
-                    'Select at least one site frequency and one talkgroup. No Favorites List was created.')
-                return
+                    'Select at least one site frequency and one talkgroup. Nothing was added.')
+                return None
             records = [section['records'][0].copy()]
             for group in sites:
                 records.append(group['records'][0].copy())
@@ -1559,18 +1601,26 @@ class DatabaseWorkspace(QWidget):
         else:
             dialog = SelectConventionalDialog(section, self)
             if dialog.exec() != QDialog.DialogCode.Accepted:
-                return
+                return None
             chosen = dialog.selected()
             count = sum(1 for group in chosen for r in group['records'][1:] if r and r[0].strip() != 'Rectangle')
             if not chosen or count == 0:
                 QMessageBox.information(self, 'No channels selected',
-                    'Select at least one conventional channel. No Favorites List was created.')
-                return
+                    'Select at least one conventional channel. Nothing was added.')
+                return None
             records = [section['records'][0].copy()]
             for group in chosen:
                 records.extend(r.copy() for r in group['records'])
             summary = f'System: {section["name"]}\nDepartments: {len(chosen)}\nChannels: {count}'
             made = f'{count} channels in {len(chosen)} departments'
+        return records, summary, made
+
+    def _add_to_new_list(self, section, list_name):
+        """Select conventional channels, or trunked sites and talkgroups, then create the new native list."""
+        chosen = self._choose_database_records(section)
+        if chosen is None:
+            return
+        records, summary, made = chosen
         if not self._confirm_low_risk('Create new Favorites List',
                 f'Create the new Favorites List {list_name!r}?\n\n{summary}\n\n'
                 'Settings other than the database values are left at the scanner defaults, '
