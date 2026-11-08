@@ -1,0 +1,683 @@
+TargetModel	BCDx36HP
+FormatVersion	1.00
+Conventional			Pickens	Off		Conventional	Off	Off	0	Off	Off	400	Auto	8
+DQKs_Status		Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	
+C-Group			Municipalities - Central	Off	34.728070	-82.776490	3.0	Circle	Off	Global
+C-Freq			Central FD	Off	155145000	FM	TONE=D423	3	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Central Water and Sewer	Off	153500000	FM	TONE=C141.3	14	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Group			Municipalities - Clemson	Off	34.693070	-82.830050	4.0	Circle	Off	Global
+C-Freq			CAT Buses	Off	858437500	NFM	ColorCode=1	26	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Clemson FD	Off	155295000	FM		3	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Clemson PD Dispatch	Off	453925000	FM	TONE=C123.0	2	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Group			Municipalities - Easley	Off	34.827330	-82.599340	4.0	Circle	Off	Global
+C-Freq			Department of Public Works	Off	155040000	NFM	ColorCode=1	14	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Easley FD Dispatch	Off	155692500	NFM	TONE=D506	3	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Easley FD/DPW	Off	153485000	NFM	TONE=D506	22	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Easley PD	Off	453612500	NFM	TONE=C123.0	2	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Easley PD	Off	460212500	FM	TONE=C123.0	2	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Easley PD Talk-around	Off	154700000	FM		23	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Easley Rescue	Off	155220000	FM		25	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Easley Rescue (Also EP)	Off	155775000	FM	TONE=C131.8	9	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Group			Municipalities - Liberty	Off	34.785610	-82.694090	3.0	Circle	Off	Global
+C-Freq			Liberty FD Dispatch	Off	155925000	FM	TONE=C141.3	3	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Group			Municipalities - Pickens (City)	Off	34.890440	-82.710570	3.0	Circle	Off	Global
+C-Freq			Pickens FD Dispatch	Off	158835000	FM	TONE=C136.5	3	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Pickens PD	Off	460150000	FM	TONE=C123.0	7	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Pickens PD (also Central PD)	Off	460350000	FM		7	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Pickens PD Dispatch (also Liberty and Central PDs)	Off	453700000	FM	TONE=C123.0	2	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Group			Pickens County - Fire/EMS	Off	34.890440	-82.710570	16.0	Circle	Off	Global
+C-Freq			Norris FD Dispatch	Off	153695000	FM	TONE=C179.9	3	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Pickens Co. EMS	Off	155220000	FM	TONE=C131.8	25	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Pickens Co. EMS	Off	155280000	FM		9	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Pickens Co. EMS Admin	Off	155115000	FM	TONE=C131.8	1	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Pickens Co. EMS Dispatch	Off	155175000	FM	TONE=C131.8	4	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Pickens Co. EMS HEAR Network	Off	155340000	FM	TONE=C131.8	12	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Pickens Co. Rural FDs Dispatch	Off	151340000	FM	TONE=C167.9	3	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Pickens Co. Rural FDs Fireground	Off	154070000	FM	TONE=C192.8	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Six Mile FD	Off	159112500	FM	TONE=C167.9	3	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Vinyards FD	Off	155887500	FM		8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Vinyards FD Fireground	Off	155250000	FM		24	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Group			Pickens County - Sheriff	Off	34.890440	-82.710570	16.0	Circle	Off	Global
+C-Freq			Pickens Co. SD (Also Liberty PD and Pickens PD)	Off	460150000	FM	TONE=C127.3	7	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Pickens Co. SD Dispatch	Off	460450000	FM	TONE=C127.3	2	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Pickens Co. SD Narcotics	Off	453975000	FM	TONE=C127.3	2	Off	2	0	Off	Auto	Off	On	Off	Off
+Trunk			Palmetto 800	Off		P25Standard	Off	Off	Auto	Ignore		Off	Off	0	Off	Off	Ignore	Off	Off	On	IDAS
+DQKs_Status		Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	
+Site			Pickens	Off	34.899250	-82.659580	20.0	AUTO			Circle	Off	400	Auto	8	Off	1DB	Global
+BandPlan_P25		851006250	6250	762006250	6250	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+T-Freq				Off	851125000	0	Srch	Any
+T-Freq				Off	851412500	0	Srch	Any
+T-Freq				Off	852100000	0	Srch	Any
+T-Freq				Off	852362500	0	Srch	Any
+T-Freq				Off	852712500	0	Srch	Any
+T-Freq				Off	853600000	0	Srch	Any
+T-Freq				Off	856962500	0	Srch	Any
+T-Group			Pickens County	Off	34.890437	-82.710570	16.0	Circle	Off
+TGID			All Call	Off	47641	ALL	29	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Clemson City Police	Off	47865	ALL	2	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Clemson University Fire/EMS	Off	47666	ALL	4	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Clemson University Fire/EMS 2	Off	47667	ALL	9	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Clemson University Fire/EMS 3	Off	47668	ALL	9	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Clemson University Police Dispatch	Off	47670	ALL	2	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Clemson University Police Roam	Off	47671	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Easley Fire	Off	47881	ALL	3	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Easley Fire/Police Ops	Off	47882	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Easley Police	Off	47883	ALL	2	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Emergency Management	Off	47615	ALL	29	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			EMS	Off	47565	ALL	4	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Fire	Off	47541	ALL	4	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Liberty Police	Off	47897	ALL	2	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Sheriff	Off	47501	ALL	2	2	0	Off	Auto	Off	On	Off	Off	Any
+Trunk			FleetTalk Carolinas	Off		Nxdn	Off	Off	Auto	Ignore		Off	Off	0	Off	Off	Ignore	Off	Off	On	NEXEDGE
+DQKs_Status		Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	
+Site			Abbeville	Off	34.174720	-82.404840	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451200000	97	RAN=3	Any
+T-Freq				Off	451837500	148	RAN=3	Any
+T-Freq				Off	452400000	193	RAN=3	Any
+T-Freq				Off	452462500	198	RAN=3	Any
+T-Freq				Off	461812500	546	RAN=3	Any
+T-Freq				Off	463537500	684	RAN=3	Any
+T-Freq				Off	463937500	716	RAN=3	Any
+T-Freq				Off	464112500	730	RAN=3	Any
+T-Freq				Off	464412500	754	RAN=3	Any
+T-Freq				Off	463412500	754	RAN=3	Any
+T-Freq				Off	464887500	792	RAN=3	Any
+Site			Adrian	Off	33.943360	-79.013670	23.5	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	460925000	475	RAN=13	Any
+T-Freq				Off	462137500	572	RAN=13	Any
+T-Freq				Off	463762500	702	RAN=13	Any
+Site			Anderson	Off	34.596080	-82.679310	15.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	452075000	167	RAN=9	Any
+T-Freq				Off	452600000	209	RAN=9	Any
+T-Freq				Off	461000000	481	RAN=9	Any
+T-Freq				Off	461512500	522	RAN=9	Any
+T-Freq				Off	463737500	700	RAN=9	Any
+T-Freq				Off	464750000	781	RAN=9	Any
+Site			Anderson Mountain	Off	35.666800	-81.233140	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	463312500	666	RAN=6	Any
+T-Freq				Off	463800000	705	RAN=6	Any
+T-Freq				Off	464962500	798	RAN=6	Any
+Site			Blacksburg	Off	35.083470	-81.524250	15.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451700000	137	RAN=8	Any
+T-Freq				Off	452125000	171	RAN=8	Any
+T-Freq				Off	461425000	515	RAN=8	Any
+T-Freq				Off	462162500	574	RAN=8	Any
+T-Freq				Off	463250000	661	RAN=8	Any
+T-Freq				Off	463750000	701	RAN=8	Any
+T-Freq				Off	464687500	776	RAN=8	Any
+Site			Broadway	Off	35.383490	-78.849740	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	452675000	215	RAN=24	Any
+Site			Burgess	Off	33.590930	-79.048320	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	460825000	467	RAN=30	Any
+T-Freq				Off	461125000	491	RAN=30	Any
+T-Freq				Off	462737500	620	RAN=30	Any
+Site			Caesars Head	Off	35.107560	-82.620190	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451375000	111	RAN=10	Any
+T-Freq				Off	451825000	147	RAN=10	Any
+T-Freq				Off	452387500	192	RAN=10	Any
+T-Freq				Off	452912500	234	RAN=10	Any
+T-Freq				Off	461025000	483	RAN=10	Any
+T-Freq				Off	461600000	529	RAN=10	Any
+T-Freq				Off	462075000	567	RAN=10	Any
+Site			Cane Mountain	Off	36.042440	-79.398190	16.8	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	464612500	770	RAN=14	Any
+Site			Carrboro	Off	35.910140	-79.075290	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	461800000	545	RAN=19	Any
+T-Freq				Off	464362500	750	RAN=19	Any
+T-Freq				Off	464725000	779	RAN=19	Any
+Site			Cedar Rock	Off	35.615280	-79.890830	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	461475000	519	RAN=23	Any
+T-Freq				Off	462112500	570	RAN=23	Any
+T-Freq				Off	463812500	706	RAN=23	Any
+T-Freq				Off	464950000	797	RAN=23	Any
+Site			Charleston	Off	32.787870	-79.849770	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	461637500	532	RAN=5	Any
+Site			Chester	Off	34.708460	-81.244670	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451350000	109	RAN=21	Any
+T-Freq				Off	451787500	144	RAN=21	Any
+T-Freq				Off	452100000	169	RAN=21	Any
+T-Freq				Off	452425000	195	RAN=21	Any
+Site			Chestnut Knob	Off	36.666800	-79.883090	20.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	452012500	162	RAN=3	Any
+Site			China Grove	Off	35.650140	-80.516450	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	461650000	533	RAN=7	Any
+T-Freq				Off	461825000	547	RAN=7	Any
+T-Freq				Off	461950000	557	RAN=7	Any
+T-Freq				Off	463575000	687	RAN=7	Any
+T-Freq				Off	463675000	695	RAN=7	Any
+T-Freq				Off	463875000	711	RAN=7	Any
+Site			CHS Lincoln	Off	35.483470	-81.249800	5.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	461662500	534	RAN=18	Any
+T-Freq				Off	462125000	571	RAN=18	Any
+T-Freq				Off	463387500	672	RAN=18	Any
+Site			CHS NorthEast	Off	35.366810	-80.566460	5.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	463687500	696	RAN=15	Any
+Site			CHS Pineville	Off	35.266810	-80.849790	5.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	462275000	583	RAN=17	Any
+T-Freq				Off	463650000	693	RAN=17	Any
+T-Freq				Off	464337500	748	RAN=17	Any
+Site			CHS Stanly	Off	35.333480	-80.249780	5.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451325000	107	RAN=3	Any
+Site			CHS Union	Off	35.000150	-80.549790	5.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451837500	148	RAN=20	Any
+T-Freq				Off	461537500	524	RAN=20	Any
+T-Freq				Off	462112500	570	RAN=20	Any
+T-Freq				Off	463387500	672	RAN=20	Any
+T-Freq				Off	464962500	798	RAN=20	Any
+Site			CHS University	Off	35.266810	-80.849790	5.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	452350000	189	RAN=16	Any
+T-Freq				Off	463562500	686	RAN=16	Any
+T-Freq				Off	463975000	719	RAN=16	Any
+Site			CHS Waxhaw	Off	35.000150	-80.549790	5.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	463737500	700	RAN=19	Any
+T-Freq				Off	464000000	721	RAN=19	Any
+T-Freq				Off	464912500	794	RAN=19	Any
+Site			Clemson	Off	34.890440	-82.710570	16.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451450000	117	RAN=22	Any
+T-Freq				Off	451862500	150	RAN=22	Any
+T-Freq				Off	452262500	182	RAN=22	Any
+T-Freq				Off	452450000	197	RAN=22	Any
+T-Freq				Off	452775000	223	RAN=22	Any
+T-Freq				Off	453150000	253	RAN=22	Any
+T-Freq				Off	461200000	497	RAN=22	Any
+T-Freq				Off	461425000	515	RAN=22	Any
+T-Freq				Off	462250000	581	RAN=22	Any
+T-Freq				Off	462275000	593	RAN=22	Any
+Site			Clinton	Off	34.491750	-81.871690	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451162500	94	RAN=13	Any
+T-Freq				Off	461712500	538	RAN=13	Any
+T-Freq				Off	464475000	759	RAN=13	Any
+Site			Clover	Off	35.093780	-81.181000	15.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451375000	111	RAN=10	Any
+T-Freq				Off	451675000	135	RAN=10	Any
+Site			CMC Cleveland	Off	35.303060	-81.536110	5.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451137500	92	RAN=22	Any
+Site			CMC Kings Mtn	Off	35.245130	-81.341190	5.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451062500	86	RAN=21	Any
+Site			CMC Main	Off	35.203760	-80.838780	5.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	460350000	429	RAN=13	Any
+Site			CMC Mercy	Off	35.266810	-80.849790	5.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	461725000	539	RAN=14	Any
+T-Freq				Off	463650000	693	RAN=14	Any
+T-Freq				Off	464287500	744	RAN=14	Any
+T-Freq				Off	464925000	795	RAN=14	Any
+Site			Columbia	Off	34.000710	-81.034810	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451225000	99	RAN=1	Any
+T-Freq				Off	452000000	161	RAN=1	Any
+T-Freq				Off	452875000	231	RAN=1	Any
+T-Freq				Off	461300000	505	RAN=1	Any
+T-Freq				Off	462162500	574	RAN=1	Any
+T-Freq				Off	463337500	668	RAN=1	Any
+T-Freq				Off	463562500	686	RAN=1	Any
+T-Freq				Off	463612500	690	RAN=1	Any
+T-Freq				Off	463912500	714	RAN=1	Any
+T-Freq				Off	463950000	717	RAN=1	Any
+Site			Columbia Benedict	Off	34.023070	-80.919800	27.5	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	462087500	568	RAN=8	Any
+Site			Donalds	Off	34.349220	-82.349000	15.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451112500	90	RAN=24	Any
+T-Freq				Off	451125000	91	RAN=24	Any
+T-Freq				Off	451550000	125	RAN=24	Any
+T-Freq				Off	451625000	131	RAN=24	Any
+T-Freq				Off	452050000	165	RAN=24	Any
+T-Freq				Off	462537500	604	RAN=24	Any
+T-Freq				Off	462737500	620	RAN=24	Any
+T-Freq				Off	463587500	688	RAN=24	Any
+Site			Draytonville	Off	35.046420	-81.589440	15.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	461225000	499	RAN=18	Any
+T-Freq				Off	461675000	535	RAN=18	Any
+T-Freq				Off	463212500	658	RAN=18	Any
+T-Freq				Off	464025000	723	RAN=18	Any
+T-Freq				Off	464475000	759	RAN=18	Any
+T-Freq				Off	464862500	790	RAN=18	Any
+Site			Easley	Off	34.836720	-82.591080	15.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451275000	103	RAN=25	Any
+T-Freq				Off	451500000	121	RAN=25	Any
+T-Freq				Off	451900000	153	RAN=25	Any
+T-Freq				Off	460075000	407	RAN=25	Any
+T-Freq				Off	460125000	411	RAN=25	Any
+T-Freq				Off	461300000	505	RAN=25	Any
+T-Freq				Off	461400000	513	RAN=25	Any
+T-Freq				Off	461962500	558	RAN=25	Any
+Site			East Saulda	Off	33.993890	-81.737780	20.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451862500	150	RAN=25	Any
+T-Freq				Off	452125000	171	RAN=25	Any
+T-Freq				Off	452437500	196	RAN=25	Any
+T-Freq				Off	461437500	516	RAN=25	Any
+T-Freq				Off	461737500	540	RAN=25	Any
+T-Freq				Off	463212500	658	RAN=25	Any
+Site			Edgefield	Off	33.793920	-81.890190	20.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	461612500	530	RAN=4	Any
+T-Freq				Off	463262500	662	RAN=4	Any
+T-Freq				Off	463787500	704	RAN=4	Any
+T-Freq				Off	464337500	748	RAN=4	Any
+T-Freq				Off	464862500	790	RAN=4	Any
+Site			Fancy Gap	Off	36.665960	-80.692290	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	461437500	516	RAN=12	Any
+T-Freq				Off	461687500	536	RAN=12	Any
+T-Freq				Off	462425000	595	RAN=12	Any
+Site			Fishers Peak	Off	36.483460	-81.116470	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	452462500	198	RAN=1	Any
+Site			Florence	Off	34.203840	-79.863860	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451262500	102	RAN=4	Any
+T-Freq				Off	451500000	121	RAN=4	Any
+T-Freq				Off	451700000	137	RAN=4	Any
+T-Freq				Off	452375000	191	RAN=4	Any
+Site			Fort Mill	Off	34.986280	-80.923170	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	463225000	659	RAN=23	Any
+T-Freq				Off	463512500	682	RAN=23	Any
+T-Freq				Off	463775000	703	RAN=23	Any
+Site			Gaffney	Off	35.069390	-81.643000	15.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	453562500	286	RAN=7	Any
+T-Freq				Off	453925000	315	RAN=7	Any
+T-Freq				Off	463637500	692	RAN=7	Any
+T-Freq				Off	464150000	733	RAN=7	Any
+T-Freq				Off	464575000	767	RAN=7	Any
+T-Freq				Off	464925000	795	RAN=7	Any
+Site			Gaston Hospital	Off	35.275250	-81.139690	15.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	460125000	411	RAN=12	Any
+T-Freq				Off	461525000	523	RAN=12	Any
+T-Freq				Off	462200000	577	RAN=12	Any
+T-Freq				Off	463337500	668	RAN=12	Any
+Site			Gilbert	Off	33.901130	-81.409700	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451500000	121	RAN=27	Any
+T-Freq				Off	452550000	205	RAN=27	Any
+T-Freq				Off	461512500	522	RAN=27	Any
+T-Freq				Off	461912500	554	RAN=27	Any
+T-Freq				Off	462112500	570	RAN=27	Any
+T-Freq				Off	463550000	685	RAN=27	Any
+T-Freq				Off	464437500	756	RAN=27	Any
+T-Freq				Off	464712500	778	RAN=27	Any
+Site			Glassy Mountain	Off	34.900280	-82.660000	15.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	460025000	403	RAN=4	Any
+T-Freq				Off	461050000	485	RAN=4	Any
+T-Freq				Off	461100000	489	RAN=4	Any
+T-Freq				Off	461687500	536	RAN=4	Any
+T-Freq				Off	461800000	545	RAN=4	Any
+T-Freq				Off	462200000	577	RAN=4	Any
+T-Freq				Off	462425000	595	RAN=4	Any
+T-Freq				Off	463212500	658	RAN=4	Any
+T-Freq				Off	463325000	667	RAN=4	Any
+Site			GMAC Building	Off	36.133470	-80.233100	5.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	461512500	522	RAN=11	Any
+T-Freq				Off	462162500	574	RAN=11	Any
+T-Freq				Off	463412500	674	RAN=11	Any
+T-Freq				Off	464887500	792	RAN=11	Any
+Site			Green Mountain	Off	36.483460	-81.116470	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451362500	110	RAN=9	Any
+T-Freq				Off	451512500	122	RAN=9	Any
+T-Freq				Off	452037500	164	RAN=9	Any
+T-Freq				Off	452212500	178	RAN=9	Any
+T-Freq				Off	452662500	214	RAN=9	Any
+Site			Greensboro	Off	36.072640	-79.791980	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451162500	94	RAN=13	Any
+T-Freq				Off	451575000	127	RAN=13	Any
+T-Freq				Off	451825000	147	RAN=13	Any
+Site			Greenwood	Off	34.161030	-82.125050	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451725000	139	RAN=23	Any
+T-Freq				Off	461862500	550	RAN=23	Any
+T-Freq				Off	463337500	668	RAN=23	Any
+T-Freq				Off	463862500	710	RAN=23	Any
+T-Freq				Off	463887500	712	RAN=23	Any
+T-Freq				Off	464150000	733	RAN=23	Any
+T-Freq				Off	464837500	788	RAN=23	Any
+Site			Guilford	Off	36.158710	-79.672610	10.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	454625000	371	RAN=16	Any
+Site			Hamer/Dillon	Off	34.416550	-79.371160	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451562500	126	RAN=25	Any
+Site			Hampton	Off	32.877940	-81.127610	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451750000	141	RAN=2	Any
+T-Freq				Off	452437500	196	RAN=2	Any
+T-Freq				Off	463500000	681	RAN=2	Any
+Site			Hardeeville	Off	32.287140	-81.080670	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451162500	94	RAN=26	Any
+T-Freq				Off	463625000	691	RAN=26	Any
+T-Freq				Off	463850000	709	RAN=26	Any
+Site			High Point	Off	35.955690	-80.005320	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451125000	91	RAN=17	Any
+Site			Hillsborough	Off	36.066810	-79.116400	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	454337500	348	RAN=2	Any
+Site			Honaker	Off	37.052440	-82.035560	15.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451025000	83	RAN=27	Any
+T-Freq				Off	452337500	188	RAN=27	Any
+T-Freq				Off	461425000	515	RAN=27	Any
+T-Freq				Off	463625000	691	RAN=27	Any
+T-Freq				Off	464112500	730	RAN=27	Any
+Site			I77 Carowinds	Off	34.986280	-80.923170	15.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	461487500	520	RAN=24	Any
+T-Freq				Off	461812500	546	RAN=24	Any
+T-Freq				Off	462137500	572	RAN=24	Any
+T-Freq				Off	463437500	676	RAN=24	Any
+Site			Kings Mountain	Off	35.245130	-81.341190	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451575000	127	RAN=29	Any
+T-Freq				Off	452200000	177	RAN=29	Any
+T-Freq				Off	452850000	229	RAN=29	Any
+T-Freq				Off	460087500	408	RAN=29	Any
+T-Freq				Off	461075000	487	RAN=29	Any
+T-Freq				Off	461375000	511	RAN=29	Any
+T-Freq				Off	462100000	569	RAN=29	Any
+T-Freq				Off	463375000	671	RAN=29	Any
+T-Freq				Off	464125000	731	RAN=29	Any
+T-Freq				Off	464350000	749	RAN=29	Any
+Site			Kingstree	Off	33.707850	-79.811110	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	452212500	178	RAN=9	Any
+T-Freq				Off	461637500	532	RAN=9	Any
+T-Freq				Off	463650000	693	RAN=9	Any
+Site			Liberty Hill	Off	35.409540	-79.953990	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451150000	93	RAN=28	Any
+Site			Lilesville	Off	34.983490	-80.099780	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	453012500	242	RAN=12	Any
+Site			Little Mountain	Off	34.196250	-81.413440	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451325000	107	RAN=2	Any
+T-Freq				Off	451987500	160	RAN=2	Any
+T-Freq				Off	452025000	169	RAN=2	Any
+T-Freq				Off	452337500	188	RAN=2	Any
+T-Freq				Off	464225000	739	RAN=2	Any
+T-Freq				Off	464587500	768	RAN=2	Any
+T-Freq				Off	464737500	780	RAN=2	Any
+Site			Long Mountain	Off	34.882540	-83.097750	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	461875000	551	RAN=12	Any
+T-Freq				Off	463656200	694	RAN=12	Any
+T-Freq				Off	463962500	718	RAN=12	Any
+Site			Monroe	Off	35.000150	-80.549790	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451275000	103	RAN=8	Any
+T-Freq				Off	451837500	148	RAN=8	Any
+T-Freq				Off	452825000	227	RAN=8	Any
+Site			Montmorenci	Off	33.508900	-81.624620	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451900000	153	RAN=5	Any
+T-Freq				Off	452225000	179	RAN=5	Any
+T-Freq				Off	461500000	521	RAN=5	Any
+T-Freq				Off	461700000	537	RAN=5	Any
+T-Freq				Off	463887500	712	RAN=5	Any
+Site			Mount Pleasant	Off	32.787870	-79.849770	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	454000000	321	RAN=29	Any
+T-Freq				Off	461525000	523	RAN=29	Any
+T-Freq				Off	464150000	733	RAN=29	Any
+T-Freq				Off	464850000	789	RAN=29	Any
+Site			Myrtle Beach	Off	33.689060	-78.886690	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451012500	82	RAN=7	Any
+T-Freq				Off	462475000	599	RAN=7	Any
+T-Freq				Off	463250000	661	RAN=7	Any
+Site			N Columbia	Off	34.139680	-81.055850	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451712500	138	RAN=26	Any
+T-Freq				Off	453362500	190	RAN=26	Any
+T-Freq				Off	461375000	511	RAN=26	Any
+T-Freq				Off	461712500	538	RAN=26	Any
+T-Freq				Off	463287500	664	RAN=26	Any
+T-Freq				Off	463587500	688	RAN=26	Any
+T-Freq				Off	463987500	720	RAN=26	Any
+Site			Newport	Off	34.983470	-81.183130	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	461962500	558	RAN=25	Any
+T-Freq				Off	464212500	738	RAN=25	Any
+T-Freq				Off	464412500	754	RAN=25	Any
+T-Freq				Off	464725000	779	RAN=25	Any
+Site			North Augusta	Off	33.505830	-81.961940	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451037500	84	RAN=7	Any
+T-Freq				Off	452725000	219	RAN=7	Any
+T-Freq				Off	461150000	493	RAN=7	Any
+T-Freq				Off	461950000	557	RAN=7	Any
+T-Freq				Off	462000000	561	RAN=7	Any
+T-Freq				Off	463225000	659	RAN=7	Any
+T-Freq				Off	464062500	726	RAN=7	Any
+T-Freq				Off	464362500	750	RAN=7	Any
+Site			Orangeburg	Off	33.526920	-80.828550	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451087500	88	RAN=28	Any
+T-Freq				Off	451850000	149	RAN=28	Any
+T-Freq				Off	452075000	167	RAN=28	Any
+T-Freq				Off	452462500	198	RAN=28	Any
+T-Freq				Off	464887500	792	RAN=28	Any
+Site			Orr Rd	Off	35.266810	-80.849790	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451500000	121	RAN=1	Any
+T-Freq				Off	451600000	129	RAN=1	Any
+T-Freq				Off	451775000	143	RAN=1	Any
+T-Freq				Off	452500000	201	RAN=1	Any
+T-Freq				Off	463200000	657	RAN=1	Any
+Site			Pageland	Off	34.755930	-80.420200	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451037500	84	RAN=11	Any
+Site			Paris Mtn	Off	34.941670	-82.411390	15.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	461175000	495	RAN=15	Any
+T-Freq				Off	461350000	509	RAN=15	Any
+T-Freq				Off	461700000	537	RAN=15	Any
+T-Freq				Off	462125000	571	RAN=15	Any
+T-Freq				Off	462225000	579	RAN=15	Any
+T-Freq				Off	463237500	660	RAN=15	Any
+T-Freq				Off	463375000	671	RAN=15	Any
+T-Freq				Off	463837500	708	RAN=15	Any
+T-Freq				Off	464262500	742	RAN=15	Any
+T-Freq				Off	464787500	784	RAN=15	Any
+Site			Phoenix Mtn	Off	36.460680	-81.519000	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	464812500	786	RAN=7	Any
+Site			Pocahontas	Off	37.323440	-81.365390	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	464337500	748	RAN=20	Any
+Site			Point Lookout Mtn	Off	36.650120	-81.216480	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	461525000	523	RAN=15	Any
+Site			Pores Knob	Off	36.216800	-80.999800	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	461412500	514	RAN=4	Any
+T-Freq				Off	462087500	568	RAN=4	Any
+T-Freq				Off	463487500	680	RAN=4	Any
+Site			Raleigh area	Off	35.828470	-78.619170	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451112500	90	RAN=29	Any
+Site			Randleman	Off	35.700140	-79.816420	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	452337500	188	RAN=10	Any
+T-Freq				Off	461750000	541	RAN=10	Any
+T-Freq				Off	461887500	552	RAN=10	Any
+T-Freq				Off	461137500	572	RAN=10	Any
+T-Freq				Off	463887500	712	RAN=10	Any
+Site			Richburg	Off	34.696170	-81.023030	15.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	461787500	544	RAN=9	Any
+T-Freq				Off	462050000	565	RAN=9	Any
+T-Freq				Off	463900000	713	RAN=9	Any
+T-Freq				Off	464150000	733	RAN=9	Any
+T-Freq				Off	464850000	789	RAN=9	Any
+Site			Ridge Spring	Off	33.846110	-81.661690	15.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451150000	93	RAN=12	Any
+T-Freq				Off	451750000	141	RAN=12	Any
+T-Freq				Off	452100000	169	RAN=12	Any
+T-Freq				Off	452475000	199	RAN=12	Any
+T-Freq				Off	452550000	205	RAN=12	Any
+T-Freq				Off	452975000	239	RAN=12	Any
+Site			Ridgeway	Off	34.362510	-80.911260	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451300000	105	RAN=24	Any
+T-Freq				Off	452012500	162	RAN=24	Any
+T-Freq				Off	452450000	197	RAN=24	Any
+T-Freq				Off	461450000	517	RAN=24	Any
+T-Freq				Off	461900000	553	RAN=24	Any
+T-Freq				Off	463400000	673	RAN=24	Any
+Site			Robbins	Off	35.409260	-79.571230	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451025000	83	RAN=21	Any
+Site			Rock Hill	Off	34.983470	-81.183130	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	452675000	215	RAN=4	Any
+T-Freq				Off	461125000	491	RAN=4	Any
+T-Freq				Off	461200000	497	RAN=4	Any
+T-Freq				Off	461762500	542	RAN=4	Any
+T-Freq				Off	463350000	669	RAN=4	Any
+T-Freq				Off	463887500	712	RAN=4	Any
+Site			Salisbury	Off	35.650140	-80.516450	20.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	464462500	758	RAN=9	Any
+Site			Sauratown Mtn	Off	36.400140	-80.249770	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451850000	149	RAN=8	Any
+T-Freq				Off	451950000	157	RAN=8	Any
+T-Freq				Off	461387500	512	RAN=8	Any
+T-Freq				Off	462062500	566	RAN=8	Any
+T-Freq				Off	464787500	784	RAN=8	Any
+Site			Savannah	Off	32.048060	-81.123610	15.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451012500	82	RAN=27	Any
+T-Freq				Off	460975000	479	RAN=27	Any
+T-Freq				Off	462737500	620	RAN=27	Any
+Site			Sharon	Off	34.886030	-81.380360	15.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	461025000	483	RAN=30	Any
+T-Freq				Off	462537500	604	RAN=30	Any
+T-Freq				Off	463625000	691	RAN=30	Any
+Site			Shelton	Off	34.495530	-81.402200	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451175000	95	RAN=22	Any
+T-Freq				Off	451425000	115	RAN=22	Any
+T-Freq				Off	451675000	135	RAN=22	Any
+T-Freq				Off	452350000	189	RAN=22	Any
+Site			Simpsonville	Off	34.736190	-82.262220	15.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451925000	155	RAN=11	Any
+T-Freq				Off	452700000	207	RAN=11	Any
+T-Freq				Off	461200000	491	RAN=11	Any
+T-Freq				Off	451975000	540	RAN=11	Any
+T-Freq				Off	462475000	587	RAN=11	Any
+T-Freq				Off	461750000	666	RAN=11	Any
+Site			Site 11	Off	35.547870	-83.004460	19.2	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451012500	82	RAN=0	Any
+Site			Six Mile	Off	34.807330	-82.820700	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	452437500	196	RAN=6	Any
+T-Freq				Off	452650000	213	RAN=6	Any
+T-Freq				Off	453000000	241	RAN=6	Any
+T-Freq				Off	461225000	499	RAN=6	Any
+T-Freq				Off	462050000	565	RAN=6	Any
+T-Freq				Off	463350000	669	RAN=6	Any
+T-Freq				Off	464087500	728	RAN=6	Any
+T-Freq				Off	464287500	744	RAN=6	Any
+T-Freq				Off	464662500	774	RAN=6	Any
+T-Freq				Off	464962500	798	RAN=6	Any
+Site			South Charlotte	Off	35.266810	-80.849790	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451525000	123	RAN=5	Any
+T-Freq				Off	461675000	535	RAN=5	Any
+T-Freq				Off	462037500	564	RAN=5	Any
+T-Freq				Off	462737500	620	RAN=5	Any
+T-Freq				Off	463300000	665	RAN=5	Any
+T-Freq				Off	463862500	710	RAN=5	Any
+T-Freq				Off	464325000	747	RAN=5	Any
+Site			Spartanburg	Off	34.845000	-82.009720	15.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	460950000	477	RAN=20	Any
+T-Freq				Off	461225000	525	RAN=20	Any
+T-Freq				Off	462050000	565	RAN=20	Any
+T-Freq				Off	462500000	601	RAN=20	Any
+T-Freq				Off	463225000	659	RAN=20	Any
+T-Freq				Off	464612500	770	RAN=20	Any
+Site			Springville	Off	37.180220	-81.378000	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	452475000	199	RAN=25	Any
+Site			St George	Off	33.192730	-80.564090	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451212500	98	RAN=6	Any
+T-Freq				Off	452575000	207	RAN=6	Any
+T-Freq				Off	461025000	483	RAN=6	Any
+T-Freq				Off	463775000	703	RAN=6	Any
+T-Freq				Off	464475000	759	RAN=6	Any
+Site			St Matthews	Off	33.603740	-80.796620	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	464200000	737	RAN=8	Any
+Site			Starr	Off	34.388680	-82.717940	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	452150000	173	RAN=14	Any
+T-Freq				Off	452750000	221	RAN=14	Any
+T-Freq				Off	462062500	566	RAN=14	Any
+Site			Sugar Mtn	Off	36.095000	-81.922000	13.3	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	464425000	595	RAN=18	Any
+Site			Summerville	Off	32.948890	-80.208890	15.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451250000	101	RAN=24	Any
+Site			Sumter	Off	33.902390	-80.286470	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	462062500	566	RAN=3	Any
+T-Freq				Off	463262500	662	RAN=3	Any
+Site			Supply	Off	34.043200	-78.330710	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451150000	93	RAN=15	Any
+T-Freq				Off	451600000	129	RAN=15	Any
+T-Freq				Off	452475000	199	RAN=15	Any
+Site			Tazewell	Off	37.049280	-81.617030	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451600000	129	RAN=26	Any
+Site			Thicketty Mtn	Off	35.113410	-81.768830	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451400000	113	RAN=17	Any
+T-Freq				Off	452225000	179	RAN=17	Any
+T-Freq				Off	452662500	190	RAN=17	Any
+T-Freq				Off	461250000	501	RAN=17	Any
+T-Freq				Off	462400000	593	RAN=17	Any
+T-Freq				Off	463287500	664	RAN=17	Any
+T-Freq				Off	463772500	699	RAN=17	Any
+T-Freq				Off	463912500	714	RAN=17	Any
+T-Freq				Off	464637500	772	RAN=17	Any
+T-Freq				Off	464937500	796	RAN=17	Any
+Site			Townville	Off	34.527720	-82.920860	15.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	460900000	473	RAN=5	Any
+T-Freq				Off	461550000	525	RAN=5	Any
+T-Freq				Off	462000000	561	RAN=5	Any
+T-Freq				Off	462512500	602	RAN=5	Any
+T-Freq				Off	463200000	657	RAN=5	Any
+T-Freq				Off	463700000	697	RAN=5	Any
+Site			Truist Center	Off	35.266810	-80.849790	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	461987500	560	RAN=2	Any
+T-Freq				Off	463937500	716	RAN=2	Any
+T-Freq				Off	464275000	743	RAN=2	Any
+Site			Union	Off	34.790600	-81.644530	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	452462500	198	RAN=16	Any
+T-Freq				Off	463587500	688	RAN=16	Any
+T-Freq				Off	463987500	720	RAN=16	Any
+Site			Wallace	Off	34.748550	-79.841710	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451200000	97	RAN=20	Any
+T-Freq				Off	451475000	119	RAN=20	Any
+T-Freq				Off	451887500	152	RAN=20	Any
+Site			Walterboro	Off	32.905170	-80.666770	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	461625000	531	RAN=1	Any
+T-Freq				Off	462050000	565	RAN=1	Any
+T-Freq				Off	462475000	599	RAN=1	Any
+T-Freq				Off	463325000	667	RAN=1	Any
+Site			Wedgefield	Off	33.854170	-80.529440	15.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	461887500	552	RAN=17	Any
+T-Freq				Off	462075000	567	RAN=17	Any
+T-Freq				Off	463937500	716	RAN=17	Any
+T-Freq				Off	464412500	754	RAN=17	Any
+Site			West End	Off	35.239870	-79.567530	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	464250000	741	RAN=30	Any
+Site			West Saluda	Off	33.956240	-81.902330	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451062500	86	RAN=18	Any
+T-Freq				Off	451400000	113	RAN=18	Any
+T-Freq				Off	451825000	147	RAN=18	Any
+T-Freq				Off	452225000	179	RAN=18	Any
+T-Freq				Off	452262500	182	RAN=18	Any
+T-Freq				Off	452600000	209	RAN=18	Any
+T-Freq				Off	453000000	241	RAN=18	Any
+Site			Winnsboro	Off	34.401430	-81.103440	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451062500	86	RAN=19	Any
+T-Freq				Off	451400000	113	RAN=19	Any
+T-Freq				Off	451750000	141	RAN=19	Any
+T-Freq				Off	451975000	159	RAN=19	Any
+T-Freq				Off	461875000	551	RAN=19	Any
+T-Freq				Off	464425000	755	RAN=19	Any
+Site			Winston-Salem	Off	36.133470	-80.233100	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	464775000	783	RAN=22	Any
+Site			York	Off	34.986110	-81.248060	15.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451012500	82	RAN=28	Any
+T-Freq				Off	451475000	119	RAN=28	Any
+T-Freq				Off	452250000	181	RAN=28	Any
+T-Freq				Off	452975000	239	RAN=28	Any
+T-Group			Pickens County SC	Off	34.895747	-82.715962	10.0	Circle	Off
+TGID			Clemson PD 1	Off	11668	ALL	2	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Clemson PD 2	Off	11669	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Clemson University Bus Service	Off	529	ALL	26	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Communications	Off	11672	ALL	29	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Easley Fire	Off	11690	ALL	3	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Easley Police Dispatch	Off	11691	ALL	2	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			EMS	Off	11697	ALL	9	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			EMS Dispatch	Off	11696	ALL	4	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Event 1	Off	11721	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Event 10	Off	11730	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Event 11	Off	11731	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Event 12	Off	11732	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Event 13	Off	11733	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Event 14	Off	11734	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Event 15	Off	11735	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Event 16	Off	11736	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Event 2	Off	11722	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Event 3	Off	11723	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Event 4	Off	11724	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Event 5	Off	11725	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Event 6	Off	11726	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Event 7	Off	11727	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Event 8	Off	11728	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Event 9	Off	11729	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Fire Dispatch	Off	11671	ALL	3	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Municipal Police Dispatch	Off	11704	ALL	2	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Municipal Police Tac	Off	11705	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Ops 1	Off	11738	ALL	11	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Ops 2	Off	11739	ALL	11	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Ops 3	Off	11740	ALL	11	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Ops 4	Off	11741	ALL	11	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Ops 5	Off	11674	ALL	11	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Ops 6	Off	11675	ALL	8	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Ops 7	Off	11676	ALL	8	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Ops 8	Off	11677	ALL	8	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Roads and Bridges	Off	11710	ALL	14	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Sheriff Dispatch	Off	11713	ALL	2	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Sheriff Special Ops	Off	11714	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Six Mile Water District	Off	11717	ALL	14	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Statewide Roam	Off	11712	ALL	11	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Training	Off	11720	ALL	29	2	0	Off	Auto	Off	On	Off	Off	Any

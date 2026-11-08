@@ -1,0 +1,19 @@
+TargetModel	BCDx36HP
+FormatVersion	1.00
+Trunk			Oconee County Emergency Services	Off		DmrOneFrequency	Off	Off	Auto	Ignore		Off	Off	0	Off	Off	Ignore	Off	Off	On	IDAS
+DQKs_Status		Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	
+Site			Fair Play	Off	34.737380	-83.063160	20.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	154852500	0	8
+Site			Long Mountain	Off	34.737380	-83.063160	20.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	154980000	0	4
+Site			Mountain Rest	Off	34.737380	-83.063160	20.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	154167500	0	9
+Site			Oakway	Off	34.737380	-83.063160	20.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	155542500	0	1
+Site			Seneca	Off	34.737380	-83.063160	20.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	156225000	0	7
+Site			Westminster	Off	34.737380	-83.063160	20.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	154025000	0	6
+T-Group			Oconee Co FD	Off	34.737380	-83.063160	20.0	Circle	Off
+TGID			Operations	Off	121	ALL	8	2	0	Off	Auto	Off	On	Off	Off	1
+TGID			Operations 2	Off	122	ALL	8	2	0	Off	Auto	Off	On	Off	Off	2

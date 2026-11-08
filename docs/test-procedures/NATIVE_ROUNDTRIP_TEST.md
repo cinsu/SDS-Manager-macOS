@@ -1,0 +1,1 @@
+v0.0.6w Test 1: Launch test-launch.sh, connect SDS100 in Mass Storage mode, File > Preview Scanner Export (Read-only), select unchanged configuration and scanner. Paste NATIVE FAVORITES RECORD ROUND-TRIP — READ ONLY section. No scanner writes.

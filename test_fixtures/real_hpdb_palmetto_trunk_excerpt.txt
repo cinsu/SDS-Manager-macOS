@@ -1,0 +1,79 @@
+Trunk	TrunkId=5042	StateId=45	Palmetto 800	Off		P25Standard															NEXEDGE
+Site	SiteId=30731	TrunkId=5042	Caesars Head	Off	35.112000	-82.606000	30.0	AUTO	Standard	Wide	Circle						1DB	Global	FDMA
+T-Freq	TFreqId=0	SiteId=30731			851312500	1	Srch	Any
+T-Freq	TFreqId=0	SiteId=30731			851475000	2	Srch	Any
+T-Freq	TFreqId=0	SiteId=30731			851912500	3	Srch	Any
+T-Freq	TFreqId=0	SiteId=30731			852250000	4	Srch	Any
+T-Freq	TFreqId=0	SiteId=30731			852812500	5	Srch	Any
+T-Freq	TFreqId=0	SiteId=30731			853125000	6	Srch	Any
+T-Freq	TFreqId=0	SiteId=30731			853462500	7	Srch	Any
+T-Freq	TFreqId=0	SiteId=30731			853800000	8	Srch	Any
+T-Freq	TFreqId=0	SiteId=30731			854187500	9	Srch	Any
+T-Freq	TFreqId=0	SiteId=30731			854462500	10	Srch	Any
+Site	SiteId=30732	TrunkId=5042	Greenville County Simulcast	Off	34.885930	-82.348020	30.0	AUTO	Standard	Wide	Circle						1DB	Global	FDMA
+T-Freq	TFreqId=0	SiteId=30732			851187500	1	Srch	Any
+T-Freq	TFreqId=0	SiteId=30732			851875000	2	Srch	Any
+T-Freq	TFreqId=0	SiteId=30732			852187500	3	Srch	Any
+T-Freq	TFreqId=0	SiteId=30732			852450000	4	Srch	Any
+T-Freq	TFreqId=0	SiteId=30732			852550000	5	Srch	Any
+T-Freq	TFreqId=0	SiteId=30732			852737500	6	Srch	Any
+T-Freq	TFreqId=0	SiteId=30732			853212500	7	Srch	Any
+T-Freq	TFreqId=0	SiteId=30732			853262500	8	Srch	Any
+T-Freq	TFreqId=0	SiteId=30732			853537500	9	Srch	Any
+T-Freq	TFreqId=0	SiteId=30732			853750000	10	Srch	Any
+T-Freq	TFreqId=0	SiteId=30732			853862500	11	Srch	Any
+T-Freq	TFreqId=0	SiteId=30732			854987500	12	Srch	Any
+T-Freq	TFreqId=0	SiteId=30732			856237500	13	Srch	Any
+T-Freq	TFreqId=0	SiteId=30732			859262500	14	Srch	Any
+T-Freq	TFreqId=0	SiteId=30732			859962500	15	Srch	Any
+Site	SiteId=30727	TrunkId=5042	Hogback Mountain	Off	35.169830	-82.290940	20.0	AUTO	Standard	Wide	Circle						1DB	Global	FDMA
+T-Freq	TFreqId=0	SiteId=30727			851375000	1	Srch	Any
+T-Freq	TFreqId=0	SiteId=30727			851962500	2	Srch	Any
+T-Freq	TFreqId=0	SiteId=30727			852350000	3	Srch	Any
+T-Freq	TFreqId=0	SiteId=30727			852837500	4	Srch	Any
+T-Freq	TFreqId=0	SiteId=30727			853312500	5	Srch	Any
+T-Freq	TFreqId=0	SiteId=30727			853625000	6	Srch	Any
+T-Freq	TFreqId=0	SiteId=30727			855137500	7	Srch	Any
+T-Freq	TFreqId=0	SiteId=30727			859237500	8	Srch	Any
+T-Freq	TFreqId=0	SiteId=30727			859987500	9	Srch	Any
+T-Freq	TFreqId=0	SiteId=30727			860237500	10	Srch	Any
+T-Freq	TFreqId=0	SiteId=30727			860837500	11	Srch	Any
+T-Group	TGroupId=26025	TrunkId=5042	SCHP Statewide	Off	33.879537	-81.068115	140.0	Circle	
+TGID	Tid=457487	TGroupId=26025	Ch 113 BPS Dispatch	Off	27121	ALL	23									Any
+TGID	Tid=457488	TGroupId=26025	Ch 114 BPS 1	Off	27122	ALL	23									Any
+TGID	Tid=457489	TGroupId=26025	Ch 115 BPS 2	Off	27123	ALL	23									Any
+TGID	Tid=457490	TGroupId=26025	Ch 116 BPS 3 Statewide	Off	27124	ALL	23									Any
+TGID	Tid=456639	TGroupId=26025	Ch. 132 Statewide	Off	27136	ALL	23									Any
+TGID	Tid=365728	TGroupId=26025	Ch. 146 Coordination	Off	27142	ALL	23									Any
+TGID	Tid=348055	TGroupId=26025	Ch. 147 Command	Off	27141	ALL	7									Any
+TGID	Tid=354744	TGroupId=26025	Insurance Enforcement Unit 1	Off	27138	ALL	7									Any
+TGID	Tid=354745	TGroupId=26025	Insurance Enforcement Unit 2	Off	27139	ALL	7									Any
+TGID	Tid=365727	TGroupId=26025	Insurance Enforcement Unit 3	Off	27134	ALL	7									Any
+TGID	Tid=462340	TGroupId=26025	Meeting	Off	65005	ALL	7									Any
+TGID	Tid=366629	TGroupId=26025	SCHP 27131	Off	27131	ALL	23									Any
+TGID	Tid=381961	TGroupId=26025	SCHP 27137	Off	27137	ALL	7									Any
+TGID	Tid=381962	TGroupId=26025	SCHP 27140	Off	27140	ALL	7									Any
+TGID	Tid=366630	TGroupId=26025	SCHP 27143	Off	27143	ALL	7									Any
+TGID	Tid=391807	TGroupId=26025	SCHP 27153	Off	27153	ALL	7									Any
+TGID	Tid=391808	TGroupId=26025	SCHP 27191	Off	27191	ALL	7									Any
+TGID	Tid=391809	TGroupId=26025	SCHP 27192	Off	27192	ALL	7									Any
+TGID	Tid=391810	TGroupId=26025	SCHP 27198	Off	27198	ALL	23									Any
+TGID	Tid=391812	TGroupId=26025	SCHP 50244	Off	50244	ALL	7									Any
+TGID	Tid=391813	TGroupId=26025	SCHP 50274	Off	50274	ALL	7									Any
+TGID	Tid=391814	TGroupId=26025	SCHP 50297	Off	50297	ALL	7									Any
+TGID	Tid=450677	TGroupId=26025	SCHP 50351	Off	50351	ALL	23									Any
+TGID	Tid=450678	TGroupId=26025	SCHP 52461	Off	52461	ALL	23									Any
+TGID	Tid=457895	TGroupId=26025	SCHP 9629	Off	9629	ALL	7									Any
+TGID	Tid=391811	TGroupId=26025	SCHP 9655	Off	9655	ALL	23									Any
+TGID	Tid=397234	TGroupId=26025	SCTP Headquarters	Off	27199	ALL	23									Any
+T-Group	TGroupId=25873	TrunkId=5042	SCHP Troop 3	Off	34.777716	-82.512817	45.0	Circle	
+TGID	Tid=316554	TGroupId=25873	Ch 33 Anderson	Off	50211	ALL	2									Any
+TGID	Tid=316555	TGroupId=25873	Ch 34 Tac 5	Off	50212	ALL	7									Any
+TGID	Tid=316664	TGroupId=25873	Ch 35 Pickens/Oconee	Off	50233	ALL	2									Any
+TGID	Tid=316556	TGroupId=25873	Ch 36 Greenville	Off	50213	ALL	2									Any
+TGID	Tid=316557	TGroupId=25873	Ch 37 Tac 6	Off	50214	ALL	7									Any
+TGID	Tid=316558	TGroupId=25873	Ch 38 Spartanburg	Off	50215	ALL	2									Any
+TGID	Tid=316559	TGroupId=25873	Ch 39 Transport Police Troop 3	Off	50216	ALL	7									Any
+TGID	Tid=316560	TGroupId=25873	Ch 40 DPS 3	Off	50217	ALL	14									Any
+TGID	Tid=316561	TGroupId=25873	Ch 41 Special Ops Troop 3	Off	50218	ALL	7									Any
+TGID	Tid=316562	TGroupId=25873	SC DOT SHEP District 3	Off	51104	ALL	14									Any

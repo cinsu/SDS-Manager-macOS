@@ -1,0 +1,69 @@
+TargetModel	BCDx36HP
+FormatVersion	1.00
+Trunk			FleetTalk Carolinas	Off		Nxdn	Off	Off	Auto	Ignore		Off	Off	0	Off	Off	Ignore	Off	Off	On	NEXEDGE
+DQKs_Status		Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	
+Site			Abbeville	Off	34.174720	-82.404840	25.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	451200000	97	RAN=3	Any
+T-Freq				Off	451837500	148	RAN=3	Any
+T-Freq				Off	452400000	193	RAN=3	Any
+T-Freq				Off	452462500	198	RAN=3	Any
+T-Freq				Off	461812500	546	RAN=3	Any
+T-Freq				Off	463537500	684	RAN=3	Any
+T-Freq				Off	463937500	716	RAN=3	Any
+T-Freq				Off	464112500	730	RAN=3	Any
+T-Freq				Off	464412500	754	RAN=3	Any
+T-Freq				Off	463412500	754	RAN=3	Any
+T-Freq				Off	464887500	792	RAN=3	Any
+Site			Adrian	Off	33.943360	-79.013670	23.5	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	460925000	475	RAN=13	Any
+T-Freq				Off	462137500	572	RAN=13	Any
+T-Freq				Off	463762500	702	RAN=13	Any
+Site			Anderson	Off	34.596080	-82.679310	15.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	452075000	167	RAN=9	Any
+T-Freq				Off	452600000	209	RAN=9	Any
+T-Freq				Off	461000000	481	RAN=9	Any
+T-Freq				Off	461512500	522	RAN=9	Any
+T-Freq				Off	463737500	700	RAN=9	Any
+T-Freq				Off	464750000	781	RAN=9	Any
+T-Group			Pickens County SC	Off	34.895747	-82.715962	10.0	Circle	Off
+TGID			Clemson PD 1	Off	11668	ALL	2	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Clemson PD 2	Off	11669	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Clemson University Bus Service	Off	529	ALL	26	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Communications	Off	11672	ALL	29	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Easley Fire	Off	11690	ALL	3	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Easley Police Dispatch	Off	11691	ALL	2	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			EMS	Off	11697	ALL	9	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			EMS Dispatch	Off	11696	ALL	4	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Event 1	Off	11721	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Event 10	Off	11730	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Event 11	Off	11731	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Event 12	Off	11732	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Event 13	Off	11733	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Event 14	Off	11734	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Event 15	Off	11735	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Event 16	Off	11736	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Event 2	Off	11722	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Event 3	Off	11723	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Event 4	Off	11724	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Event 5	Off	11725	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Event 6	Off	11726	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Event 7	Off	11727	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Event 8	Off	11728	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Event 9	Off	11729	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Fire Dispatch	Off	11671	ALL	3	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Municipal Police Dispatch	Off	11704	ALL	2	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Municipal Police Tac	Off	11705	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Ops 1	Off	11738	ALL	11	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Ops 2	Off	11739	ALL	11	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Ops 3	Off	11740	ALL	11	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Ops 4	Off	11741	ALL	11	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Ops 5	Off	11674	ALL	11	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Ops 6	Off	11675	ALL	8	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Ops 7	Off	11676	ALL	8	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Ops 8	Off	11677	ALL	8	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Roads and Bridges	Off	11710	ALL	14	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Sheriff Dispatch	Off	11713	ALL	2	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Sheriff Special Ops	Off	11714	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Six Mile Water District	Off	11717	ALL	14	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Statewide Roam	Off	11712	ALL	11	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Training	Off	11720	ALL	29	2	0	Off	Auto	Off	On	Off	Off	Any

@@ -1,0 +1,40 @@
+TargetModel	BCDx36HP
+FormatVersion	1.00
+Trunk			Palmetto 800	Off		P25Standard	Off	Off	Auto	Ignore		Off	Off	0	Off	Off	Ignore	Off	Off	On	IDAS
+DQKs_Status		Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	
+Site			Laurens	Off	34.530670	-82.052330	20.0	AUTO			Rectangles	Off	400	Auto	8	Off	1DA	Global
+BandPlan_P25		851006250	6250	762006250	6250	851012500	12500	762006250	12500	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	3	3	0	0	0	0	0	0	0	0	0	0	0	0
+Rectangle		34.498055	-82.020000	34.472458	-82.165388
+T-Freq				Off	851787500	0	Srch	Any
+T-Freq				Off	855337500	0	Srch	Any
+T-Freq				Off	856462500	0	Srch	Any
+T-Freq				Off	857812500	0	Srch	Any
+T-Freq				Off	858462500	0	Srch	Any
+T-Freq				Off	858812500	0	Srch	Any
+T-Freq				Off	859862500	0	Srch	Any
+T-Freq				Off	860812500	0	Srch	Any
+T-Group			Laurens County	Off	34.500400	-82.000370	22.0	Circle	Off
+TGID			Clinton FD Dispatch	Off	45857	ALL	3	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Clinton PD Dispatch	Off	45851	ALL	2	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			EMS Dispatch	Off	45565	ALL	4	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			EMS Ops	Off	45566	ALL	9	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Fire	Off	45542	ALL	8	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Fire	Off	45546	ALL	8	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Fire	Off	45547	ALL	8	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Fire	Off	45549	ALL	8	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Fire 1	Off	45553	ALL	24	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Fire 2	Off	43554	ALL	24	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Fire 3	Off	45555	ALL	24	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Fire 4	Off	45556	ALL	24	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Fire Dispatch	Off	45541	ALL	3	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Laurens City FD Dispatch	Off	45889	ALL	3	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Laurens Electric Cooperative	Off	45682	ALL	34	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Laurens PD Dispatch	Off	45881	ALL	2	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Roads and Bridges	Off	45593	ALL	14	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Sheriff Ch. 1 Dispatch	Off	45501	ALL	2	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Sheriff Ch. 2	Off	45502	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Sheriff Ch. 3	Off	45503	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Sheriff Ch. 4	Off	45504	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Sheriff Ch. 5	Off	45505	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Sheriff Ch. 6	Off	45506	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Solid Waste/Landfill	Off	45592	ALL	14	2	0	Off	Auto	Off	On	Off	Off	Any

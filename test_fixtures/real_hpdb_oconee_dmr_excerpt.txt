@@ -1,0 +1,16 @@
+Trunk	TrunkId=11152	StateId=45	Oconee County Emergency Services	Off		DmrOneFrequency															NEXEDGE
+Site	SiteId=36825	TrunkId=11152	Fair Play	Off	34.737380	-83.063160	20.0	AUTO	Standard	Wide	Circle						Srch	Global	FDMA
+T-Freq	TFreqId=0	SiteId=36825			154852500	0	8	Any
+Site	SiteId=36821	TrunkId=11152	Long Creek	Off	34.737380	-83.063160	20.0	AUTO	Standard	Wide	Circle						Srch	Global	FDMA
+T-Freq	TFreqId=0	SiteId=36821			154167500	0	9	Any
+Site	SiteId=42442	TrunkId=11152	Long Mountain	Off	34.737380	-83.063160	20.0	AUTO	Standard	Wide	Circle						Srch	Global	FDMA
+T-Freq	TFreqId=0	SiteId=42442			154980000	1	4	Any
+Site	SiteId=36823	TrunkId=11152	Oakway	Off	34.737380	-83.063160	20.0	AUTO	Standard	Wide	Circle						Srch	Global	FDMA
+T-Freq	TFreqId=0	SiteId=36823			155542500	0	1	Any
+Site	SiteId=36822	TrunkId=11152	Seneca	Off	34.737380	-83.063160	20.0	AUTO	Standard	Wide	Circle						Srch	Global	FDMA
+T-Freq	TFreqId=0	SiteId=36822			156225000	0	7	Any
+Site	SiteId=36824	TrunkId=11152	Westminster	Off	34.737380	-83.063160	20.0	AUTO	Standard	Wide	Circle						Srch	Global	FDMA
+T-Freq	TFreqId=0	SiteId=36824			154025000	0	6	Any
+T-Group	TGroupId=31405	TrunkId=11152	Oconee Co FD	Off	34.737380	-83.063160	20.0	Circle	
+TGID	Tid=373002	TGroupId=31405	Operations	Off	121	ALL	8									1
+TGID	Tid=401735	TGroupId=31405	Operations 2	Off	122	ALL	8									2

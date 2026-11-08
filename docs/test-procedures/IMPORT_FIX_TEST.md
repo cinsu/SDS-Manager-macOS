@@ -1,0 +1,1 @@
+Launch with ./test-launch.sh. Test Import from Scanner once. Verify success confirmation and stable GUI. If crash, preserve logs before relaunch. If successful, close normally and send result. This is a candidate fix, not yet hardware-tested.

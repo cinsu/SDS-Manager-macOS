@@ -1,0 +1,92 @@
+TargetModel	BCDx36HP
+FormatVersion	1.00
+Trunk			Palmetto 800	Off		P25Standard	Off	Off	Auto	Ignore		Off	Off	0	Off	Off	Ignore	Off	Off	On	IDAS
+DQKs_Status		Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	
+Site			Anderson County Simulcast	Off	34.514830	-82.637920	25.0	AUTO			Circle	Off	400	Auto	8	Off	1D3	Global
+T-Freq				Off	853162500	0	Srch
+T-Freq				Off	852962500	0	Srch
+T-Freq				Off	852600000	0	Srch
+T-Freq				Off	852575000	0	Srch
+T-Freq				Off	852687500	0	Srch
+T-Freq				Off	852212500	0	Srch
+T-Freq				Off	852075000	0	Srch
+T-Freq				Off	851550000	0	Srch
+T-Freq				Off	851537500	0	Srch
+T-Freq				Off	851212500	0	Srch
+T-Freq				Off	851162500	0	Srch
+Site			Pickens	Off	34.899250	-82.659580	20.0	AUTO			Circle	Off	400	Auto	8	Off	1DB	Global
+T-Freq				Off	851125000	0	Srch
+T-Freq				Off	851412500	0	Srch
+T-Freq				Off	852100000	0	Srch
+T-Freq				Off	852362500	0	Srch
+T-Freq				Off	852712500	0	Srch
+T-Freq				Off	853600000	0	Srch
+T-Freq				Off	856962500	0	Srch
+Site			Seneca	Off	34.687500	-82.986940	20.0	AUTO			Circle	Off	400	Auto	8	Off	1D3	Global
+T-Freq				Off	851075000	0	Srch
+T-Freq				Off	852050000	0	Srch
+T-Freq				Off	852662500	0	Srch
+T-Freq				Off	853100000	0	Srch
+T-Freq				Off	853962500	0	Srch
+T-Group			Oconee County	Off	34.766762	-83.083208	25.0	Circle	Off
+TGID			EMS	Off	47065	ALL	9	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Sheriff	Off	47001	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+Conventional			Oconee	Off		Conventional	Off	Off	0	Off	Off	400	Auto	8
+DQKs_Status		Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	
+C-Group			Municipalities - Seneca	Off	34.685170	-82.944030	3.0	Circle	Off	Global
+C-Freq			Seneca FD Dispatch	Off	151040000	NFM	ColorCode=10	3	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Seneca PD	Off	460275000	FM	TONE=C186.2	7	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Seneca PD Dispatch	Off	460387500	NFM	ColorCode=12	2	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Group			Municipalities - Walhalla	Off	34.768690	-83.062130	3.0	Circle	Off	Global
+C-Freq			Fire 2 Support	Off	156240000	NFM	ColorCode=5	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Fire Response/Scene Ops	Off	156240000	NFM	ColorCode=5	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Police	Off	460300000	FM	TONE=C186.2	2	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Public Works	Off	154040000	FM	TONE=C100.0	14	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Group			Municipalities - Westminster	Off	34.669360	-83.089600	3.0	Circle	Off	Global
+C-Freq			Police Dispatch	Off	453600000	NFM	ColorCode=6	2	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Unkown Use	Off	453600000	NFM	ColorCode=6	14	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Westminster DPW	Off	153455000	FM		14	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Westminster PD	Off	460475000	NFM	ColorCode=1	2	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Group			Oconee County - Board of Education	Off	34.737380	-83.063160	20.0	Circle	Off	Global
+C-Freq			Board of Education	Off	460675000	FM		32	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Seneca High School	Off	464425000	FM	TONE=C110.9	32	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Group			Oconee County - EMS	Off	34.737380	-83.063160	20.0	Circle	Off	Global
+C-Freq			EMS Dispatch	Off	152405000	FM	TONE=C192.8	4	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			EMS to Hospital	Off	155340000	FM	TONE=C192.8	12	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Rescue Dispatch	Off	151130000	FM	TONE=C210.7	4	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Group			Oconee County - Fire Departments	Off	34.737380	-83.063160	20.0	Circle	Off	Global
+C-Freq			Fire Dispatch	Off	154130000	FM	TONE=C103.5	3	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Fire Dispatch 2	Off	155647500	NFM	TONE=C103.5	3	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Keowee Key FD	Off	154265000	FM	TONE=C103.5	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Keowee Key FD Ch. 2	Off	154205000	FM		8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Group			Oconee County - Public Works	Off	34.737380	-83.063160	20.0	Circle	Off	Global
+C-Freq			Sewer Commission	Off	158880000	FM		14	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Group			Oconee County - Sheriff	Off	34.737380	-83.063160	20.0	Circle	Off	Global
+C-Freq			Dispatch (Long Mtn Tower)	Off	460250000	NFM	ColorCode=1	2	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Dispatch (Mtn Rest Tower)	Off	453725000	NFM	ColorCode=9	2	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Dispatch (Oakway Tower)	Off	460612500	NFM	ColorCode=1	2	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Dispatch (Seneca Tower)	Off	460087500	NFM	ColorCode=1	2	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Dispatch (Walhalla Tower)	Off	460575000	NFM	ColorCode=5	2	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Jail Ops (Walhalla)	Off	453575000	NFM	ColorCode=1	2	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Sheriff Alternate	Off	460325000	FM	TONE=D315	7	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Sheriff and Walhalla PD Dispatch	Off	460300000	NFM	ColorCode=1	2	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Sheriff and Walhalla PD Dispatch	Off	460575000	NFM	ColorCode=5	2	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Sheriff Dispatch	Off	460175000	FM	TONE=C186.2	2	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Sheriff Regional Police	Off	460250000	FM	TONE=C186.2	7	Off	2	0	Off	Auto	Off	On	Off	Off
+Trunk			Oconee County Emergency Services	Off		DmrOneFrequency	Off	Off	Auto	Ignore		Off	Off	0	Off	Off	Ignore	Off	Off	On	IDAS
+DQKs_Status		Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	
+Site			Fair Play	Off	34.737380	-83.063160	20.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	154852500	0	8
+Site			Long Mountain	Off	34.737380	-83.063160	20.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	154980000	0	4
+Site			Mountain Rest	Off	34.737380	-83.063160	20.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	154167500	0	9
+Site			Oakway	Off	34.737380	-83.063160	20.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	155542500	0	1
+Site			Seneca	Off	34.737380	-83.063160	20.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	156225000	0	7
+Site			Westminster	Off	34.737380	-83.063160	20.0	AUTO			Circle	Off	400	Auto	8	Off	0	Global
+T-Freq				Off	154025000	0	6
+T-Group			Oconee Co FD	Off	34.737380	-83.063160	20.0	Circle	Off
+TGID			Operations	Off	121	ALL	8	2	0	Off	Auto	Off	On	Off	Off	1
+TGID			Operations 2	Off	122	ALL	8	2	0	Off	Auto	Off	On	Off	Off	2

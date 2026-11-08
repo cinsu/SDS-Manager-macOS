@@ -1,0 +1,76 @@
+TargetModel	BCDx36HP
+FormatVersion	1.00
+Trunk			Palmetto 800	Off		P25Standard	Off	Off	Auto	Ignore		Off	Off	0	Off	Off	Ignore	Off	Off	On	IDAS
+DQKs_Status		Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	
+Site			Caesars Head	Off	35.112000	-82.606000	30.0	AUTO			Circle	Off	400	Auto	8	Off	1DB	Global
+BandPlan_P25		851006250	6250	762006250	6250	851012500	12500	762006250	12500	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	3	3	0	0	0	0	0	0	0	0	0	0	0	0
+T-Freq				Off	851312500	0	Srch	Any
+T-Freq				Off	851475000	0	Srch	Any
+T-Freq				Off	851912500	0	Srch	Any
+T-Freq				Off	852250000	0	Srch	Any
+T-Freq				Off	852812500	0	Srch	Any
+T-Freq				Off	853125000	0	Srch	Any
+T-Freq				Off	853462500	0	Srch	Any
+T-Freq				Off	853800000	0	Srch	Any
+T-Freq				Off	854187500	0	Srch	Any
+T-Freq				Off	854462500	0	Srch	Any
+Site			Greenville County Simulcast	Off	34.885930	-82.348020	30.0	AUTO			Circle	Off	400	Auto	8	Off	1DB	Global
+BandPlan_P25		851006250	6250	762006250	6250	851012500	12500	762006250	12500	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	3	3	0	0	0	0	0	0	0	0	0	0	0	0
+T-Freq				Off	851187500	0	Srch	Any
+T-Freq				Off	851875000	0	Srch	Any
+T-Freq				Off	852187500	0	Srch	Any
+T-Freq				Off	852450000	0	Srch	Any
+T-Freq				Off	852550000	0	Srch	Any
+T-Freq				Off	852737500	0	Srch	Any
+T-Freq				Off	853212500	0	Srch	Any
+T-Freq				Off	853262500	0	Srch	Any
+T-Freq				Off	853537500	0	Srch	Any
+T-Freq				Off	853750000	0	Srch	Any
+T-Freq				Off	853862500	0	Srch	Any
+T-Freq				Off	854987500	0	Srch	Any
+T-Freq				Off	856237500	0	Srch	Any
+T-Freq				Off	859262500	0	Srch	Any
+T-Freq				Off	859962500	0	Srch	Any
+Site			Hogback Mountain	Off	35.169830	-82.290940	20.0	AUTO			Circle	Off	400	Auto	8	Off	1DB	Global
+BandPlan_P25		851006250	6250	762006250	6250	851012500	12500	762006250	12500	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	3	3	0	0	0	0	0	0	0	0	0	0	0	0
+T-Freq				Off	851375000	0	Srch	Any
+T-Freq				Off	851962500	0	Srch	Any
+T-Freq				Off	852350000	0	Srch	Any
+T-Freq				Off	852837500	0	Srch	Any
+T-Freq				Off	853312500	0	Srch	Any
+T-Freq				Off	853625000	0	Srch	Any
+T-Freq				Off	855137500	0	Srch	Any
+T-Freq				Off	859237500	0	Srch	Any
+T-Freq				Off	859987500	0	Srch	Any
+T-Freq				Off	860237500	0	Srch	Any
+T-Freq				Off	860837500	0	Srch	Any
+T-Group			SCHP Statewide	Off	33.879537	-81.068115	140.0	Circle	Off
+TGID			Hurricane Operations 1	Off	27141	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Hurricane Operations 2	Off	27142	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Insurance Enforcement Unit	Off	27134	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Insurance Enforcement Unit 1	Off	27138	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Insurance Enforcement Unit 2	Off	27139	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			SCHP 27131	Off	27131	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			SCHP 27137	Off	27137	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			SCHP 27140	Off	27140	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			SCHP 27143	Off	27143	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			SCHP 27153	Off	27153	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			SCHP 27191	Off	27191	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			SCHP 27192	Off	27192	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			SCHP 27198	Off	27198	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			SCHP 50244	Off	50244	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			SCHP 50274	Off	50274	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			SCHP 50297	Off	50297	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			SCHP 9655	Off	9655	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			SCHP Unknown	Off	27199	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+T-Group			SCHP Troop 3	Off	34.777715	-82.512817	45.0	Circle	Off
+TGID			Ch 33 Anderson	Off	50211	ALL	2	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Ch 34 Tac 5	Off	50212	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Ch 35 Pickens/Oconee	Off	50233	ALL	2	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Ch 36 Greenville	Off	50213	ALL	2	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Ch 37 Tac 6	Off	50214	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Ch 38 Spartanburg	Off	50215	ALL	2	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Ch 39 Transport Police Troop 3	Off	50216	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Ch 40 DPS 3	Off	50217	ALL	14	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Ch 41 Special Ops Troop 3	Off	50218	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			SC DOT SHEP District 3	Off	51104	ALL	14	2	0	Off	Auto	Off	On	Off	Off	Any

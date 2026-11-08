@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a3a50"/><stop offset="1" stop-color="#141a24"/>
+    </linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3a4656"/><stop offset="1" stop-color="#232b36"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9fe7ff"/><stop offset="1" stop-color="#3fa9e0"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="240" height="240" rx="52" fill="url(#bg)" stroke="#4a5d78" stroke-width="3"/>
+  <!-- radio waves -->
+  <g fill="none" stroke="#5cc8f5" stroke-width="9" stroke-linecap="round">
+    <path d="M60 46 a26 26 0 0 1 36 0" opacity="0.95"/>
+    <path d="M46 30 a46 46 0 0 1 64 0" opacity="0.6"/>
+  </g>
+  <!-- antenna -->
+  <rect x="71" y="58" width="14" height="44" rx="7" fill="#1b222c" stroke="#0e1218" stroke-width="2"/>
+  <circle cx="78" cy="60" r="9" fill="#e9eef5"/>
+  <!-- body -->
+  <rect x="58" y="94" width="112" height="144" rx="24" fill="url(#body)" stroke="#0e1218" stroke-width="3"/>
+  <!-- screen -->
+  <rect x="72" y="108" width="84" height="50" rx="9" fill="url(#screen)"/>
+  <rect x="80" y="118" width="46" height="7" rx="3.5" fill="#123047" opacity="0.8"/>
+  <rect x="80" y="132" width="64" height="7" rx="3.5" fill="#123047" opacity="0.55"/>
+  <rect x="80" y="145" width="34" height="5" rx="2.5" fill="#123047" opacity="0.4"/>
+  <!-- keys -->
+  <g fill="#556274">
+    <rect x="74" y="172" width="22" height="14" rx="5"/><rect x="103" y="172" width="22" height="14" rx="5"/><rect x="132" y="172" width="22" height="14" rx="5"/>
+    <rect x="74" y="193" width="22" height="14" rx="5"/><rect x="103" y="193" width="22" height="14" rx="5"/><rect x="132" y="193" width="22" height="14" rx="5"/>
+  </g>
+  <circle cx="114" cy="222" r="7" fill="#e5533d"/>
+  <circle cx="190" cy="190" r="50" fill="#e08a1e" stroke="#141a24" stroke-width="8"/>
+  <g fill="none" stroke="#ffffff" stroke-width="8">
+    <ellipse cx="190" cy="168" rx="22" ry="8"/>
+    <path d="M168 168 v40 a22 8 0 0 0 44 0 v-40"/>
+    <path d="M168 188 a22 8 0 0 0 44 0"/>
+  </g>
+</svg>

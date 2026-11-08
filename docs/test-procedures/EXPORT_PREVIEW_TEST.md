@@ -1,0 +1,1 @@
+v0.0.6t1 Test 1: Select File → Preview Scanner Export (Read-only)…; choose saved configuration and scanner root. Verify the busy dialog appears promptly, its animated indicator stays responsive, and the results report eventually opens. Scanner must remain unchanged. No cancel button during checksum processing.

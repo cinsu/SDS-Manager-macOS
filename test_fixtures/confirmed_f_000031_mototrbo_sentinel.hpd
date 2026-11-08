@@ -1,0 +1,127 @@
+TargetModel	BCDx36HP
+FormatVersion	1.00
+Trunk			Duke Energy P25	Off		P25Standard	Off	Off	Auto	Ignore	Srch	Off	Off	0	Off	Off	Analog	Off	Off	On	NEXEDGE
+DQKs_Status		On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On
+Site			Greenville	Off	34.921110	-82.400280	15.0	AUTO	Standard	Wide	Circle	Off	400	Auto	8	Off	Srch	Global
+T-Freq				Off	856087500	1	Srch
+T-Freq				Off	858087500	2	Srch
+T-Freq				Off	859087500	3	Srch
+T-Freq				Off	860087500	4	Srch
+Site			Simpsonville	Off	34.718330	-82.239280	15.0	AUTO	Standard	Wide	Circle	Off	400	Auto	8	Off	Srch	Global
+T-Freq				Off	855287500	1	Srch
+T-Freq				Off	857862500	2	Srch
+T-Freq				Off	858287500	3	Srch
+Site			Spartanburg	Off	34.972500	-81.930000	15.0	AUTO	Standard	Wide	Circle	Off	400	Auto	8	Off	Srch	Global
+T-Freq				Off	857337500	1	Srch
+T-Freq				Off	858337500	2	Srch
+T-Freq				Off	859337500	3	Srch
+T-Freq				Off	860337500	4	Srch
+T-Group			Carolinas	Off	35.288227	-81.215057	17.2	Circle	Off
+TGID			Bad Creek Hydro	Off	62016	ALL	34	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Clinton area operations	Off	62354	ALL	34	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Duke Energy Carolinas District 3 operations	Off	62012	ALL	34	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Duke Energy Carolinas District 3 operations	Off	62014	ALL	34	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Duke Energy Progress Distribution Control Center operations	Off	60035	ALL	34	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Duke Energy Progress Distribution Control Center operations	Off	60038	ALL	34	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Duke Energy Progress Distribution Control Center operations	Off	62322	ALL	34	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Duke Energy Progress Energy Control Center operations	Off	60048	ALL	34	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Durham area operations	Off	62305	ALL	34	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Fuquay Varina area operations	Off	62013	ALL	34	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Garner area operations	Off	62376	ALL	34	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Garner area operations	Off	62441	ALL	34	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Garner area operations	Off	62449	ALL	34	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Greensboro area operations	Off	62295	ALL	34	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Kernersville area operations	Off	62297	ALL	34	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			L3Harris Techs	Off	2479	ALL	17	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Leland area operations	Off	62439	ALL	34	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Lexington area operations	Off	62292	ALL	34	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			North Carolina Unknown operations	Off	62001	ALL	34	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			North Wilkesboro area operations	Off	62289	ALL	34	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Raleigh / Method area operations	Off	62321	ALL	34	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Storm operations	Off	62239	ALL	34	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Zebulon area operations	Off	62301	ALL	34	2	0	Off	Auto	Off	On	Off	Off	Any
+Trunk			Charleston Wireless Group/James White	Off		MotoTrbo	Off	Off	Auto	Ignore	Srch	Off	Off	0	Off	Off	Analog	Off	Off	On	NEXEDGE
+DQKs_Status		On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On
+Site			Bluffton	Off	32.389240	-80.771480	22.0	AUTO	Standard	Wide	Circle	Off	400	Auto	8	Off	Srch	Global
+T-Freq				Off	856637500	1	1
+T-Freq				Off	854137500	2	2
+Site			Charleston	Off	33.206520	-79.936520	28.0	AUTO	Standard	Wide	Circle	Off	400	Auto	8	Off	Srch	Global
+T-Freq				Off	857887500	1	Srch
+T-Freq				Off	855262500	2	Srch
+T-Freq				Off	860837500	3	Srch
+T-Freq				Off	854812500	4	Srch
+T-Freq				Off	854762500	5	Srch
+Site			Clanton Road	Off	35.192770	-80.886910	25.0	AUTO	Standard	Wide	Circle	Off	400	Auto	8	Off	Srch	Global
+T-Freq				Off	860112500	1	1
+T-Freq				Off	859112500	2	2
+T-Freq				Off	858112500	3	3
+T-Freq				Off	857112500	4	4
+T-Freq				Off	856112500	5	5
+T-Freq				Off	860512500	6	6
+Site			Columbia	Off	34.023070	-80.919800	27.5	AUTO	Standard	Wide	Circle	Off	400	Auto	8	Off	Srch	Global
+T-Freq				Off	860312500	1	Srch
+Site			Crowder's Mountain	Off	35.288230	-81.215060	17.2	AUTO	Standard	Wide	Circle	Off	400	Auto	8	Off	Srch	Global
+T-Freq				Off	855637500	1	1
+T-Freq				Off	855137500	2	2
+T-Freq				Off	857812500	3	3
+T-Freq				Off	859662500	4	4
+T-Freq				Off	858662500	5	5
+Site			Greenville	Off	34.840860	-82.320560	23.0	AUTO	Standard	Wide	Circle	Off	400	Auto	8	Off	Srch	Global
+T-Freq				Off	856562500	1	1
+T-Freq				Off	857562500	2	2
+T-Freq				Off	858562500	3	3
+T-Freq				Off	859562500	4	4
+T-Freq				Off	860562500	5	5
+Site			Hood Road	Off	35.266810	-80.849790	20.0	AUTO	Standard	Wide	Circle	Off	400	Auto	8	Off	Srch	Global
+T-Freq				Off	860412500	1	1
+T-Freq				Off	859412500	2	2
+T-Freq				Off	858412500	3	3
+T-Freq				Off	857412500	4	4
+T-Freq				Off	856412500	5	5
+T-Freq				Off	860537500	6	6
+T-Freq				Off	855687500	7	7
+Site			Lexington	Off	33.929690	-81.276860	21.9	AUTO	Standard	Wide	Circle	Off	400	Auto	8	Off	Srch	Global
+T-Freq				Off	855012500	1	1
+T-Freq				Off	855062500	2	1
+T-Freq				Off	855337500	3	1
+T-Freq				Off	855687500	4	1
+T-Freq				Off	856312500	5	1
+T-Freq				Off	857312500	6	1
+T-Freq				Off	858337500	7	1
+T-Freq				Off	858362500	8	1
+T-Freq				Off	859362500	9	1
+T-Freq				Off	860312500	10	1
+Site			Long Mountain	Off	34.882690	-83.097720	25.0	AUTO	Standard	Wide	Circle	Off	400	Auto	8	Off	Srch	Global
+T-Freq				Off	855812500	1	Srch
+T-Freq				Off	855262500	2	Srch
+T-Freq				Off	856812500	3	Srch
+Site			Mooresville	Off	35.614030	-80.817250	20.0	AUTO	Standard	Wide	Circle	Off	400	Auto	8	Off	Srch	Global
+T-Freq				Off	855612500	1	1
+T-Freq				Off	859312500	2	2
+T-Freq				Off	855012500	3	3
+Site			Rock Hill	Off	34.909700	-81.002030	25.0	AUTO	Standard	Wide	Circle	Off	400	Auto	8	Off	Srch	Global
+T-Freq				Off	860137500	1	1
+T-Freq				Off	859137500	2	2
+T-Freq				Off	858137500	3	3
+T-Freq				Off	857137500	4	4
+T-Freq				Off	856137500	5	5
+Site			SE SC	Off	0.000000	0.000000	0.0	AUTO	Standard	Wide	Circle	Off	400	Auto	8	Off	Srch	Global
+T-Freq				Off	857162500	5	5
+Site			Summerville	Off	33.040900	-80.428160	25.0	AUTO	Standard	Wide	Circle	Off	400	Auto	8	Off	Srch	Global
+T-Freq				Off	860887500	1	Srch
+T-Freq				Off	859887500	2	Srch
+T-Freq				Off	855712500	3	Srch
+T-Freq				Off	856162500	4	Srch
+T-Freq				Off	856612500	5	Srch
+T-Freq				Off	857062500	6	Srch
+T-Freq				Off	854812500	7	Srch
+T-Freq				Off	858887500	8	Srch
+T-Group			General	Off	34.691945	-81.175232	18.0	Circle	Off
+TGID			WYFF4 News Helicopter Greenville	Off	29	ALL	17	2	0	Off	Auto	Off	On	Off	Off	Any
+Conventional			Businesses	Off		Conventional	Off	Off	0	Off	Off	400	Auto	8
+DQKs_Status		On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On	On
+C-Group			Utilities - Electric	Off	34.840860	-82.320560	23.0	Circle	Off	Global
+C-Freq			Pike Electric Greenville Area 1	Off	461775000	NFM	TONE=C67.0	34	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Pike Electric Greenville Area 2	Off	49520000	FM	TONE=C67.0	34	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Pike Electric Greenville Area 3	Off	49540000	FM	TONE=C67.0	34	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Pike Electric Greenville Area 4	Off	49580000	FM	TONE=C67.0	34	Off	2	0	Off	Auto	Off	On	Off	Off

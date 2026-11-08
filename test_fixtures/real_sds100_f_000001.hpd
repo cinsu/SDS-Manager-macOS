@@ -1,0 +1,230 @@
+TargetModel	BCDx36HP
+FormatVersion	1.00
+Trunk			Palmetto 800	Off		P25Standard	Off	Off	Auto	Ignore		0	Off	0	Off	Off	Ignore	Off	Off	On	IDAS
+DQKs_Status		On	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	
+Site			Caesars Head	Off	35.112000	-82.606000	8.0	AUTO			Circle	Off	400	Auto	8	Off	1DB	Global
+BandPlan_P25		851006250	6250	762006250	6250	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+T-Freq				Off	851312500	0	Srch	Any
+T-Freq				Off	851475000	0	Srch	Any
+T-Freq				Off	851912500	0	Srch	Any
+T-Freq				Off	852250000	0	Srch	Any
+T-Freq				Off	852812500	0	Srch	Any
+T-Freq				Off	853125000	0	Srch	Any
+T-Freq				Off	853462500	0	Srch	Any
+T-Freq				Off	853800000	0	Srch	Any
+T-Freq				Off	854187500	0	Srch	Any
+T-Freq				Off	854462500	0	Srch	Any
+Site			Greenville County Simulcast	Off	34.885930	-82.348020	30.0	AUTO			Circle	Off	400	Auto	8	Off	1DB	Global
+BandPlan_P25		851006250	6250	762006250	6250	851012500	12500	762006250	12500	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	3	3	0	0	0	0	0	0	0	0	0	0	0	0
+T-Freq				Off	851187500	0	Srch	Any
+T-Freq				Off	851875000	0	Srch	Any
+T-Freq				Off	852187500	0	Srch	Any
+T-Freq				Off	852450000	0	Srch	Any
+T-Freq				Off	852550000	0	Srch	Any
+T-Freq				Off	852737500	0	Srch	Any
+T-Freq				Off	853212500	0	Srch	Any
+T-Freq				Off	853262500	0	Srch	Any
+T-Freq				Off	853537500	0	Srch	Any
+T-Freq				Off	853750000	0	Srch	Any
+T-Freq				Off	853862500	0	Srch	Any
+T-Freq				Off	854987500	0	Srch	Any
+T-Freq				Off	856237500	0	Srch	Any
+T-Freq				Off	859262500	0	Srch	Any
+T-Freq				Off	859962500	0	Srch	Any
+Site			Hogback Mountain	Off	35.169830	-82.290940	20.0	AUTO			Circle	Off	400	Auto	8	Off	1DB	Global
+BandPlan_P25		851006250	6250	762006250	6250	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+T-Freq				Off	851375000	0	Srch	Any
+T-Freq				Off	851962500	0	Srch	Any
+T-Freq				Off	852350000	0	Srch	Any
+T-Freq				Off	852837500	0	Srch	Any
+T-Freq				Off	853312500	0	Srch	Any
+T-Freq				Off	853625000	0	Srch	Any
+T-Freq				Off	855137500	0	Srch	Any
+T-Freq				Off	859237500	0	Srch	Any
+T-Freq				Off	859987500	0	Srch	Any
+T-Freq				Off	860237500	0	Srch	Any
+T-Freq				Off	860837500	0	Srch	Any
+T-Group			Greenville County	Off	34.840857	-82.320557	23.0	Circle	0
+TGID			Admin 10	Off	44042	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Admin 100	Off	44464	ALL	8	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Admin 110/Wade Hampton FD Dispatch	Off	44473	ALL	3	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Admin 20	Off	44488	ALL	8	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Admin 30 (FIFD)	Off	44493	ALL	8	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Admin 40 (Simpsonville FD)	Off	44450	ALL	8	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Admin 70 (MFD)	Off	44401	ALL	8	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Admin 80 (Greer FD)	Off	44387	ALL	8	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Cedar Mountain Fire Rescue Tac 12 M	Off	60002	ALL	8	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Cedar Mountain Fire Rescue Tac 12 P	Off	60001	ALL	8	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Cedar Mountain Fire Rescue Tac 12 Roam	Off	60003	ALL	8	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Central 1	Off	44033	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Central 2	Off	44034	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			City FD Automated Dispatch	Off	44363	ALL	3	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Common	Off	44028	ALL	22	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			County Fire Dispatch	Off	44041	ALL	3	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Donaldson Center/SCTAC Fire	Off	44486	ALL	3	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			EMS Dispatch	Off	44065	ALL	4	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			EMS Tac 1	Off	44066	ALL	9	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			EMS to Prisma Health ER	Off	44145	ALL	12	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			ERT Roam	Off	44116	ALL	8	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Event 1	Off	44021	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Event 2	Off	44022	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Event 3	Off	44023	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Event 4	Off	44024	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Event 5	Off	44025	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Event 6	Off	44026	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Event 7	Off	44027	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Fire Tac 2/ERT	Off	44115	ALL	8	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Ft. Inn Fire Dispatch	Off	44491	ALL	3	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Ft. Inn Police Dispatch	Off	44337	ALL	2	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			GHS MedTrans Dispatch (Prisma Health)	Off	51712	ALL	29	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Greenville City PD	Off	44361	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Greenville City PD Dispatch	Off	44358	ALL	2	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Greenville City PD Event	Off	44360	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Greenville City PD Investigators	Off	44357	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Greenville City PD Records	Off	44359	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Greenville City PD Tac	Off	44197	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Greenville City PD Traffic	Off	44356	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Greenville City PD Training	Off	44364	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Greenville City Street Dept	Off	44178	ALL	14	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Greenville FD Dispatch	Off	44351	ALL	3	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Greer FD Tac	Off	44388	ALL	8	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Greer Firecomm dispatch w/Greer, Taylors, Boling Springs, Pehlam	Off	44385	ALL	3	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Greer PD Dispatch	Off	44381	ALL	2	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			GSP Airport Fire	Off	44165	ALL	3	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Mauldin FD	Off	44399	ALL	3	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Mauldin PD	Off	44395	ALL	2	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			North 1	Off	44031	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			North 2	Off	44032	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Ops 10	Off	44043	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Ops 100	Off	44465	ALL	8	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Ops 110	Off	44474	ALL	8	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Ops 20	Off	44489	ALL	8	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Ops 30 (FIFD)	Off	44494	ALL	8	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Ops 40 (Simpsonville FD)	Off	44451	ALL	8	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Ops 50 (GFD)	Off	44352	ALL	8	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Ops 51 (GFD)	Off	44353	ALL	8	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Ops 52 (GFD)	Off	44354	ALL	8	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Ops 53	Off	44355	ALL	8	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Ops 70 (MFD)	Off	44402	ALL	8	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Ops 80 (Greer FD)	Off	44390	ALL	8	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Parker FD	Off	44411	ALL	3	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			River Falls FD	Off	44266	ALL	8	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Sheriff	Off	44011	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Sheriff Ch 5	Off	44015	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Sheriff East Dispatch	Off	44002	ALL	2	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Sheriff Information	Off	44012	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Sheriff South Dispatch	Off	44004	ALL	2	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Sheriff Tac	Off	44013	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Sheriff Tac 1	Off	44005	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Sheriff Tac 2	Off	44006	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Sheriff Tac 3	Off	44007	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Sheriff Tac 4	Off	44008	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Sheriff Tac 5	Off	44009	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Sheriff Tac 6	Off	44016	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Sheriff Tac 7	Off	44017	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Sheriff Traffic/Admin	Off	44001	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Sheriff Training	Off	44014	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Sheriff West Dispatch	Off	44003	ALL	2	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Simpsonville FD	Off	44448	ALL	3	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Simpsonville PD 1	Off	44441	ALL	2	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Simpsonville PD 2	Off	44442	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Simpsonville PD 3	Off	44443	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			South 1	Off	44035	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			South 2	Off	44036	ALL	6	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			South Greenville FD Dispatch w/Gantt FD and Piedmont FD	Off	44462	ALL	3	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Travelers Rest FD	Off	44458	ALL	8	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Travelers Rest PD	Off	44455	ALL	2	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Travelers Rest PD Ch.2	Off	44456	ALL	7	2	0	Off	Auto	Off	On	Off	Off	Any
+TGID			Wade Hampton FD Ops	Off	44471	ALL	8	2	0	Off	Auto	Off	On	Off	Off	Any
+Conventional			Greenville	Off		Conventional	1	Off	0	Off	Off	400	Auto	8
+DQKs_Status		On	On	On	Off	On	On	On	On	On	On	On	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	Off	
+C-Group			Greenville (City) - Fire Department	Off	34.839170	-82.378920	7.0	Circle	0	Global
+C-Freq			Alert (Simulcast on Palmetto 800)	Off	453650000	NFM	TONE=C146.2	3	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Dispatch	Off	453900000	FM	TONE=C127.3	3	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Group			Greenville (City) - Police	Off	34.839170	-82.378920	7.0	Circle	1	Global
+C-Freq			Greenville PD Events	Off	460075000	FM	TONE=C127.3	2	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Greenville PD Forensics	Off	460025000	FM	TONE=C127.3	7	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Group			Greenville County - EMS	Off	34.840860	-82.320560	23.0	Circle	2	Global
+C-Freq			Greenville EMS	Off	463000000	FM		9	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Greenville EMS	Off	463025000	FM		9	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Greenville EMS	Off	463050000	FM	TONE=C167.9	9	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Greenville EMS	Off	463100000	FM		9	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Greenville EMS	Off	463150000	FM		9	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Greenville EMS Backup for all recieving facilities	Off	155340000	FM	TONE=C123.0	12	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Greenville EMS Dispatch	Off	462950000	FM	TONE=C123.0	4	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Greenville EMS Incident Command & MedTrans Flight Control (TAC-1	Off	462975000	FM	TONE=C123.0	9	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Greenville EMS Rescue	Off	155175000	FM	TONE=C123.0	9	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Greenville EMS to Allen Bennett, N. Greenville, Hillcrest Hospit	Off	463125000	FM	TONE=D364	12	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Greenville EMS to Greenville Memorial Hospital	Off	463175000	FM	TONE=D364	12	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Greenville EMS to St. Francis Hospital	Off	463075000	FM	TONE=D364	12	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Greenville Hospital	Off	155280000	FM	TONE=C123.0	12	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Group			Greenville County - Fire Departments	Off	34.840860	-82.320560	23.0	Circle	4	Global
+C-Freq			Belmont Fire Ch.2	Off	155865000	FM	TONE=C123.0	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Berea Fire Ch. 2	Off	452500000	FM	TONE=C141.3	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Boiling Springs Fire Ch.1	Off	154370000	FM	TONE=C156.7	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Boiling Springs Fire Ch.2	Off	156180000	FM	TONE=C156.7	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Canebrake Fire Fireground	Off	154415000	FM	TONE=C179.9	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Cedar Mountain Fire (Tac 12 C)	Off	155662500	FM	TONE=D606	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Clear Spring Fire Rescue	Off	453750000	FM	TONE=C179.9	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Duncan Chapel Fire	Off	154220000	FM	TONE=C123.0	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Duncan Chapel Fire	Off	461725000	NFM	ColorCode=1	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Duncan Chapel Fire  Ch. 3	Off	154452500	FM	TONE=C156.7	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Dunklin Fire	Off	154415000	FM		8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Gantt Fire	Off	159045000	FM	TONE=C107.2	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Gantt Fire Dispatch	Off	154340000	FM	TONE=D411	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Glassy Mountain Fire	Off	453362500	FM	TONE=C206.5	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Lake Cunningham Fire Tac	Off	453337500	FM	TONE=C110.9	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Lake Cunningham Fire Tac	Off	458525000	FM		8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			N. Greenville Fire Ch. 2	Off	453300000	FM	TONE=C156.7	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Parker Fire	Off	453375000	FM	TONE=D331	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Parker Fire	Off	460162500	NFM	ColorCode=5	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Pelham-Batetsville Fire	Off	156120000	FM	TONE=C85.4	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Piedmont Fire	Off	154400000	FM	TONE=C107.2	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Piedmont Park Fire	Off	154325000	FM	TONE=C103.5	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Piedmont Park Fire	Off	464050000	NFM	ColorCode=1	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Riverfalls Fire	Off	154340000	FM	TONE=C156.7	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			SCTAC Ind Park Fire	Off	154430000	FM	TONE=C162.2	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Slater-Marietta Fire Ch.2	Off	154205000	FM	TONE=D331	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			South Greenville Fire	Off	154175000	FM	TONE=C136.5	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			South Greenville Fire Ch.1	Off	154280000	FM	TONE=C136.5	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			South Greenville Fire Ch.2	Off	154415000	FM	TONE=C136.5	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Taylors Fire Ch.1	Off	154385000	FM	TONE=C82.5	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Taylors Fire Ch.2	Off	155085000	FM	TONE=D114	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Tigerville Fire	Off	151085000	FM	TONE=D311	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Tigerville Fire	Off	154340000	FM	TONE=C123.0	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Tigerville Fire Tac	Off	464050000	NFM	ColorCode=1	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Wade Hampton Fire	Off	153770000	FM		8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Wade Hampton Fire	Off	464437500	NFM	ColorCode=1	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Wade Hampton Fire Alert	Off	154265000	FM	TONE=C162.2	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Wade Hampton Fire Dispatch	Off	154445000	FM	TONE=C156.7	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Group			Greenville County - Sheriff	Off	34.840860	-82.320560	23.0	Circle	5	Global
+C-Freq			Greenville Co. Detention Center 1	Off	859712500	NFM	TONE=D343	37	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Greenville Co. Detention Center 2	Off	860712500	NFM	TONE=D343	37	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Greenville Co. Detention Center 3	Off	855487500	NFM	TONE=D343	37	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Greenville Co. SD SWAT.Helo	Off	460287500	NFM	TONE=D464	7	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Group			Municipalities - Fountain Inn	Off	34.700980	-82.198940	1.0	Circle	6	Global
+C-Freq			Fountain Inn FD Dispatch Analog	Off	460600000	NFM	TONE=C127.3	3	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Fountain Inn FD Dispatch Digital	Off	453275000	NFM	ColorCode=1	3	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Fountain Inn PD Dispatch Analog	Off	453275000	NFM	TONE=C127.3	2	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Fountain Inn PD Dispatch Digital	Off	453275000	NFM	ColorCode=1	2	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Fountain Inn PD TAC	Off	470000000	NFM	TONE=C127.3	7	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Group			Municipalities - Greer	Off	34.938160	-82.228720	2.0	Circle	7	Global
+C-Freq			Greer FD	Off	150175000	FM		8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Greer FD Alternate Ch.2	Off	154100000	FM	TONE=C85.4	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Greer FD Dispatch Ch.1	Off	154175000	FM	TONE=C85.4	3	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Greer PD Dispatch	Off	460400000	FM	TONE=C127.3	2	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Group			Municipalities - Mauldin	Off	34.784480	-82.306820	1.0	Circle	8	Global
+C-Freq			Mauldin FD Dispatch	Off	460375000	FM	TONE=C203.5	3	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Mauldin FD Fireground/EOC	Off	460575000	FM	TONE=C127.3	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Mauldin PD Dispatch	Off	460275000	FM	TONE=C127.3	2	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Group			Municipalities - Simpsonville	Off	34.748380	-82.260130	1.0	Circle	9	Global
+C-Freq			Simpsonville FD Dispatch	Off	460625000	FM	TONE=C127.3	3	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Simpsonville FD Ops	Off	453075000	NFM	ColorCode=1	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Simpsonville PD	Off	453550000	FM	TONE=C118.8	7	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Simpsonville PD	Off	453600000	FM	TONE=C179.9	7	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Simpsonville PD Investigators	Off	453487500	FM	TONE=D466	7	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Group			Municipalities - Travelers Rest	Off	34.973750	-82.438660	1.0	Circle	10	Global
+C-Freq			Travelers Rest FD	Off	154055000	FM	TONE=C136.5	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Travelers Rest FD	Off	464737500	NFM	ColorCode=1	8	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Travelers Rest PD	Off	453400000	FM	TONE=D205	7	Off	2	0	Off	Auto	Off	On	Off	Off
+C-Freq			Travelers Rest PD	Off	460175000	FM		7	Off	2	0	Off	Auto	Off	On	Off	Off

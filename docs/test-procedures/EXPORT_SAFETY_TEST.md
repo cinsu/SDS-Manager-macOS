@@ -1,0 +1,1 @@
+v0.0.6u GUI Test 1: File → Preview Scanner Export (Read-only)… with an unchanged imported configuration. Confirm the report includes EXPORT SAFETY AUDIT — READ ONLY, scanner free-space bytes, unresolved safety gates, and Export action: DISABLED. Verify UI remains responsive and no scanner files change.
