@@ -1,12 +1,12 @@
 # SDS-Manager User Manual
 
-Version 0.1.25 · by J. Lynch, developed with the help of AI (Anthropic's Claude) · [PDF with each release](https://github.com/jmlynchjr/SDS-Manager/releases)
+Version 0.1.27 · by J. Lynch, developed with the help of AI (Anthropic's Claude) · [PDF with each release](https://github.com/jmlynchjr/SDS-Manager/releases)
 
 Use the outline button (☰) at the top right of this file to jump to a chapter.
 
 ## About this manual
 
-This manual describes **SDS-Manager version 0.1.25**, a Linux program for managing a Uniden SDS100 scanner's Favorites Lists, settings and system database from a PC, without Sentinel.
+This manual describes **SDS-Manager version 0.1.27**, a Linux program for managing a Uniden SDS100 scanner's Favorites Lists, settings and system database from a PC, without Sentinel.
 
 Chapters 1 to 4 cover installing, the main window and scanner configurations, and are worth reading first. Chapter 10, *Exporting to the scanner*, explains how changes reach the scanner and how they are protected. The rest can be read as you need them.
 
@@ -253,7 +253,7 @@ Right-click in the left pane:
 - **New Department…** on a system or department: a conventional department starts with one channel (name, frequency, modulation, tone); a talkgroup department starts with one talkgroup (name and ID).
 - **Add Conventional Frequency…** on a conventional department: name, frequency, modulation and an optional tone, NAC or colour code. **Add Talkgroup…** on a talkgroup department.
 - **Delete System…**, **Delete Department…** and **Delete Site…** remove them with everything in them, or select one and press **Delete**. A list can't be left empty, and a trunked system keeps at least one site.
-- Select several channels or talkgroups on the right (Ctrl+click, Shift+click) and press **Delete** to remove them together, as one Undo step.
+- Select several channels or talkgroups on the right, or several systems, sites and departments on the left (Ctrl+click adds one, Shift+click a range), and press **Delete** to remove them together, as one Undo step.
 
 Trunked systems come from RadioReference, with their sites.
 
