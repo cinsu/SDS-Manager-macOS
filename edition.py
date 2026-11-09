@@ -9,7 +9,7 @@ archive file you choose, and takes firmware files you add yourself.
 EDITION = "public"
 PERSONAL = EDITION == "personal"
 APP_NAME = "SDS-Manager"
-BASE_VERSION = "0.1.24"
+BASE_VERSION = "0.1.27"
 APP_VERSION = BASE_VERSION + ("-personal" if PERSONAL else "")
 PACKAGE_NAME = "sds-manager-personal" if PERSONAL else "sds-manager"
 PROGRAM_COMMAND = "/usr/bin/sds-manager"

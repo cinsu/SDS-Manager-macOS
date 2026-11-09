@@ -239,6 +239,7 @@ QLineEdit, QTextEdit, QPlainTextEdit, QTextBrowser, QComboBox, QSpinBox, QDouble
 QLineEdit:focus, QTextEdit:focus, QPlainTextEdit:focus, QComboBox:focus, QSpinBox:focus,
 QDoubleSpinBox:focus { border:1px solid #69b8ef; }
 QLineEdit:disabled, QComboBox:disabled, QSpinBox:disabled { color:#718094; }
+QComboBox { combobox-popup:0; }
 QComboBox QAbstractItemView { background:#202d3d; border:1px solid #567c9f;
     selection-background-color:#2975b8; selection-color:#ffffff; }
 QTableWidget, QTableView, QTreeWidget, QTreeView, QListWidget, QListView {
@@ -316,3 +317,29 @@ def reapply(widgets):
             continue
         if isinstance(css, str):
             widget.setStyleSheet(th(css))
+
+
+COMBO_ROWS = 20
+
+
+def fit_combo(widget):
+    """Up to COMBO_ROWS rows in a dropdown's list; the rest scroll (v0.1.26)."""
+    if type(widget).__name__ == 'QComboBox' or any(c.__name__ == 'QComboBox' for c in type(widget).__mro__):
+        try:
+            if widget.maxVisibleItems() < COMBO_ROWS:
+                widget.setMaxVisibleItems(COMBO_ROWS)
+        except (AttributeError, RuntimeError):
+            pass
+
+
+try:
+    from PyQt6.QtCore import QObject, QEvent
+
+    class ComboRows(QObject):
+        """Gives every dropdown made after the theme is applied the same row limit."""
+        def eventFilter(self, obj, event):
+            if event.type() == QEvent.Type.Polish:
+                fit_combo(obj)
+            return False
+except ImportError:                       # tests without PyQt6
+    ComboRows = None

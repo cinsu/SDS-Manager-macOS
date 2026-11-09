@@ -1,3 +1,25 @@
+## v0.1.27 — Select several with Ctrl and Shift
+
+- **New: Ctrl+click and Shift+click select several items** (Ctrl adds or removes one, Shift selects a range):
+  - **List editor, left pane:** select systems, sites and departments, then press Delete or right-click → **Delete N Selected…**. One question, one Undo step. It refuses to delete every site of a trunked system or everything in the list; a system whose departments are all deleted goes too.
+  - **List editor, right pane:** clicking anywhere in a row now selects the whole row, so Ctrl and Shift work on any column, not just the row numbers. Delete, Change Selected Rows…, Cut and Copy use them.
+  - **Main window, Favorites Lists:** select several systems and press **Remove Selection**; one Undo step.
+  - **Keys & Tags:** **Next Free Key**, **Next Free Tag** and **Clear** work on every selected item, and ticking or unticking Scanning (or a list's Monitor) on one selected item does the same to all of them.
+- New tests (2).
+
+## v0.1.26 — Dropdowns fit on the screen
+
+- **Fixed: long dropdowns ran off the top and bottom of the screen** (for example the Database Contents county list, or the Favorites List list with many lists), so some entries couldn't be reached. Every dropdown now opens as a list of up to 20 entries below the box, and the rest scroll.
+- Typing the first letters of an entry still jumps to it.
+
+## v0.1.25 — Delete in the list editor
+
+- **New: Delete Site…** (right-click a trunked site on the left): the site with its frequencies and band plan. The last site of a system is refused, because a trunked system needs one; delete the system instead.
+- **New: the Delete key** in the list editor. On the left it deletes the selected system, site or department (each asks first); on the right, the selected channels or talkgroups.
+- **New: delete several channels or talkgroups at once**: select rows (Ctrl+click, Shift+click) and press Delete, or right-click → **Delete N Selected Rows…**. One Undo step. Selecting everything in a department is refused; delete the department instead.
+- Delete System… and Delete Department… were already on the right-click menu; they now show the Delete key beside them.
+- New tests (3).
+
 ## v0.1.24 — Add to Favorites into an existing list
 
 - **Fixed: adding a system from the database to an existing Favorites List couldn't be saved** ("Configuration save blocked: Draft includes non-native or unsupported system records"). Add to Favorites put the new system in the database's own layout instead of the scanner's. It worked for new lists only.

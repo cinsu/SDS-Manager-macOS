@@ -477,6 +477,7 @@ class DatabaseWorkspace(QWidget):
         self.draft_tree = QTreeWidget()
         self.draft_tree.setHeaderLabels([title for _,title in FAVORITES_FIELDS])
         self.draft_tree.setUniformRowHeights(True)
+        self.draft_tree.setSelectionMode(QTreeWidget.SelectionMode.ExtendedSelection)    # v0.1.27: Ctrl / Shift
         self.display_settings = QSettings('SDS100Manager', 'DatabaseFavoritesManager')
         for tree, key in ((self.db_tree,'database'), (self.draft_tree,'favorites')):
             tree.setSortingEnabled(True)
@@ -1703,8 +1704,32 @@ class DatabaseWorkspace(QWidget):
                 item.setToolTip(0, 'Offline selective import. Expand to review sites and TGIDs.')
 
     def delete_selected(self):
+        if not self.current_draft:
+            return
+        draft = self.drafts[self.current_draft]
+        systems = sorted({n.data(0, Qt.ItemDataRole.UserRole) for n in self.draft_tree.selectedItems()
+                          if isinstance(n.data(0, Qt.ItemDataRole.UserRole), int)})
+        systems = [i for i in systems if 0 <= i < len(draft) and draft[i].get('scope') != 'metadata']
+        if len(systems) > 1 or (systems and favorites_clipboard.is_native(draft)):
+            # v0.1.27: several systems at once (Ctrl / Shift), one Undo step; never the whole list
+            targets = [(i, None) for i in systems]
+            try:
+                plan = favorites_clipboard.removal_plan(draft, targets)
+            except favorites_clipboard.ClipboardError as exc:
+                QMessageBox.information(self, 'Remove Selection', str(exc))
+                return
+            if QMessageBox.question(self, 'Remove Selection', favorites_clipboard.describe_plan(plan)
+                                    + '\n\nUndo brings them back.',
+                                    QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No
+                                    ) != QMessageBox.StandardButton.Yes:
+                return
+            self._snapshot()
+            favorites_clipboard.remove_planned(draft, plan, targets)
+            self.refresh_draft()
+            self.status.setText(f'Removed {len(systems)} system(s). Save Configuration keeps the change.')
+            return
         node = self.draft_tree.currentItem()
-        if node is None or not self.current_draft:
+        if node is None:
             return
         index = node.data(0, Qt.ItemDataRole.UserRole)
         if not isinstance(index, int):

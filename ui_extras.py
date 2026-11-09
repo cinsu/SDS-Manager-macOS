@@ -87,6 +87,16 @@ class ExtrasMixin:
         app.setPalette(palette)
         app.setStyleSheet(app_theme.stylesheet(theme))
         app_theme.reapply(app.allWidgets())
+        # v0.1.26: dropdowns open as a scrolling list that fits on the screen (combobox-popup:0 in the
+        # stylesheet), showing up to 20 entries, instead of a menu taller than the screen.
+        if app_theme.ComboRows is not None and not getattr(self, '_combo_filter', None):
+            self._combo_filter = app_theme.ComboRows(app)
+            app.installEventFilter(self._combo_filter)
+        try:
+            for widget in app.allWidgets():
+                app_theme.fit_combo(widget)
+        except TypeError:                     # not a real application (tests)
+            pass
         font = QFont(self._default_font)
         size = int(self.prefs.get('font_size', 0))
         base = self._default_font.pointSizeF()

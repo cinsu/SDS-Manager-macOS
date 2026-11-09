@@ -218,7 +218,8 @@ class DialogLogicTests(unittest.TestCase):
         finally:
             self.mod.QMenu = original
         dialog.table.selectRow.assert_not_called()
-        self.assertIn('Change 2 Selected Rows', str(menu.addAction.call_args))
+        self.assertIn('Change 2 Selected Rows', str(menu.addAction.call_args_list))
+        self.assertIn('Delete 2 Selected Rows', str(menu.addAction.call_args_list))      # v0.1.25
 
     def test_right_click_outside_the_selection_selects_that_row(self):
         from unittest.mock import MagicMock

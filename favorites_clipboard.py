@@ -167,6 +167,98 @@ def remove_department(entries, entry_index, start):
     return False
 
 
+def site_count(records):
+    return sum(1 for kind, *_ in blocks(records) if kind == 'Site')
+
+
+def remove_site(entries, entry_index, start):
+    """Remove one trunked site with its frequencies and band plan (v0.1.25). A trunked system needs at least
+    one site, so the last one is refused: delete the system instead."""
+    records = entries[entry_index]['records']
+    block = block_at(records, start)
+    if block is None or block[0] != 'Site':
+        raise ClipboardError('Choose a site.')
+    if site_count(records) == 1:
+        raise ClipboardError(f'{records[start][3]} is the only site of {system_name(records)}; a trunked system '
+                             'needs at least one. Delete the system instead.')
+    del records[block[1]:block[2]]
+    _note_selection(entries[entry_index])
+
+
+def removal_plan(entries, targets):
+    """Several systems, sites and departments selected together (v0.1.27). targets: [(entry index, block start
+    or None for a whole system)]. Returns {'systems': [names], 'sites': [names], 'departments': [names],
+    'emptied': [systems that lose their last department]} or raises ClipboardError."""
+    systems = {e for e, start in targets if start is None}
+    plan = {'systems': [], 'sites': [], 'departments': [], 'emptied': [], '_rows': {}}
+    for e in sorted(systems):
+        plan['systems'].append(system_name(entries[e]['records']))
+    for e, start in targets:
+        if start is None or e in systems:
+            continue
+        block = block_at(entries[e]['records'], start)
+        if block is not None:
+            plan['_rows'].setdefault(e, set()).add(start)
+    for e, starts in plan['_rows'].items():
+        records = entries[e]['records']
+        chosen = [b for b in blocks(records) if b[1] in starts]
+        sites = [b for b in chosen if b[0] == 'Site']
+        departments = [b for b in chosen if b[0] in DEPARTMENTS]
+        if sites and len(sites) == site_count(records) and len(departments) < department_count(records):
+            raise ClipboardError(f'That is every site of {system_name(records)}; a trunked system needs at least '
+                                 'one. Leave one site, or delete the system.')
+        plan['sites'] += [records[b[1]][3] for b in sites]
+        plan['departments'] += [records[b[1]][3] for b in departments]
+        if departments and len(departments) == department_count(records):
+            plan['emptied'].append(system_name(records))
+    left = [e for i, e in enumerate(entries) if e.get('scope') != 'metadata' and i not in systems
+            and system_name(e['records']) not in plan['emptied']]
+    if not left:
+        raise ClipboardError('That would leave this Favorites List empty. Delete the list from the '
+                             'configuration instead (Favorites → Delete Favorites List…).')
+    return plan
+
+
+def remove_planned(entries, plan, targets):
+    """Carry out removal_plan (bottom up, so positions stay valid)."""
+    systems = {e for e, start in targets if start is None}
+    for e, starts in plan['_rows'].items():
+        records = entries[e]['records']
+        for kind, start, end in sorted((b for b in blocks(records) if b[1] in starts), key=lambda b: -b[1]):
+            del records[start:end]
+        if department_count(records) == 0:
+            systems.add(e)
+        else:
+            _note_selection(entries[e])
+    for e in sorted(systems, reverse=True):
+        del entries[e]
+
+
+def describe_plan(plan):
+    parts = []
+    for word, key in (('system', 'systems'), ('site', 'sites'), ('department', 'departments')):
+        if plan[key]:
+            parts.append(f'{len(plan[key])} {word}{"s" if len(plan[key]) != 1 else ""}: ' + ', '.join(plan[key]))
+    text = 'Delete ' + '; '.join(parts) + '?'
+    if plan['emptied']:
+        text += '\n\nThat is every department of ' + ', '.join(plan['emptied']) + ', so the system goes too.'
+    return text
+
+
+def leaves_check(entries, entry_index, indices):
+    """Refuse deleting every channel or talkgroup of a department (v0.1.25): delete the department instead.
+    Returns the rows to delete."""
+    records = entries[entry_index]['records']
+    chosen = {i for i in indices if 0 <= i < len(records) and kind_of(records[i]) in DEPARTMENT_OF}
+    for kind, start, end in blocks(records):
+        if kind in DEPARTMENTS:
+            leaves = {i for i in range(start + 1, end) if kind_of(records[i]) in DEPARTMENT_OF}
+            if leaves and leaves <= chosen:
+                raise ClipboardError(f'That is everything in the department {records[start][3]}. Delete the '
+                                     'department instead (right-click it on the left).')
+    return sorted(chosen)
+
+
 def remove_leaves(entries, entry_index, indices):
     records = entries[entry_index]['records']
     for i in sorted(set(indices), reverse=True):

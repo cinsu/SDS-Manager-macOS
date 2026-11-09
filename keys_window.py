@@ -119,6 +119,7 @@ class KeysWindow(QDialog):
         self.tree.setHeaderLabels(['Favorites List / System / Department / Channel', 'Detail', 'Quick key',
                                    'Scanning', 'Number tag', 'Order'])
         self.tree.setColumnHidden(ORDER, True)
+        self.tree.setSelectionMode(QTreeWidget.SelectionMode.ExtendedSelection)    # v0.1.27: Ctrl / Shift
         self.tree.setSortingEnabled(True)
         self.tree.sortByColumn(ORDER, Qt.SortOrder.AscendingOrder)
         self.tree.header().setToolTip('Click a column heading to sort by it; click again to reverse. '
@@ -264,6 +265,13 @@ class KeysWindow(QDialog):
         node = self.tree.currentItem()
         return None if node is None else self.model.items[node.data(NAME, ROLE)]
 
+    def _all_selected(self):
+        """Every selected item (v0.1.27: Ctrl+click and Shift+click), in tree order; else the current one."""
+        items = [self.model.items[n.data(NAME, ROLE)] for n in self.tree.selectedItems()]
+        if not items and self._selected() is not None:
+            items = [self._selected()]
+        return sorted(items, key=lambda i: i['id'])
+
     def _double_clicked(self, node, column):
         item = self.model.items[node.data(NAME, ROLE)]
         field = {KEY: 'key', TAG: 'tag'}.get(column)
@@ -280,13 +288,18 @@ class KeysWindow(QDialog):
             return
         item = self.model.items[node.data(NAME, ROLE)]
         checked = node.checkState(column) == Qt.CheckState.Checked
-        if column == SCANNING and self.model.key_on(item) is not None and checked != self.model.key_on(item):
-            self.model.set_on(item, checked)
-        elif column == DETAIL and item['level'] == 'list' and checked != item.get('monitor'):
-            self.model.set_monitor(item, checked)
-        else:
-            return
-        self._refresh()
+        # v0.1.27: ticking one of several selected items ticks them all
+        family = self._all_selected() if node.isSelected() else [item]
+        changed = False
+        for one in family:
+            if column == SCANNING and self.model.key_on(one) is not None and checked != self.model.key_on(one):
+                self.model.set_on(one, checked)
+                changed = True
+            elif column == DETAIL and one['level'] == 'list' and checked != one.get('monitor'):
+                self.model.set_monitor(one, checked)
+                changed = True
+        if changed:
+            self._refresh()
 
     # ---- helpers ---------------------------------------------------------------------------------------
     def _number_children(self, field):
@@ -329,15 +342,15 @@ class KeysWindow(QDialog):
         self._refresh()
 
     def _next_free(self, field):
-        item = self._selected()
-        if item is None or (item['key_scope'] if field == 'key' else item['tag_scope']) is None:
-            return
-        free = self.model.next_free(item, field)
-        if free is None:
-            QMessageBox.information(self, 'Next Free', 'Every number in this set is used.')
-            return
-        self.model.set_number(item, field, free)
-        self._refresh()
+        items = [i for i in self._all_selected() if (i['key_scope'] if field == 'key' else i['tag_scope'])]
+        for item in items:                       # v0.1.27: each selected item gets its own free number
+            free = self.model.next_free(item, field)
+            if free is None:
+                QMessageBox.information(self, 'Next Free', f'Every number is used in the set of {item["name"]}.')
+                break
+            self.model.set_number(item, field, free)
+        if items:
+            self._refresh()
 
     def _tags_by_department(self):
         item = self._selected()
@@ -485,12 +498,13 @@ class KeysWindow(QDialog):
         QMessageBox.information(self, 'Key Card', f'Saved {path}.')
 
     def _clear_selected(self):
-        item = self._selected()
-        if item is None:
+        items = self._all_selected()
+        if not items:
             return
-        for field, scope in (('key', 'key_scope'), ('tag', 'tag_scope')):
-            if item[scope] is not None:
-                self.model.set_number(item, field, None)
+        for item in items:                       # v0.1.27: every selected item
+            for field, scope in (('key', 'key_scope'), ('tag', 'tag_scope')):
+                if item[scope] is not None:
+                    self.model.set_number(item, field, None)
         self._refresh()
 
     # ---- applying --------------------------------------------------------------------------------------

@@ -7,7 +7,7 @@ from PyQt6.QtCore import Qt, QSettings, QRegularExpression
 from PyQt6.QtWidgets import (QDialog, QVBoxLayout, QHBoxLayout, QLabel, QSplitter,
     QTreeWidget, QTreeWidgetItem, QTableWidget, QTableWidgetItem,
     QDialogButtonBox, QMessageBox, QSizePolicy, QComboBox, QPushButton, QHeaderView,
-    QCheckBox, QGroupBox, QRadioButton, QGridLayout, QFormLayout, QLineEdit, QMenu, QInputDialog)
+    QCheckBox, QGroupBox, QRadioButton, QGridLayout, QFormLayout, QLineEdit, QMenu, QInputDialog, QAbstractItemView)
 from PyQt6.QtGui import QRegularExpressionValidator, QShortcut, QKeySequence
 from database_workspace import favorites_record_columns
 
@@ -395,7 +395,11 @@ class FavoritesSettingsDialog(QDialog):
         self.tree.setColumnWidth(0, 300)
         self.tree.setMinimumWidth(260)
         self.tree.setSortingEnabled(False)
+        # v0.1.27: Ctrl+click adds one, Shift+click a range, in both panes.
+        self.tree.setSelectionMode(QAbstractItemView.SelectionMode.ExtendedSelection)
         self.table = QTableWidget()
+        self.table.setSelectionMode(QAbstractItemView.SelectionMode.ExtendedSelection)
+        self.table.setSelectionBehavior(QAbstractItemView.SelectionBehavior.SelectRows)
         self.table.setColumnCount(len(COLUMNS))
         self.table.setHorizontalHeaderLabels(COLUMNS)
         self.table.setSortingEnabled(False)
@@ -495,6 +499,11 @@ class FavoritesSettingsDialog(QDialog):
                 shortcut = QShortcut(QKeySequence(keys), widget)
                 shortcut.setContext(Qt.ShortcutContext.WidgetShortcut)
                 shortcut.activated.connect(lambda s=side, a=action: self._clipboard_key(s, a))
+        # Delete (v0.1.25): the selected system, site or department on the left; the selected rows on the right.
+        for widget, handler in ((self.tree, self._delete_in_tree), (self.table, self._delete_selected_rows)):
+            shortcut = QShortcut(QKeySequence(QKeySequence.StandardKey.Delete), widget)
+            shortcut.setContext(Qt.ShortcutContext.WidgetShortcut)
+            shortcut.activated.connect(handler)
         buttons.rejected.connect(self.reject)
         layout.addWidget(buttons, 0)
         self._populate_tree()
@@ -508,6 +517,12 @@ class FavoritesSettingsDialog(QDialog):
             menu.addAction('New Conventional System…', self._new_conventional_system)
             menu.exec(self.tree.viewport().mapToGlobal(point))
             return
+        picked = [i for i in self.tree.selectedItems() if i.data(0, ROLE) is not None]
+        if item.isSelected() and len(picked) > 1:     # v0.1.27: right-click inside a multi-selection keeps it
+            menu = QMenu(self)
+            menu.addAction(f'Delete {len(picked)} Selected…\tDel', self._delete_in_tree)
+            menu.exec(self.tree.viewport().mapToGlobal(point))
+            return
         self.tree.setCurrentItem(item)  # Right-click always acts on the clicked item.
         entry_index, record_index = item.data(0, ROLE)
         if record_index is None:
@@ -517,7 +532,7 @@ class FavoritesSettingsDialog(QDialog):
             menu.addAction('Rename System…', self._rename_selected_system)
             menu.addAction('New Department…', self._new_department)
             menu.addAction('New Conventional System…', self._new_conventional_system)
-            menu.addAction('Delete System…', self._delete_selected_system)
+            menu.addAction('Delete System…\tDel', self._delete_selected_system)
             menu.addSeparator()
             menu.addAction('Add Unit Names from SDS100 Monitor…', self._add_monitor_unit_names)
             menu.addSeparator()
@@ -533,16 +548,17 @@ class FavoritesSettingsDialog(QDialog):
         if kind == 'Site':
             menu.addAction('Edit Site…', self._edit_selected_site)
             menu.addAction('Add Site Frequency…', self._add_site_frequency)
+            menu.addAction('Delete Site…\tDel', self._delete_selected_site)
         elif kind == 'C-Group':
             menu.addAction('Rename Department…', self._rename_selected_department)
             menu.addAction('Add Conventional Frequency…', self._add_conventional_frequency)
             menu.addAction('New Department…', self._new_department)
-            menu.addAction('Delete Department…', self._delete_selected_department)
+            menu.addAction('Delete Department…\tDel', self._delete_selected_department)
         elif kind == 'T-Group':
             menu.addAction('Rename Department…', self._rename_selected_department)
             menu.addAction('Add Talkgroup…', self._add_talkgroup)
             menu.addAction('New Department…', self._new_department)
-            menu.addAction('Delete Department…', self._delete_selected_department)
+            menu.addAction('Delete Department…\tDel', self._delete_selected_department)
         if menu.actions():
             menu.exec(self.tree.viewport().mapToGlobal(point))
 
@@ -688,6 +704,8 @@ class FavoritesSettingsDialog(QDialog):
         menu.addSeparator()
         if len(selected_rows) > 1:
             menu.addAction(f'Change {len(selected_rows)} Selected Rows…', self._bulk_edit_selected)
+            if kind in ('TGID', 'C-Freq'):
+                menu.addAction(f'Delete {len(selected_rows)} Selected Rows…\tDel', self._delete_selected_rows)
             menu.exec(self.table.viewport().mapToGlobal(point))
             return
         if kind == 'T-Freq' and self._site_frequency_context() is not None:
@@ -697,11 +715,11 @@ class FavoritesSettingsDialog(QDialog):
         elif kind == 'TGID':
             menu.addAction('Edit Talkgroup Name…', lambda: self.table.editItem(self.table.item(table_row, 0)))
             menu.addAction('Edit TGID…', self._edit_tgid)
-            menu.addAction('Delete Talkgroup…', self._delete_selected_leaf)
+            menu.addAction('Delete Talkgroup…\tDel', self._delete_selected_leaf)
         elif kind == 'C-Freq':
             menu.addAction('Edit Channel Name…', lambda: self.table.editItem(self.table.item(table_row, 0)))
             menu.addAction('Edit Frequency…', lambda: self.table.editItem(self.table.item(table_row, 2)))
-            menu.addAction('Delete Channel…', self._delete_selected_leaf)
+            menu.addAction('Delete Channel…\tDel', self._delete_selected_leaf)
         # Match double-click field editing without introducing a second edit path.
         # The existing per-field validation/confirmation remains authoritative.
         if kind in ('C-Freq', 'TGID') and clicked_column >= 0:
@@ -1331,6 +1349,97 @@ class FavoritesSettingsDialog(QDialog):
         clipboard.remove_system(entries, entry_index)
         self._redraw(None)
         self.workspace.status.setText(f'Deleted system {name}. Save Configuration keeps the change.')
+
+    def _delete_in_tree(self):
+        picked = [i.data(0, ROLE) for i in self.tree.selectedItems() if i.data(0, ROLE) is not None]
+        if len(picked) > 1:                       # v0.1.27: several selected with Ctrl or Shift
+            self._delete_many(picked)
+            return
+        item = self.tree.currentItem()
+        if item is None or item.data(0, ROLE) is None:
+            return
+        entry_index, start = item.data(0, ROLE)
+        if start is None:
+            self._delete_selected_system()
+            return
+        kind = self._entries()[entry_index]['records'][start][0]
+        if kind == 'Site':
+            self._delete_selected_site()
+        elif kind in ('C-Group', 'T-Group'):
+            self._delete_selected_department()
+
+    def _delete_many(self, picked):
+        entries = self._entries()
+        targets = [tuple(p) for p in picked]
+        try:
+            plan = clipboard.removal_plan(entries, targets)
+        except clipboard.ClipboardError as exc:
+            QMessageBox.information(self, 'Delete', str(exc))
+            return
+        if QMessageBox.question(self, 'Delete', clipboard.describe_plan(plan) + '\n\nUndo brings them back.',
+                                QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No,
+                                QMessageBox.StandardButton.No) != QMessageBox.StandardButton.Yes:
+            return
+        self.workspace._snapshot()
+        clipboard.remove_planned(entries, plan, targets)
+        self._redraw(None)
+        self.workspace.status.setText('Deleted ' + ', '.join(
+            f'{len(plan[k])} {k}' for k in ('systems', 'sites', 'departments') if plan[k])
+            + '. Save Configuration keeps the change.')
+
+    def _delete_selected_site(self):
+        """A trunked site with its frequencies (v0.1.25); never the last site of a system."""
+        item = self.tree.currentItem()
+        if item is None or item.data(0, ROLE) is None or item.data(0, ROLE)[1] is None:
+            return
+        entry_index, start = item.data(0, ROLE)
+        entries = self._entries()
+        records = entries[entry_index]['records']
+        if records[start][0] != 'Site':
+            return
+        name = records[start][3]
+        block = clipboard.block_at(records, start)
+        frequencies = sum(1 for r in records[block[1]:block[2]] if r and r[0] == 'T-Freq')
+        if clipboard.site_count(records) == 1:
+            QMessageBox.information(self, 'Delete Site', f'{name} is the only site of '
+                                    f'{clipboard.system_name(records)}; a trunked system needs at least one. '
+                                    'Delete the system instead.')
+            return
+        if QMessageBox.question(self, 'Delete Site', f'Delete the site {name} and its {frequencies} '
+                                f'frequenc{"y" if frequencies == 1 else "ies"} from '
+                                f'{clipboard.system_name(records)}?\n\nUndo brings it back.',
+                                QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No,
+                                QMessageBox.StandardButton.No) != QMessageBox.StandardButton.Yes:
+            return
+        self.workspace._snapshot()
+        clipboard.remove_site(entries, entry_index, start)
+        self._redraw((entry_index, None))
+        self.workspace.status.setText(f'Deleted site {name}. Save Configuration keeps the change.')
+
+    def _delete_selected_rows(self):
+        """Delete the selected channels or talkgroups (v0.1.25: several at once, as one Undo step)."""
+        entry_index, indices = self._selected_leaf_indices()
+        if len(indices) <= 1:
+            self._delete_selected_leaf()
+            return
+        entries = self._entries()
+        try:
+            rows = clipboard.leaves_check(entries, entry_index, indices)
+        except clipboard.ClipboardError as exc:
+            QMessageBox.information(self, 'Delete', str(exc))
+            return
+        if not rows:
+            return
+        if QMessageBox.question(self, 'Delete', f'Delete the {len(rows)} selected channels or talkgroups?'
+                                '\n\nUndo brings them back.',
+                                QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No,
+                                QMessageBox.StandardButton.No) != QMessageBox.StandardButton.Yes:
+            return
+        self.workspace._snapshot()
+        clipboard.remove_leaves(entries, entry_index, rows)
+        self._redraw(self._current_place())
+        self.workspace.status.setText(f'Deleted {len(rows)} channels or talkgroups. '
+                                      'Save Configuration keeps the change.')
 
     def _delete_selected_department(self):
         item = self.tree.currentItem()

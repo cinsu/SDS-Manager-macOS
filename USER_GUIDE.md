@@ -63,7 +63,8 @@ In the list editor (right-click in the left pane):
 - **New Department…** on a system or department: a conventional department starts with one channel (name, frequency, modulation, tone); a talkgroup department starts with one talkgroup (name and ID).
 - **New Conventional System…** (also on the empty area): system name, first department and first channel. Trunked systems come from the database or RadioReference, with their sites.
 - **Add Conventional Frequency…** on a conventional department: name, frequency, modulation and an optional tone, NAC or colour code. **Add Talkgroup…** on a talkgroup department.
-- **Delete System…** and **Delete Department…** remove them with everything in them. A list can't be left with nothing in it.
+- **Delete System…**, **Delete Department…** and **Delete Site…** remove them with everything in them, or select one and press **Delete**. A list can't be left empty, and a trunked system keeps at least one site.
+- Select several channels or talkgroups on the right, or several systems, sites and departments on the left (Ctrl+click adds one, Shift+click a range), and press **Delete** to remove them together, as one Undo step.
 - New items get the scanner's default settings, the same as items from the database. Each change is one Undo step; **Save Configuration** keeps them.
 
 ### Change settings

@@ -103,3 +103,21 @@ class PreferenceTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+class DropdownTests(unittest.TestCase):
+    def test_dropdowns_scroll_instead_of_running_off_the_screen(self):     # v0.1.26
+        self.assertIn('QComboBox { combobox-popup:0; }', app_theme.STYLESHEET)
+
+        class QComboBox:
+            rows = 10
+
+            def maxVisibleItems(self):
+                return self.rows
+
+            def setMaxVisibleItems(self, n):
+                self.rows = n
+        combo = QComboBox()
+        app_theme.fit_combo(combo)
+        self.assertEqual(combo.rows, app_theme.COMBO_ROWS)
+        app_theme.fit_combo(object())                         # anything else is left alone
