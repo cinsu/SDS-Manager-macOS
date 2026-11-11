@@ -13,6 +13,7 @@ Favorites lists are self-contained copies and are never touched by this update.
 The write itself is the same controlled batch as the favorites export: a fresh SHA-256-verified backup,
 SHA-256 staging for every file, rollback of the whole batch on any failure, then os.sync().
 """
+import mac_platform  # macOS: full flush to the SD card, no-overwrite rename
 from pathlib import Path
 from datetime import datetime, timezone
 import hashlib

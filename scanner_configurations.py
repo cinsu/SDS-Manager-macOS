@@ -1,6 +1,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 # Copyright (c) 2026 J. Lynch. See LICENSE.
 """Local SDS100 configurations, verified import and safeguarded offline edits."""
+import mac_platform  # macOS: full flush to the SD card, no-overwrite rename
 from pathlib import Path
 import hashlib
 import ctypes
@@ -498,6 +499,10 @@ def save_configuration_as(folder, new_name, edited_favorites=None, library=None)
         verify_configuration(stage, new_manifest)
         # Linux atomic no-replace publish. Ordinary os.rename() can replace an
         # empty directory created concurrently; never allow that for Save As.
+        if mac_platform.IS_MAC:
+            mac_platform.rename_noreplace(stage, destination)
+            verify_configuration(destination, new_manifest)
+            return destination, new_manifest
         libc = ctypes.CDLL(None, use_errno=True)
         renameat2 = getattr(libc, 'renameat2', None)
         if renameat2 is None:

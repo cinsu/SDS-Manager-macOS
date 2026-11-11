@@ -2,3 +2,4 @@ rr_app_key
 *.key
 __pycache__/
 *.pyc
+.venv-mac/

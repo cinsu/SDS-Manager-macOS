@@ -1,6 +1,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 # Copyright (c) 2026 J. Lynch. See LICENSE.
 """Verified exact configuration restoration with temporary emergency recovery."""
+import mac_platform  # macOS: full flush to the SD card, no-overwrite rename
 from pathlib import Path
 import json
 import hashlib

@@ -4,6 +4,7 @@
 housekeeping dialogs and appearance.  A mixin for ManagerWindow; the logic lives in plain modules
 (preferences, scanner_detect, scanner_panel, scanner_backup, managed_storage) and is unit tested there."""
 from pathlib import Path
+import sys
 import threading
 
 from PyQt6.QtCore import Qt, QTimer
@@ -247,7 +248,7 @@ class ExtrasMixin:
 
     def pick_scanner_folder(self, title):
         """The SD card root to use: the detected scanner when the user agrees, otherwise a folder chooser."""
-        start = self.prefs.get('mount_folder') or '/run/media'
+        start = self.prefs.get('mount_folder') or ('/Volumes' if sys.platform == 'darwin' else '/run/media')
         if not Path(start).is_dir():
             start = str(Path.home())
         if self.prefs.get('offer_detected_scanner', True):

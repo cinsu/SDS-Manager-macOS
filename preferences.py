@@ -8,6 +8,7 @@ invalid single value falls back to its default; the program never refuses to sta
 """
 import json
 import os
+import sys
 import tempfile
 from pathlib import Path
 
@@ -52,7 +53,7 @@ class Pref:
 
 PREFS = (
     # Scanner connection
-    Pref('mount_folder', '/run/media', 'Folder where removable media appear', 'Scanner connection', 'folder',
+    Pref('mount_folder', '/Volumes' if sys.platform == 'darwin' else '/run/media', 'Folder where removable media appear', 'Scanner connection', 'folder',
          help='Where file dialogs start, and where the detector looks first. Empty = look in every mounted volume.'),
     Pref('auto_detect', True, 'Detect the SDS100 when it is connected', 'Scanner connection', 'bool',
          help='Reads the mounted volumes every few seconds (read-only) and fills in the Scanner panel.'),

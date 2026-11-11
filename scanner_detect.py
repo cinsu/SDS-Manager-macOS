@@ -9,6 +9,8 @@ from datetime import datetime
 from pathlib import Path
 import shutil
 
+import mac_platform
+
 FAT_TYPES = ('vfat', 'msdos', 'exfat', 'fuseblk')
 
 
@@ -17,7 +19,9 @@ def _unescape(path):
 
 
 def mounts(proc='/proc/mounts'):
-    """[(device, mountpoint, fstype)] from /proc/mounts."""
+    """[(device, mountpoint, fstype)] from /proc/mounts (macOS: from `mount`)."""
+    if mac_platform.IS_MAC and proc == '/proc/mounts':
+        return mac_platform.mounts()
     found = []
     try:
         for line in Path(proc).read_text(encoding='utf-8', errors='replace').splitlines():

@@ -1,6 +1,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 # Copyright (c) 2026 J. Lynch. See LICENSE.
 """Offline-only safety rehearsal tests. No physical scanner or scanner writes."""
+import os
 import tempfile
 import unittest
 from pathlib import Path
@@ -8,6 +9,11 @@ from unittest.mock import patch
 from scanner_staging_rehearsal import rehearse_staging
 
 
+# A second file system for the staging area: /dev/shm on Linux, a RAM disk from run-tests-mac.sh on macOS.
+ALT_FS = os.environ.get('SDS_TEST_ALT_FS', '/dev/shm')
+
+
+@unittest.skipUnless(os.path.isdir(ALT_FS), 'no second file system for staging (use run-tests-mac.sh on macOS)')
 class StagingRehearsalTests(unittest.TestCase):
     def fixture(self, base):
         scanner = base/'scanner'/'BCDx36HP'
@@ -32,7 +38,7 @@ class StagingRehearsalTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             scanner, source, target, changes = self.fixture(Path(tmp))
             originals = {p:p.read_bytes() for p in target.values()}
-            report, ok = rehearse_staging(scanner,source,target,changes,workspace_base='/dev/shm')
+            report, ok = rehearse_staging(scanner,source,target,changes,workspace_base=ALT_FS)
             self.assertTrue(ok, report)
             self.assertIn('Injected interruption and simulated rollback: PASSED', report)
             self.assertIn('Scanner writes: 0', report)
@@ -51,7 +57,7 @@ class StagingRehearsalTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             scanner, source, target, changes = self.fixture(Path(tmp))
             source['favorites_lists/F_000001.hpd'] = source['favorites_lists/f_000001.hpd']
-            report, ok = rehearse_staging(scanner,source,target,changes,workspace_base='/dev/shm')
+            report, ok = rehearse_staging(scanner,source,target,changes,workspace_base=ALT_FS)
             self.assertFalse(ok)
             self.assertIn('Case-insensitive filename collision', report)
 
@@ -60,7 +66,7 @@ class StagingRehearsalTests(unittest.TestCase):
             scanner, source, target, changes = self.fixture(Path(tmp))
             source['favorites_lists/f_000002.hpd'].unlink()
             source['favorites_lists/f_000002.hpd'].symlink_to(source['favorites_lists/f_000001.hpd'])
-            report, ok = rehearse_staging(scanner,source,target,changes,workspace_base='/dev/shm')
+            report, ok = rehearse_staging(scanner,source,target,changes,workspace_base=ALT_FS)
             self.assertFalse(ok)
             self.assertIn('Symlink', report)
 
@@ -69,7 +75,7 @@ class StagingRehearsalTests(unittest.TestCase):
             scanner, source, target, changes = self.fixture(Path(tmp))
             changes['ADD'] = []
             changes['REPLACE'] = []
-            report, ok = rehearse_staging(scanner,source,target,changes,workspace_base='/dev/shm')
+            report, ok = rehearse_staging(scanner,source,target,changes,workspace_base=ALT_FS)
             self.assertTrue(ok, report)
             self.assertIn('actual-file rehearsal skipped', report)
 
@@ -78,7 +84,7 @@ class StagingRehearsalTests(unittest.TestCase):
             scanner, source, target, changes = self.fixture(Path(tmp))
             changes['ADD'] = ['favorites_lists/f_000001.hpd']
             changes['REPLACE'] = []
-            report, ok = rehearse_staging(scanner,source,target,changes,workspace_base='/dev/shm')
+            report, ok = rehearse_staging(scanner,source,target,changes,workspace_base=ALT_FS)
             self.assertFalse(ok)
             self.assertIn('ADD plan does not match', report)
 
@@ -88,7 +94,7 @@ class StagingRehearsalTests(unittest.TestCase):
             from collections import namedtuple
             Usage = namedtuple('Usage', 'total used free')
             with patch('scanner_staging_rehearsal.shutil.disk_usage', return_value=Usage(100,99,1)):
-                report, ok = rehearse_staging(scanner,source,target,changes,workspace_base='/dev/shm')
+                report, ok = rehearse_staging(scanner,source,target,changes,workspace_base=ALT_FS)
             self.assertFalse(ok)
             self.assertIn('Insufficient free space', report)
 

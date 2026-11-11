@@ -10,6 +10,8 @@ from pathlib import Path
 import os
 import re
 
+import mac_platform
+
 _OCTAL_ESCAPE = re.compile(r'\\([0-7]{3})')
 
 
@@ -63,6 +65,8 @@ def collect_identity_evidence(location, *, mountinfo='/proc/self/mountinfo',
     root = selected if selected.name.lower() == 'bcdx36hp' else selected/'BCDx36HP'
     if not root.is_dir():
         raise ValueError('BCDx36HP directory not found.')
+    if mac_platform.IS_MAC and mountinfo == '/proc/self/mountinfo':
+        return mac_platform.identity_evidence(root)
     # Only a real mounted block device provides useful USB provenance.
     mounts = [m for m in _mounts(mountinfo)
               if _is_within(root, Path(m['mountpoint']))]

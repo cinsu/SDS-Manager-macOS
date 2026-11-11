@@ -19,6 +19,7 @@ Safety:
     other scanner write; leftover firmware files in the folder are listed and can be removed first,
     because the scanner would try to install them too.
 """
+import mac_platform  # macOS: full flush to the SD card, no-overwrite rename
 from datetime import datetime
 import hashlib
 import html

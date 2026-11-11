@@ -17,6 +17,9 @@ MAX_BYTES = 25 * 1024 * 1024
 
 def detect_mounts():
     """List likely removable mount points, without automatically reading/writing them."""
+    import mac_platform
+    if mac_platform.IS_MAC:
+        return mac_platform.removable_mounts()
     found = []
     try:
         result = subprocess.run(['lsblk', '-J', '-o', 'NAME,TRAN,RM,MOUNTPOINTS,LABEL'],

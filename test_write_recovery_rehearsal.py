@@ -1,6 +1,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 # Copyright (c) 2026 J. Lynch. See LICENSE.
 """v0.0.7m isolated durable-recovery tests: NEVER use a real scanner."""
+import os
 import tempfile
 import unittest
 from pathlib import Path
@@ -19,6 +20,11 @@ def native(value=b'851012500'):
     return b'TargetModel\tBCDx36HP\r\n' + b'\t'.join(fields) + b'\r\n'
 
 
+# A second file system for the staging area: /dev/shm on Linux, a RAM disk from run-tests-mac.sh on macOS.
+ALT_FS = os.environ.get('SDS_TEST_ALT_FS', '/dev/shm')
+
+
+@unittest.skipUnless(os.path.isdir(ALT_FS), 'no second file system for staging (use run-tests-mac.sh on macOS)')
 class DurableRecoveryTests(unittest.TestCase):
     def fixture(self, base):
         root = base/'scanner'/'BCDx36HP'
@@ -120,7 +126,7 @@ class DurableRecoveryTests(unittest.TestCase):
             root,rel,target,source = self.fixture(base)
             original = target.read_bytes()
             report,ok = rehearse_write_recovery(root,{rel:source},{rel:target},
-                {'ADD':[],'REPLACE':[rel]},workspace_base='/dev/shm')
+                {'ADD':[],'REPLACE':[rel]},workspace_base=ALT_FS)
             self.assertTrue(ok,report)
             self.assertIn('actual narrow candidate',report)
             self.assertIn('Restart recovery after journal/stage/replacement interruption: PASSED (3/3)',report)
@@ -134,7 +140,7 @@ class DurableRecoveryTests(unittest.TestCase):
             source.write_bytes(native()+native())
             original = target.read_bytes()
             report,ok = rehearse_write_recovery(root,{rel:source},{rel:target},
-                {'ADD':[],'REPLACE':[rel]},workspace_base='/dev/shm')
+                {'ADD':[],'REPLACE':[rel]},workspace_base=ALT_FS)
             self.assertTrue(ok,report)
             self.assertIn('synthetic one-field edit',report)
             self.assertEqual(target.read_bytes(),original)
@@ -169,7 +175,7 @@ class DurableRecoveryTests(unittest.TestCase):
             source.symlink_to(target)
             original = target.read_bytes()
             report,ok = rehearse_write_recovery(root,{rel:source},{rel:target},
-                {'ADD':[],'REPLACE':[rel]},workspace_base='/dev/shm')
+                {'ADD':[],'REPLACE':[rel]},workspace_base=ALT_FS)
             self.assertTrue(ok,report)
             self.assertIn('synthetic one-field edit',report)
             self.assertEqual(target.read_bytes(),original)

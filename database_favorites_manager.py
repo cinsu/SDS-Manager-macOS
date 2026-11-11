@@ -2,6 +2,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 # Copyright (c) 2026 J. Lynch. See LICENSE.
 """SDS-Manager (formerly SDS100 Database & Favorites Manager)."""
+import mac_platform  # macOS: full flush to the SD card, no-overwrite rename
 import sys
 from PyQt6.QtWidgets import QApplication, QMainWindow, QFileDialog, QMessageBox, QInputDialog, QProgressDialog, QPushButton, QLabel, QDialog, QVBoxLayout, QProgressBar, QToolTip
 from PyQt6.QtCore import QObject, QThread, QTimer, pyqtSignal, Qt, QUrl
@@ -361,7 +362,7 @@ class ManagerWindow(ManageMixin, ExtrasMixin, MonitorLinkMixin, UpdatesMixin, QM
         if target == original or target.exists():
             QMessageBox.warning(self, 'Export blocked', 'Export requires a NEW filename. Existing files and original native files cannot be overwritten.')
             return
-        for forbidden in (Path('/run/media'), Path('/media')):
+        for forbidden in (Path('/run/media'), Path('/media'), Path('/Volumes')):
             if target == forbidden or forbidden in target.parents:
                 QMessageBox.warning(self, 'Scanner write blocked', 'Removable media export is disabled. Choose a local directory.')
                 return
