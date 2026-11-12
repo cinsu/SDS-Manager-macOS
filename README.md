@@ -21,11 +21,11 @@ Created by J. Lynch, with AI assistance in the build. Free software under the GN
 
 This fork adds macOS support. Nothing changes for Linux users. The full Mac guide, including safety steps for the scanner's SD card, is the appendix *Running on macOS* in the [user manual](docs/user-manual.md).
 
-**Requirements:** a Mac with [Homebrew](https://brew.sh) and git, and a RadioReference Premium account.
+**Requirements:** a Mac with [Homebrew](https://brew.sh), and a RadioReference Premium account.
 
-**RadioReference application key:** a key for the Mac version has been applied for. Once RadioReference approves it, a ready-to-run Mac release that includes the key will be published on the [Releases](https://github.com/cinsu/SDS-Manager-macOS/releases) page. Until then, running from source needs your own key (see the manual's appendix), entered under Advanced in Tools → RadioReference Account….
+**Install (recommended):** download the latest `SDS-Manager-macOS-….zip` from [Releases](https://github.com/cinsu/SDS-Manager-macOS/releases). Unzip it, move the **SDS-Manager** folder to your home folder, then in Terminal: `cd ~/SDS-Manager && bash setup-mac.sh`. The release includes this fork's RadioReference application key, so you only sign in with your own account.
 
-**Set up (one time):**
+**Or from source with git** (needs git, and your own RadioReference application key, entered under Advanced in Tools → RadioReference Account…):
 
 ```bash
 cd ~
@@ -34,7 +34,7 @@ cd ~/SDS-Manager
 ./setup-mac.sh
 ```
 
-**Start:** `~/SDS-Manager/launch-mac.sh`. **Update:** `cd ~/SDS-Manager && git pull`. **Tests:** `./run-tests-mac.sh`
+**Start:** `~/SDS-Manager/launch-mac.sh`. **Update:** download the newest release, or `git pull` if you installed with git. **Tests:** `./run-tests-mac.sh`
 
 **Before the first write to your scanner:** back up the whole SD card, and always eject it properly before unplugging. See the manual's appendix.
 
@@ -45,7 +45,7 @@ cd ~/SDS-Manager
 - **Your RadioReference password and key** are kept in the macOS Keychain.
 - **Help → Check for Updates** installs Linux packages and doesn't work on a Mac. Use `git pull`.
 
-**Status on the SDS150:** detection, preview and **Export to Scanner** of an edited Favorites List are tested and work. Database updates, firmware updates and restores have not been tested on an SDS150 yet.
+**Status on the SDS150:** tested and working.
 
 ## RadioReference
 

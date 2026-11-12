@@ -60,7 +60,7 @@ cat > "$NOTES" <<EOF
 A macOS port of [jmlynchjr/SDS-Manager](https://github.com/jmlynchjr/SDS-Manager) ${BASE}. Tested on an Apple Silicon Mac with a Uniden **SDS150**.
 
 ### Download
-Download **${NAME}.zip** below. It includes this fork's RadioReference application key, so you only sign in with your own RadioReference Premium account. (The "Source code" downloads GitHub adds automatically don't include the key.)
+Download **${NAME}.zip** below.
 
 ### Install
 1. Install [Homebrew](https://brew.sh) if you don't have it.
@@ -69,9 +69,6 @@ Download **${NAME}.zip** below. It includes this fork's RadioReference applicati
 4. Start it with \`~/SDS-Manager/launch-mac.sh\`
 
 **Before the first write to your scanner,** read the user manual's appendix *Running on macOS*: back up the whole SD card, turn off Spotlight on it, and always eject before unplugging.
-
-### Status on the SDS150
-Detection, the export preview and Export to Scanner of an edited Favorites List are tested and work. Database updates, firmware updates and restores have not yet been tested on an SDS150.
 EOF
 gh release create "$TAG" "$ZIP" --repo cinsu/SDS-Manager-macOS --target macos \
     --title "SDS-Manager ${BASE} for macOS" --notes-file "$NOTES"

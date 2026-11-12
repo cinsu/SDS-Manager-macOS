@@ -570,13 +570,15 @@ This fork ([cinsu/SDS-Manager-macOS](https://github.com/cinsu/SDS-Manager-macOS)
 ### What you need
 
 - A Mac with **Homebrew** (brew.sh) and **git** (macOS offers to install git the first time you type `git`).
-- A **RadioReference Premium** account. Until the Mac release with a built-in key is out, also your own RadioReference **application key** (see below).
+- A **RadioReference Premium** account. If you run from source instead of the release download, also your own RadioReference **application key** (see below).
 
 On a Mac, `~` means your home folder, for example `/Users/yourname`.
 
 ### Installing
 
-In Terminal:
+**From a release (recommended).** Download the latest `SDS-Manager-macOS-….zip` from the fork's **Releases** page. It includes the fork's RadioReference application key. Unzip it, move the **SDS-Manager** folder to your home folder, then in Terminal run `cd ~/SDS-Manager && bash setup-mac.sh`. To update, download the newer release and replace the folder; your configurations and backups are kept elsewhere and stay.
+
+**From source with git,** in Terminal:
 
 1. `cd ~`
 2. `git clone -b macos https://github.com/cinsu/SDS-Manager-macOS.git SDS-Manager`
@@ -592,12 +594,12 @@ In Terminal:
 
 ### RadioReference application key
 
-An application key for the Mac version has been applied for with RadioReference. Once it is approved, a ready-to-run Mac release that includes the key will be published on the fork's **Releases** page. With that release you only sign in with your own RadioReference username and password; no key of your own is needed.
+The fork's release download includes a RadioReference application key, so with it you only sign in with your own RadioReference username and password (Premium required).
 
 > [!NOTE]
 > The key is never in the source code on GitHub, only in release downloads, the same way the original author's Linux packages work.
 
-**Until the release is out,** or if you run from source, you need your own key. Apply at radioreference.com/account/api/apply (Premium required). Then enter it, with your RadioReference username and password, under **Advanced** in **Tools → RadioReference Account…**. On a Mac the password and key are kept in the **Keychain**. Never put a key in a file you commit to git.
+**If you run from source,** you need your own key. Apply at radioreference.com/account/api/apply (Premium required). Then enter it, with your RadioReference username and password, under **Advanced** in **Tools → RadioReference Account…**. On a Mac the password and key are kept in the **Keychain**. Never put a key in a file you commit to git.
 
 ### Connecting the scanner
 
@@ -631,7 +633,7 @@ All of chapter 10's protections apply. In addition:
 
 ### Status on the SDS150
 
-The original program was written for and tested on the SDS100. On the SDS150, connecting, the identity check, the export preview and **Export to Scanner** of an edited Favorites List have been tested and work, and the scanner accepted the result. Database updates, firmware updates and restores have not yet been tested on an SDS150: back up the card first if you try them.
+The original program was written for and tested on the SDS100. This fork has been tested on an SDS150 and works. As with any scanner, back up the card before big changes such as a database or firmware update.
 
 ### Settings and files
 
