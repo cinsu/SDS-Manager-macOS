@@ -6,6 +6,9 @@ Use the outline button (☰) at the top right of this file to jump to a chapter.
 
 ## About this manual
 
+> [!NOTE]
+> **On a Mac?** This fork adds macOS support. See [Appendix: Running on macOS](#appendix-running-on-macos) for install steps, SD card safety and what's different.
+
 This manual describes **SDS-Manager version 0.1.27**, a Linux program for managing a Uniden SDS100 scanner's Favorites Lists, settings and system database from a PC, without Sentinel.
 
 Chapters 1 to 4 cover installing, the main window and scanner configurations, and are worth reading first. Chapter 10, *Exporting to the scanner*, explains how changes reach the scanner and how they are protected. The rest can be read as you need them.
@@ -71,6 +74,9 @@ SDS-Manager never edits the scanner directly. It keeps **scanner configurations*
 > Before anything is written, every changed file is checked against Uniden's file specification and against real files from a working SDS100. A change SDS-Manager doesn't fully understand is refused, not guessed at.
 
 ## 2. Installing
+
+> [!NOTE]
+> **On a Mac?** This fork adds macOS support. See [Appendix: Running on macOS](#appendix-running-on-macos) for install steps, SD card safety and what's different.
 
 ### Install the package (recommended)
 
@@ -553,3 +559,84 @@ If you use a system type that isn't supported yet, build the same list in Sentin
 | **Scanner Settings** | Inspect Scanner Settings (Read-only)…, GPS and Location…, Service Types…, Global…, Search…, Weather…, Display…, Display Layouts and Colours…, Hardware…, Update Scanner Firmware… |
 | **Tools** | Settings… (Ctrl+,), Find Everywhere… (Ctrl+F), Name Unnamed Talkgroups…, RadioReference Account…, Theme, Preferences, Advanced → Diagnostic Export Preview (Read-only)… |
 | **Help** | User Guide (F1), Recovery and Troubleshooting, What's New (Change Log), Check for Updates…, Open Scanner Backups Folder, Copy Diagnostic Information, Open Log Folder, License, About… |
+
+## Appendix: Running on macOS
+
+This fork ([cinsu/SDS-Manager-macOS](https://github.com/cinsu/SDS-Manager-macOS), `macos` branch) runs SDS-Manager on a Mac. The program is the same; installing, a few paths and how it talks to the scanner's card differ. Everything else in this manual applies as written.
+
+> [!NOTE]
+> The Mac version has been tested on an Apple Silicon Mac with an **SDS150**. Report Mac problems on the fork's GitHub page, not to the original author.
+
+### What you need
+
+- A Mac with **Homebrew** (brew.sh) and **git** (macOS offers to install git the first time you type `git`).
+- A **RadioReference Premium** account. Until the Mac release with a built-in key is out, also your own RadioReference **application key** (see below).
+
+On a Mac, `~` means your home folder, for example `/Users/yourname`.
+
+### Installing
+
+In Terminal:
+
+1. `cd ~`
+2. `git clone -b macos https://github.com/cinsu/SDS-Manager-macOS.git SDS-Manager`
+3. `cd ~/SDS-Manager`
+4. `./setup-mac.sh`
+
+`setup-mac.sh` installs Python 3.12 with Homebrew and puts the program's own Python packages (PyQt6 and keyring) in a private folder, `~/SDS-Manager/.venv-mac`.
+
+- **Start:** `~/SDS-Manager/launch-mac.sh`. Terminal stays open while the program runs; errors appear there.
+- **Update:** `cd ~/SDS-Manager && git pull`, in place of **Help → Check for Updates…**, which installs Linux packages.
+- **Tests:** `./run-tests-mac.sh` (it makes a small temporary RAM disk for the tests that need a second drive).
+- **Remove:** delete the `~/SDS-Manager` folder. Your data stays.
+
+### RadioReference application key
+
+An application key for the Mac version has been applied for with RadioReference. Once it is approved, a ready-to-run Mac release that includes the key will be published on the fork's **Releases** page. With that release you only sign in with your own RadioReference username and password; no key of your own is needed.
+
+> [!NOTE]
+> The key is never in the source code on GitHub, only in release downloads, the same way the original author's Linux packages work.
+
+**Until the release is out,** or if you run from source, you need your own key. Apply at radioreference.com/account/api/apply (Premium required). Then enter it, with your RadioReference username and password, under **Advanced** in **Tools → RadioReference Account…**. On a Mac the password and key are kept in the **Keychain**. Never put a key in a file you commit to git.
+
+### Connecting the scanner
+
+Choose **Mass Storage** on the scanner when you connect it. Its card appears under `/Volumes`, as `/Volumes/NO NAME` if the card has no label. The default **Folder where removable media appear** is `/Volumes`.
+
+The Mac version checks the scanner's identity with `mount` and `ioreg` instead of Linux's `/proc` and `/sys`. It accepts the SDS100 (USB `1965:001c`) and the SDS150 (USB `1965:001a`). To see what it finds, read-only:
+
+`.venv-mac/bin/python -c "import scanner_identity as i; print(i.inspect_scanner_identity('/Volumes/NO NAME'))"`
+
+### Before the first write: protect the card
+
+Do these once, with the scanner connected in Mass Storage mode. Replace `NO NAME` with your card's name.
+
+1. **Back up the whole card** to a dated folder:
+   `ditto "/Volumes/NO NAME" ~/scanner-card-backup-$(date +%Y-%m-%d)`
+2. **Check the copy:**
+   `diff -rq -x '._*' -x '.Spotlight-V100' -x '.fseventsd' -x '.Trashes' -x '.DS_Store' "/Volumes/NO NAME" ~/scanner-card-backup-$(date +%Y-%m-%d) && echo "BACKUP MATCHES"`
+3. **Turn off Spotlight on the card**, so macOS stops indexing it:
+   `sudo mdutil -i off "/Volumes/NO NAME"`
+
+`ditto` reports *Operation not permitted* for `.Spotlight-V100`; that is Spotlight's own folder and isn't scanner data.
+
+### How writes are protected on a Mac
+
+All of chapter 10's protections apply. In addition:
+
+- **Full flush.** On a Mac a normal "save to disk" can finish while data is still in the card's cache. Every save the program makes uses macOS's full flush (`F_FULLFSYNC`), which writes it to the card itself.
+- **macOS clutter is cleared.** macOS stores its own file information on FAT cards as hidden `._` files next to each file, and Finder leaves `.DS_Store` files. The scanner doesn't expect them. Before and after every export, database update, firmware update and restore, the program removes them from the card (only files that really are macOS's, checked by their contents). To tidy the card by hand:
+  `.venv-mac/bin/python -c "import mac_platform as m; print(m.clean_card('/Volumes/NO NAME'))"`
+- **Always eject before unplugging**, with Finder's eject button or `diskutil eject "/Volumes/NO NAME"`. Ejecting makes sure everything is on the card.
+
+### Status on the SDS150
+
+The original program was written for and tested on the SDS100. On the SDS150, connecting, the identity check, the export preview and **Export to Scanner** of an edited Favorites List have been tested and work, and the scanner accepted the result. Database updates, firmware updates and restores have not yet been tested on an SDS150: back up the card first if you try them.
+
+### Settings and files
+
+Configurations, databases and the program's own scanner backups are in `~/.local/share/sds100-database-favorites-manager`, and settings in `~/.config`, the same places as on Linux (chapter 14).
+
+### Working with SDS100 Monitor
+
+The macOS fork of the Monitor is at github.com/cinsu/SDS-MONITOR-macOS. Installed as `~/SDS-MONITOR` and `~/SDS-Manager` side by side, the Monitor's **Edit in Manager…** finds SDS-Manager's `launch-mac.sh`.

@@ -1,5 +1,7 @@
 # SDS-Manager
 
+> **This is a macOS fork** of [jmlynchjr/SDS-Manager](https://github.com/jmlynchjr/SDS-Manager), maintained by [cinsu](https://github.com/cinsu). The macOS changes are on the `macos` branch. Tested on an Apple Silicon Mac with an **SDS150**. Please report Mac problems here, not to the original author. See [Running on macOS](#running-on-macos).
+
 *Formerly SDS100 Database & Favorites Manager.*
 
 A native Kubuntu (PyQt6) manager for the Uniden SDS100 scanner: update the system database, build and edit Favorites Lists, and change scanner settings, with every scanner write validated, backed up first and reversible. A Sentinel alternative for Linux.
@@ -14,6 +16,36 @@ Created by J. Lynch, with AI assistance in the build. Free software under the GN
 - Try without installing: `./launch.sh` (or `./test-launch.sh` to also capture logs).
 - Install for the current user: `./install.sh` (adds an application-menu entry; version taken from the application). Remove with `./uninstall.sh` from the installed folder, or list and remove older versions with `python3 cleanup_old_installs.py`.
 - Application data lives outside the program folder, so installing or removing a version never touches your configurations, databases or backups.
+
+## Running on macOS
+
+This fork adds macOS support. Nothing changes for Linux users. The full Mac guide, including safety steps for the scanner's SD card, is the appendix *Running on macOS* in the [user manual](docs/user-manual.md).
+
+**Requirements:** a Mac with [Homebrew](https://brew.sh) and git, and a RadioReference Premium account.
+
+**RadioReference application key:** a key for the Mac version has been applied for. Once RadioReference approves it, a ready-to-run Mac release that includes the key will be published on the [Releases](https://github.com/cinsu/SDS-Manager-macOS/releases) page. Until then, running from source needs your own key (see the manual's appendix), entered under Advanced in Tools → RadioReference Account….
+
+**Set up (one time):**
+
+```bash
+cd ~
+git clone -b macos https://github.com/cinsu/SDS-Manager-macOS.git SDS-Manager
+cd ~/SDS-Manager
+./setup-mac.sh
+```
+
+**Start:** `~/SDS-Manager/launch-mac.sh`. **Update:** `cd ~/SDS-Manager && git pull`. **Tests:** `./run-tests-mac.sh`
+
+**Before the first write to your scanner:** back up the whole SD card, and always eject it properly before unplugging. See the manual's appendix.
+
+**What's different on macOS:**
+
+- **Scanner detection and write safety** use macOS's own tools (`mount`, `ioreg`) in place of Linux's `/proc` and `/sys`. The SDS150 (USB `1965:001a`) is accepted alongside the SDS100.
+- **Every save to the card is fully flushed** (macOS `F_FULLFSYNC`), and macOS's hidden `._` and `.DS_Store` files are cleared from the card before and after each write.
+- **Your RadioReference password and key** are kept in the macOS Keychain.
+- **Help → Check for Updates** installs Linux packages and doesn't work on a Mac. Use `git pull`.
+
+**Status on the SDS150:** detection, preview and **Export to Scanner** of an edited Favorites List are tested and work. Database updates, firmware updates and restores have not been tested on an SDS150 yet.
 
 ## RadioReference
 
