@@ -164,3 +164,86 @@ if IS_MAC:
 
     if getattr(os.fsync, '__name__', '') != '_full_fsync':
         os.fsync = _full_fsync
+
+
+# ---- macOS clutter on the scanner's card ---------------------------------------------------------
+# macOS stores its own file metadata on FAT cards as hidden "._name" twins (AppleDouble) and leaves
+# .DS_Store files where Finder has looked. The scanner and this program don't expect either, so
+# card writes clear them before starting (so backups and checks don't see them) and after finishing.
+APPLEDOUBLE_MAGIC = b'\x00\x05\x16\x07'
+_SKIP_DIRS = {'.Spotlight-V100', '.fseventsd', '.Trashes', '.TemporaryItems'}
+
+
+def _is_appledouble(path):
+    try:
+        with open(path, 'rb') as handle:
+            return handle.read(4) == APPLEDOUBLE_MAGIC
+    except OSError:
+        return False
+
+
+def _sync_dir(directory):
+    try:
+        fd = os.open(directory, os.O_RDONLY)
+        try:
+            os.fsync(fd)
+        finally:
+            os.close(fd)
+    except OSError:
+        pass
+
+
+def clean_card(location):
+    """Delete AppleDouble (._*) and .DS_Store files on the card holding `location`.
+    Only touches volumes under /Volumes, and only files that really are macOS metadata.
+    Returns how many files were removed."""
+    found = _containing_mount(Path(location).expanduser().absolute())
+    if not found or not found[1].startswith('/Volumes/'):
+        return 0
+    removed, touched = 0, set()
+    for dirpath, dirnames, filenames in os.walk(found[1], onerror=lambda _err: None):
+        dirnames[:] = [d for d in dirnames if d not in _SKIP_DIRS]
+        for name in filenames:
+            path = os.path.join(dirpath, name)
+            if os.path.islink(path):
+                continue
+            if name == '.DS_Store' or (name.startswith('._') and _is_appledouble(path)):
+                try:
+                    os.unlink(path)
+                    removed += 1
+                    touched.add(dirpath)
+                except OSError:
+                    pass
+    for directory in touched:
+        _sync_dir(directory)
+    if removed:
+        os.sync()
+    return removed
+
+
+def with_card_cleanup(func):
+    """Wrap a card-writing function (it takes `location`) so macOS clutter is cleared before and after."""
+    import functools
+    import inspect
+    signature = inspect.signature(func)
+
+    def tidy(location):
+        if location:
+            try:
+                clean_card(location)
+            except Exception:     # never let tidying stop or mask the write itself
+                pass
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        try:
+            location = signature.bind_partial(*args, **kwargs).arguments.get('location')
+        except TypeError:
+            location = None
+        tidy(location)
+        try:
+            return func(*args, **kwargs)
+        finally:
+            tidy(location)
+    wrapper.mac_card_cleanup = True
+    return wrapper

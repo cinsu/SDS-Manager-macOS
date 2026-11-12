@@ -150,3 +150,7 @@ def recover_emergency(folder, location):
     # backup configuration or affecting the permanent verified backup history.
     verify_backup(folder, EMERGENCY)
     return execute_restore(folder, location, backup_root=EMERGENCY)
+
+
+if mac_platform.IS_MAC:  # macOS fork: clear ._ and .DS_Store clutter before and after card writes
+    execute_restore = mac_platform.with_card_cleanup(execute_restore)

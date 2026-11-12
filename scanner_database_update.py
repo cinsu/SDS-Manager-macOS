@@ -312,3 +312,7 @@ def execute_database_update(package, location):
             raise
         raise fw.FirstWriteError(str(exc) + (f'\nVerified backup: {backup_folder}' if backup_folder else
                                              '\nNo scanner write was attempted before backup verification.')) from exc
+
+
+if mac_platform.IS_MAC:  # macOS fork: clear ._ and .DS_Store clutter before and after card writes
+    execute_database_update = mac_platform.with_card_cleanup(execute_database_update)

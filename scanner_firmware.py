@@ -351,3 +351,7 @@ def execute(location, candidates, remove_leftovers=True, identity=None, log_fold
     return {'written': written, 'removed': removed, 'notes': first['notes'], 'folder': str(folder),
             'receipt': str(receipt) if receipt else None, 'model': first['info']['model'],
             'before': first['info']['firmware']}
+
+
+if mac_platform.IS_MAC:  # macOS fork: clear ._ and .DS_Store clutter before and after card writes
+    execute = mac_platform.with_card_cleanup(execute)
