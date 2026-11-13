@@ -43,6 +43,8 @@ def clean_request(data):
             return None
     if not isinstance(data, dict):
         return None
+    if data.get("action") == "show":                 # v0.1.30: a second start brings this window forward
+        return {"action": "show"}
     out = {k: str(data.get(k) or "").strip()[:200] for k in REQUEST_KEYS}
     out["tgid"] = re.sub(r"^(TGID|TG)\s*[:=]?\s*", "", out["tgid"], flags=re.I)
     if not out["tgid"].isdigit():
@@ -53,7 +55,10 @@ def clean_request(data):
     except ValueError:
         out["frequency"] = ""
     # v0.1.18: "add" puts something heard into a Favorites List; "edit" (the default) opens it.
-    out["action"] = "add" if str(data.get("action") or "") == "add" else "edit"
+    # v0.1.28: "rr_freq" searches RadioReference for the frequency.
+    action = str(data.get("action") or "")
+    out["action"] = action if action in ("add", "rr_freq") else "edit"
+    out["tone"] = re.sub(r"[^\w. ]", "", str(data.get("tone") or ""))[:20].strip()
     modulation = str(data.get("modulation") or "").strip().upper()
     out["modulation"] = modulation if modulation in ("AUTO", "FM", "NFM", "AM") else "AUTO"
     return out if (out["tgid"] or out["frequency"]) else None

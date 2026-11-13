@@ -40,4 +40,4 @@ The program's RadioReference app key is not in this source. The .deb packages on
 
 ## Tests
 
-`python3 -m unittest discover -s .` — about 585 tests. One module (`test_site_settings_regression`) needs PyQt6 and errors where it is not installed; everything else is pure Python.
+`python3 -m unittest discover -s .` — about 600 tests. One module (`test_site_settings_regression`) needs PyQt6 and errors where it is not installed; everything else is pure Python.

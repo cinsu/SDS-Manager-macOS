@@ -181,6 +181,11 @@ class RRClient:
         return self.call("searchCountyFreq", ("ctid", int(ctid), "xsd:int"), ("freq", f"{float(mhz):.5f}", "xsd:decimal"),
                          ("tone", tone, "xsd:string"))
 
+    def search_state_freq(self, stid, mhz, tone=""):
+        """Conventional frequencies across a state (v0.1.28)."""
+        return self.call("searchStateFreq", ("stid", int(stid), "xsd:int"), ("freq", f"{float(mhz):.5f}", "xsd:decimal"),
+                         ("tone", tone, "xsd:string"))
+
     # -- trunked --
     def trs_details(self, sid):
         return self.call("getTrsDetails", ("sid", int(sid), "xsd:int"))

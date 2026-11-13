@@ -89,9 +89,15 @@ class MonitorLinkMixin:
             self.showNormal()
         self.raise_()
         self.activateWindow()
+        if request.get('action') == 'show':
+            return
         what = monitor_link.describe_request(request)
         if request.get('action') == 'add':
             self.add_heard_entry(request, what)
+            return
+        if request.get('action') == 'rr_freq':          # v0.1.28
+            if request.get('frequency'):
+                self.search_rr_frequency(request['frequency'], request.get('tone', ''))
             return
         if QApplication.activeModalWidget() is not None:
             QMessageBox.information(self, 'Edit in Manager',
@@ -124,6 +130,14 @@ class MonitorLinkMixin:
                 return
             match = matches[labels.index(choice)]
         self.open_list_editor_at(match)
+
+    def search_rr_frequency(self, frequency='', tone=''):
+        """Tools → Search Frequency in RadioReference…, or SDS100 Monitor's request (v0.1.28)."""
+        from rr_freq_dialog import FrequencySearchDialog
+        dialog = getattr(self, '_rr_freq_dialog', None)
+        if dialog is None:
+            dialog = self._rr_freq_dialog = FrequencySearchDialog(self)
+        dialog.start(frequency, tone)
 
     def add_heard_entry(self, request, what):
         title = 'Add to Favorites List'
@@ -387,7 +401,8 @@ class AddHeardDialog(QDialog):
         self.setWindowTitle('Add to Favorites List')
         self.resize(640, 260)
         form = QFormLayout(self)
-        heard = QLabel(f'Heard in SDS100 Monitor: <b>{what}</b>')
+        heard = QLabel(('From RadioReference' if request.get('source') == 'rr' else 'Heard in SDS100 Monitor')
+                       + f': <b>{what}</b>')
         heard.setWordWrap(True)
         form.addRow(heard)
         self.target = QComboBox()
@@ -404,6 +419,7 @@ class AddHeardDialog(QDialog):
         self.modulation.setCurrentText(request.get('modulation') or 'AUTO')
         self.tone = QLineEdit()
         self.tone.setPlaceholderText('optional: 107.2, 023 DPL, NAC 293, CC 1')
+        self.tone.setText(str(request.get('tone') or ''))
         if not request['tgid']:
             form.addRow('Frequency', QLabel(f'{float(request["frequency"]):.4f} MHz'))
             form.addRow('Modulation', self.modulation)

@@ -4,7 +4,7 @@
 """SDS-Manager (formerly SDS100 Database & Favorites Manager)."""
 import sys
 from PyQt6.QtWidgets import QApplication, QMainWindow, QFileDialog, QMessageBox, QInputDialog, QProgressDialog, QPushButton, QLabel, QDialog, QVBoxLayout, QProgressBar, QToolTip
-from PyQt6.QtCore import QObject, QThread, QTimer, pyqtSignal, Qt, QUrl
+from PyQt6.QtCore import QObject, QSettings, QThread, QTimer, pyqtSignal, Qt, QUrl
 from PyQt6.QtGui import QIcon, QAction, QDesktopServices, QTextCursor
 from pathlib import Path
 import hashlib, json, re, os, tempfile
@@ -2199,6 +2199,7 @@ class ManagerWindow(ManageMixin, ExtrasMixin, MonitorLinkMixin, UpdatesMixin, QM
         find = menus['Tools'].addAction('Find Everywhere…', self.find_everywhere)
         find.setShortcut('Ctrl+F')
         menus['Tools'].addAction('Name Unnamed Talkgroups…', self.name_unnamed_talkgroups)
+        menus['Tools'].addAction('Search Frequency in RadioReference…', lambda: self.search_rr_frequency())
         menus['Tools'].addAction('RadioReference Account…', self.open_rr_account)
         tools_advanced = menus['Tools'].addMenu('Advanced')
         tools_advanced.addAction('Diagnostic Export Preview (Read-only)…', self.preview_scanner_export)
@@ -2828,14 +2829,42 @@ def monitor_request_from_args(argv):
     return None
 
 
+def leave(code):
+    """End without letting Python tear down the Qt objects one by one (v0.1.31).
+
+    By now everything is saved: closeEvent asked about unsaved changes and wrote the window's settings. On
+    Python 3.14 with PyQt6, the normal exit then crashes in sip while Python destroys the remaining Qt objects
+    (a segmentation fault in Py_Exit, the same one SDS100 Monitor met in 1.1.47/48). So settings still held
+    in memory are written out, the log is flushed, and the process ends directly."""
+    import gc
+    import logging
+    for obj in gc.get_objects():
+        try:
+            if isinstance(obj, QSettings):
+                obj.sync()
+        except (RuntimeError, ReferenceError):
+            pass
+    logging.shutdown()
+    sys.stdout.flush()
+    sys.stderr.flush()
+    os._exit(code)
+
+
+APP_ID = "sds-manager"          # matches /usr/share/applications/sds-manager.desktop
+
+
 if __name__ == "__main__":
     configure_logging()
+    # v0.1.30: its own name and desktop entry, so the task manager doesn't group it with SDS100 Monitor
+    # (both are python3), and the Plasma launcher brings the open window forward instead of starting another.
+    sys.argv[0] = APP_ID
+    QApplication.setApplicationName(APP_ID)
+    QApplication.setDesktopFileName(APP_ID)
     app = QApplication(sys.argv)
     request = monitor_request_from_args(sys.argv)
-    if request is not None:
-        from monitor_link_ui import send_to_running
-        if send_to_running(request):
-            os._exit(0)                     # the Manager already open has it
+    from monitor_link_ui import send_to_running
+    if send_to_running(request if request is not None else {"action": "show"}):
+        os._exit(0)                         # the Manager already open has it
     app.setWindowIcon(QIcon(str(Path(__file__).resolve().parent / "assets/sds100-manager.svg")))
     window = ManagerWindow()
     window.start_monitor_link()
@@ -2843,4 +2872,5 @@ if __name__ == "__main__":
     window.show()
     if request is not None:
         QTimer.singleShot(800, lambda: window.open_monitor_request(request))
-    sys.exit(app.exec())
+    code = app.exec()
+    leave(code)

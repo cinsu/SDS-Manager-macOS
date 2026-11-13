@@ -294,3 +294,22 @@ class UiTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+class SecondStartTests(unittest.TestCase):
+    def test_a_second_start_only_brings_the_window_forward(self):     # v0.1.30
+        import monitor_link
+        self.assertEqual(monitor_link.clean_request({"action": "show"}), {"action": "show"})
+        source = open("database_favorites_manager.py", encoding="utf-8").read()
+        self.assertIn('QApplication.setDesktopFileName(APP_ID)', source)
+        self.assertIn('send_to_running(request if request is not None else {"action": "show"})', source)
+
+
+class ExitTests(unittest.TestCase):
+    def test_leaves_directly_after_saving_settings(self):          # v0.1.31
+        source = open("database_favorites_manager.py", encoding="utf-8").read()
+        main = source[source.index('if __name__ == "__main__":'):]
+        self.assertIn("leave(code)", main)
+        self.assertNotIn("sys.exit(app.exec())", main)
+        body = source[source.index("def leave(code):"):source.index('APP_ID = "sds-manager"')]
+        self.assertLess(body.index("obj.sync()"), body.index("os._exit(code)"))
