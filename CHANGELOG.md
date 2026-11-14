@@ -1,3 +1,33 @@
+## v0.1.31 — No crash on closing
+
+- **Fixed: SDS-Manager could crash when closed** (a segmentation fault reported by the system after the window had gone). Nothing was lost: by then everything is saved. The crash came from Python 3.14 tearing down PyQt6's objects one by one at exit, the same problem SDS100 Monitor had in 1.1.47/48.
+- Now, once the window has closed and saved, SDS-Manager writes out its remaining settings, flushes its log and ends directly, as the Monitor does.
+- New tests (1).
+
+## v0.1.30 — Its own task manager entry, and one SDS-Manager at a time
+
+- **Fixed: SDS-Manager and SDS100 Monitor shared one task manager entry** (both run as python3), so their windows were grouped together and clicking the launcher for the one not shown started a second copy.
+  - SDS-Manager now has its own name and desktop entry (`sds-manager`); SDS100 Monitor 1.1.82 does the same. Each gets its own icon in the task manager.
+  - Starting SDS-Manager again, from the menu or `sds-manager`, brings the open window forward instead of opening a second one.
+- New tests (1).
+
+## v0.1.29 — Frequency search chooses its own state and county
+
+- **Fixed: Search Frequency in RadioReference did nothing unless Database Contents already had RadioReference, a state and a county chosen.** The buttons stayed grey, which was easy to miss (especially when SDS100 Monitor opened the window).
+- The window now has its own **State** and **County** lists. They start as Database Contents' choice when there is one, and keep what you pick for as long as SDS-Manager is open.
+- **Search County** needs a county; **Search Whole State** only a state.
+- When SDS100 Monitor asks for a search, it runs as soon as a county is known; otherwise choose one and press Search.
+
+## v0.1.28 — Search a frequency in RadioReference
+
+- **New: Tools → Search Frequency in RadioReference…** Enter a frequency (and a tone, optionally) to see what uses it:
+  - **conventional frequencies** in the county chosen in Database Contents (**Search County**) or across the whole state (**Search Whole State**);
+  - **trunked site frequencies** (tick "Include trunked site frequencies"): the sites of every trunked system in the county, or in the state and all its counties, with the system, site, LCN and NAC or colour code. Sites already read stay in memory until SDS-Manager closes, so later searches are quicker.
+  - **Add to Favorites List…** (or double-click) puts a conventional result into a list, with its name, mode and tone filled in. Trunked systems are added from Database Contents as before.
+- **SDS100 Monitor 1.1.81** can ask for this: right-click a reception or the Scanner Information panel → Search Frequency in RadioReference (SDS-Manager)…. SDS-Manager opens the window and searches the county straight away.
+- Uses your own RadioReference account, as Database Contents does; nothing is saved.
+- New tests (5).
+
 ## v0.1.27 — Select several with Ctrl and Shift
 
 - **New: Ctrl+click and Shift+click select several items** (Ctrl adds or removes one, Shift selects a range):

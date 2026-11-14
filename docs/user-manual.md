@@ -1,6 +1,6 @@
 # SDS-Manager User Manual
 
-Version 0.1.27 · by J. Lynch, developed with the help of AI (Anthropic's Claude) · [PDF with each release](https://github.com/jmlynchjr/SDS-Manager/releases)
+Version 0.1.31 · by J. Lynch, developed with the help of AI (Anthropic's Claude) · [PDF with each release](https://github.com/jmlynchjr/SDS-Manager/releases)
 
 Use the outline button (☰) at the top right of this file to jump to a chapter.
 
@@ -9,7 +9,7 @@ Use the outline button (☰) at the top right of this file to jump to a chapter.
 > [!NOTE]
 > **On a Mac?** This fork adds macOS support. See [Appendix: Running on macOS](#appendix-running-on-macos) for install steps, SD card safety and what's different.
 
-This manual describes **SDS-Manager version 0.1.27**, a Linux program for managing a Uniden SDS100 scanner's Favorites Lists, settings and system database from a PC, without Sentinel.
+This manual describes **SDS-Manager version 0.1.31**, a Linux program for managing a Uniden SDS100 scanner's Favorites Lists, settings and system database from a PC, without Sentinel.
 
 Chapters 1 to 4 cover installing, the main window and scanner configurations, and are worth reading first. Chapter 10, *Exporting to the scanner*, explains how changes reach the scanner and how they are protected. The rest can be read as you need them.
 
@@ -135,7 +135,7 @@ The bottom right shows whether the scanner's card is connected.
 | **Favorites** | Everything about Favorites Lists, including Keys & Tags |
 | **Database** | Rebuild the system database from an archive, and update the scanner's database |
 | **Scanner Settings** | The scanner's settings, and Update Scanner Firmware |
-| **Tools** | Settings, Find Everywhere, Name Unnamed Talkgroups, RadioReference Account, Theme |
+| **Tools** | Settings, Find Everywhere, Name Unnamed Talkgroups, Search Frequency in RadioReference, RadioReference Account, Theme |
 | **Help** | User Guide, Recovery and Troubleshooting, What's New, Check for Updates, backups and log folders, licence and About |
 
 Rarely used and read-only inspection tools are in **Advanced** submenus. A full list is in the appendix.
@@ -205,6 +205,10 @@ The **Database Contents** panel comes from **RadioReference**, live, through you
 3. Choose a system. It is loaded when you choose it.
 
 **All Systems / Conventional / Trunked** narrows the list, and the search box finds names in what is shown.
+
+### Searching for a frequency
+
+**Tools → Search Frequency in RadioReference…** shows what uses a frequency: conventional frequencies in a county (**Search County**) or the whole state (**Search Whole State**); choose the **State** and **County** in the window (they start as Database Contents' choice), and, with **Include trunked site frequencies** ticked, the site frequencies of the area's trunked systems (system, site, LCN, NAC or colour code). Searching a whole state with trunked sites reads every system's sites once, which takes a while the first time; they stay in memory until SDS-Manager closes. **Add to Favorites List…** puts a conventional result into a list. SDS100 Monitor can open this window for the frequency it is hearing.
 
 ### Which systems can be used
 
@@ -557,7 +561,7 @@ If you use a system type that isn't supported yet, build the same list in Sentin
 | **Database** | Update Database (Rebuild from Archive)…, Update Scanner's Master Database… |
 | Database → Advanced | Validate Master HPDB…, Validate Master HPDB .gz…, Export One State File…, Rebuild Full Database to a Folder… |
 | **Scanner Settings** | Inspect Scanner Settings (Read-only)…, GPS and Location…, Service Types…, Global…, Search…, Weather…, Display…, Display Layouts and Colours…, Hardware…, Update Scanner Firmware… |
-| **Tools** | Settings… (Ctrl+,), Find Everywhere… (Ctrl+F), Name Unnamed Talkgroups…, RadioReference Account…, Theme, Preferences, Advanced → Diagnostic Export Preview (Read-only)… |
+| **Tools** | Settings… (Ctrl+,), Find Everywhere… (Ctrl+F), Name Unnamed Talkgroups…, Search Frequency in RadioReference…, RadioReference Account…, Theme, Preferences, Advanced → Diagnostic Export Preview (Read-only)… |
 | **Help** | User Guide (F1), Recovery and Troubleshooting, What's New (Change Log), Check for Updates…, Open Scanner Backups Folder, Copy Diagnostic Information, Open Log Folder, License, About… |
 
 ## Appendix: Running on macOS

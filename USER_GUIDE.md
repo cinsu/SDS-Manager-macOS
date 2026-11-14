@@ -180,6 +180,7 @@ Dropdowns and text boxes can be changed; reserved or unsupported fields are read
 
 - The password (and a key you entered yourself) is kept in **KDE Wallet** (through `python3-keyring`), never in a settings file; your username is kept in the settings. Without a secret store it is kept only until SDS-Manager closes. **Forget Saved Password** removes it.
 - The key is never in the source code; the release packages include it.
+- **Tools → Search Frequency in RadioReference…** (0.1.28) shows what uses a frequency: conventional frequencies in a county (**Search County**) or the whole state (**Search Whole State**); choose the **State** and **County** in the window (they start as Database Contents' choice), and, with **Include trunked site frequencies** ticked, the site frequencies of the area's trunked systems. A whole state with trunked sites takes a while the first time; sites stay in memory until SDS-Manager closes. **Add to Favorites List…** puts a conventional result into a list. SDS100 Monitor can open it for the frequency it is hearing.
 - SDS-Manager talks to RadioReference directly from your computer, always over HTTPS.
 - RadioReference data is used only to build and update the Favorites Lists of your own scanner; only what you add is kept, in your configuration.
 - Updating existing Favorites Lists from RadioReference, naming talkgroups from it and looking up unknown talkgroups come in the next versions.
